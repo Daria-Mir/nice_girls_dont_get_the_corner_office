@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4: How You Think - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 4: How You Think</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 4 How You Think Changing how you think about how you work is essential to changing selfdefeating behavior. Most of us have notions about what will get us recognized and what won’t. These are called superstitious behaviors because we come to believe that if we don’t do them, something catastrophic will happen. I’ll be rewarded only if I work harder than everyone else, and My boss will fire me if I tell her what I really think are examples of superstitious thinking. These thoughts are often built around parental messages about work that may have been true for our parents but are no longer valid for us. Similarly, they’re often reflective of behaviors that may have been functional early in our careers, but they’re usually not as helpful later. What we do as entry-level workers to get respect and attention is more related to the task at hand than it is to exhibiting behaviors related to leadership capability, relationship skills, and the like. It’s thus difficult to relinquish these beliefs because they’ve worked—up until now.</p>
+<p>One of the most difficult aspects of coaching is getting people to try new behaviors. It’s a little like letting go of old worn-out tennis shoes. They’re comfortable. You’ve broken them in. You know exactly how they’re going to feel when you wear them. They looked great three years ago, but you can’t wear them in public anymore. This next section focuses on some of those beliefs you may have formed early in your work life that need to be retired before you do.</p>
+<h2 class="mistake-heading">Mistake 43: Thinking Like an Employee</h2>
+<p class="first-p">Many years ago I read an article, the gist of which was that jobs were created during the industrial revolution in response to the need for narrowly defined manufacturing functions. For example, in the automobile industry, one person put the wheels on the car, another person installed the steering wheel, another painted it, and so on. So each job was narrow in scope. The advent of robotics and a deeper understanding of workplace productivity changed all that. Even in Detroit those “jobs” have gone the way of the Model-T, with more car companies using teams of people endowed with broad responsibilities to assemble the vehicles.</p>
+<p>The impact for you is that you can’t just come to work and do your job.</p>
+<p>That’s thinking like an employee. As one who has been an employee and who has also been an employer, I can tell you we do think differently. Add to that the myriad tasks required of women in their daily routines and the belief that we have to do things right (rather than do the right thing), and you have a nice girl with little time to think broadly about her role, as opposed to about her job. Trust me, your boss does not want you to be an employee. Your boss wants you to be a partner in the process of working toward goal attainment. The following chart may be helpful in illuminating the differences.</p>
+<p>An Employee A Partner in the Process Does her job. Thinks about ways to make the company money, save the company money, or improve efficiencies.</p>
+<p>Doesn’t question authority. Diplomatically questions directives or assignments that don’t seem logical or efficient.</p>
+<p>Collects a paycheck. Gains valuable transferrable skills through experience, training, and seizing new opportunities.</p>
+<p>Performs the duties described in her job description.</p>
+<p>Expands the boundaries of her job description by doing things that aren’t asked of her but that need to be done.</p>
+<p>Thinks day-to-day. Thinks long-term.</p>
+<p>Waits for assignments. Seeks opportunities, gathers data, presents proposals, and makes it happen.</p>
+<p>The problem for many women is that they are so overwhelmed with what they have to do, they can’t carve out time for thinking more broadly and strategically. In the next mistake I address what you need to relinquish so that you can become the partner your boss wants and your company needs, but for now consider the following coaching tips to help you start that shift.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Ask the boss for assignments that will make his or her workload easier and at the same time provide you with opportunities to expand your skill set. Be up front about it when asking—it’s not considered toadying if there’s a quid pro quo.</p>
+<p>•  Consider how each of your primary duties interacts with the other functions in your department or throughout the company. Picture yourself as part of a complex network of functions, each interdependent on the other.</p>
+<p>Assume responsibility not only for your own success, but for the success of the company as a whole.</p>
+<p>•  Read trade magazines and professional journals that give you insight into trends in your field and make proposals for how to implement selected best practices. While you’re at it, share articles or books about best practices and new trends with both the boss and your coworkers.</p>
+<p>•  Continually ask yourself, What are we not doing currently that if we started doing would fundamentally change how we did business? Then find ways to introduce changes that will enhance your company’s bottom line.</p>
+<h2 class="mistake-heading">Mistake 44: Believing in the Myth of Work-Life Balance</h2>
+<p class="first-p">If climbing the corporate ladder is important to you, there is no such thing as work-life balance. It’s not possible for men, and, given their additional family responsibilities, it’s even less possible for women. We actually don’t even hear the term balance referred to any longer. The new language around it is work-life integration, because the focus is on how to integrate the two aspects of your life as a working woman. Anne-Marie Slaughter, writing for Atlantic magazine, caused quite a stir with her article “Why Women Still Can’t Have It All.” In the article, she made the case for what I’ve been saying for years—yes, women can have it all, but they can’t have it all at the same time.</p>
+<p>As women, we’re put in the untenable situation of having to make difficult choices involving our careers and our families. As one woman put it, “When I’m at work I feel as if I should be at home with my family, and when I’m home with my family I feel as if I should be working.” You would think with women making up about half the workforce and data reflecting the myriad benefits of having women in leadership roles, by now American corporations would have figured out a way to enable women to have more balance in their lives. Sadly, that’s not the case. Yet there are some things we do to ourselves that exacerbate an already difficult situation. Ask yourself how many of the following behaviors at home and at work impede your ability to have more balance in your life:</p>
+<p>Strive for perfection Rarely ask for help Have unreasonable expectations for how much you can accomplish in a day Feel guilty about never quite being who everyone else wants/needs you to be Don’t negotiate Believe you have to work twice as hard to be considered half as good Allow others to dictate how your time will be spent Engage in excessive multitasking Even if you own up to only two or three of these behaviors, that’s enough to suggest that you’re literally and figuratively working overtime.</p>
+<p>It’s time for you to get more realistic about how to craft a life that’s not only productive but meaningful, fulfilling, and rewarding.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read Anne-Marie Slaughter’s article “Why Women Still Can’t Have It All” in the July/August 2012 edition of the Atlantic magazine. Not only is it a classic piece, it will help you to understand why you’ve been feeling (and rightly so) as if you’re going out of your mind trying to keep all the balls in the air at the same time.</p>
+<p>•  Send guilt on a trip. It serves absolutely no purpose in your life. When you start feeling guilty, ask yourself what you can realistically change to make the situation better and act on it. If the answer is that nothing can be done differently, then move on.</p>
+<p>•  Focus on quality, not quantity. Staying at work additional hours doesn’t make you more effective at your job or perceived as more valuable to the company (if overtime isn’t a company expectation). In fact, it could make you seem overwhelmed and inefficient. Similarly, the amount of time you spend with your family isn’t as important as the quality of that time.</p>
+<p>You can be at home physically and absent mentally. Strive to be fully present wherever you are and compartmentalize the various aspects of your life. Personally, I have a visualization exercise that I do when I’m feeling torn between two places. I picture myself putting my concerns or worries in a box and then placing that box on a high shelf in my closet. I tell myself that I can retrieve the box at a later time and deal with the issues then, but for now I must be fully present in the moment.</p>
+<p>•  Resist multitasking. As mentioned in Mistake 21, all research points to the fact that over time, multitasking makes us less effective and actually has long-term deleterious effects on the brain.</p>
+<h2 class="mistake-heading">Mistake 45: Making Miracles</h2>
+<p class="first-p">Think logically about this. When you look around at the people who get promoted and recognized, are they the people who make miracles? Women take pride in the fact that they can do more with less, meet or beat impossible deadlines, and get juice out of a turnip. They actually believe others will recognize and appreciate their efforts. What they don’t realize is that every time they make a miracle, they’ve set the bar higher in terms of what people expect from them. Not only that, but while they’re busy jumping through hoops, their male colleagues are doing things that give them more visibility and, ultimately, more rewards.</p>
+<p>Take Anita, for example. She transferred from the advertising business into a Big Five consulting firm. Without a doubt she was an expert in her field—everyone said so. And as her boss said: “She inherited a mess.” By coming in early, staying late, and working weekends, she started to get a handle on the problem and made inroads into correcting it. No matter what was asked of her, Anita delivered.</p>
+<p>Whereas the first year she could do no wrong, the next year she could do no right. People came to expect her to achieve the same results—and more —every day. To do this, Anita had to continue spending ridiculous amounts of time at the office. She had set the standard so high the first year that she couldn’t possibly surpass it the second year—or even keep up the pace— although that’s what everyone expected. This is not to say she shouldn’t have given it her all the first year, or that she should in any way sacrifice excellence. It simply means that you must be realistic about establishing work habits and not thinking you have to be superwoman to be effective.</p>
+<p>During my keynote addresses, if there are men in the room, I will randomly choose one and ask, “When your boss asks you to make a miracle, what do you do?” Inevitably I receive one of three answers: “I laugh”; “I negotiate”; “I delegate it to a woman.” Women, on the other hand, almost always answer, “I do it.” Remember, miracle workers get canonized; they don’t get recognized.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Manage expectations. Always be willing to go the extra mile, but provide choices that focus on what’s reasonable and realistic. For example, if you’re asked to put together the company holiday party on a budget of $500 for 250 people, you can manage expectations by saying something like “I’m happy to work within that budget. Given that it amounts to $2 per person, I can make the party alcohol-free and ask everyone to bring a dish; or, if you’d like to increase the budget to $1,000, I can bring in deli trays and we can have soft drinks. What would you prefer?” This puts the onus of responsibility on the person making the request, rather than making you the scapegoat for a lousy event or making you feel as if you have to make a miracle—which even at the holidays is an unreasonable expectation.</p>
+<p>•  Set realistic daily or weekly goals. Women think there are thirty-four hours in every day. Remember Parkinson’s Law: “Work expands to fill the time available.” If you come to work in the morning with the notion that you can work until 9 p.m. if you have to, then you will. If you come in with the idea you’re going to leave at 6 p.m., you’ll probably be out not long after.</p>
+<p>•  If you’re understaffed, ask for help or negotiate reasonable deadlines.</p>
+<p>You can always say, “I’d love to get this to you by five o’clock as requested, but we don’t have the staff to achieve that kind of turnaround.</p>
+<p>Tomorrow at five is more realistic.” From there you may have to negotiate, but you’re less likely to work until midnight.</p>
+<h2 class="mistake-heading">Mistake 46: Taking Full Responsibility</h2>
+<p class="first-p">This is a variation on the miracle theme. Just because you’re assigned a project doesn’t mean you’re the only one who can do it or should do it. It only means you’re the one responsible for making it happen. You get no brownie points for doing a project alone. You get brownie points for getting it done. In fact, you may be looked upon more favorably if you’re able to delegate parts of the project or influence others to help you. It shows that you know how to manage a project. Haven’t you ever noticed that when a man is given a project, the first thing he does is begin delegating?</p>
+<p>I once coached a woman who’d been given responsibility for developing a plan for corporate philanthropy. The company had never before funded grants to the nonprofit community. The thought of doing this was daunting to her. She had no idea where to start. As we discussed it, she began to realize she didn’t have to do it all today—nor did she have to do it all herself. Engaging various stakeholders in the company and in the community would actually be better because she would get their buy-in from the start and could take advantage of their ideas, energy, and resources. She left the meeting feeling as if a burden had been lifted off her shoulders.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  When assigned a project or task, avoid the tendency to start doing.</p>
+<p>Take time to think it through, plan it, identify resources, and so forth. Break it down into small parts with benchmarks that enable you to measure and report progress on an ongoing basis, rather than when the project is completed. It also makes everything on your plate more easily digested.</p>
+<p>•  Continually build relationships throughout your company and your professional community. When you need a relationship, it’s too late to build it. I’ll speak more to this a little later in this section.</p>
+<p>•  Don’t reinvent the wheel. What I’ve come to realize is that there’s not too much new under the sun. If I have to do something, it means other people must have done it before. Find these people and ask them to share their expertise.</p>
+<p>•  Learn to delegate. Even if you don’t have staff reporting directly to you, call on the relationships you’ve built to help with providing assistance.</p>
+<h2 class="mistake-heading">Mistake 47: Obediently Following Instructions</h2>
+<p class="first-p">This isn’t true of all women, but some of us, when given an assignment, become like dogs with a bone. We’re so anxious to get the job done quickly or get the pat on the head we crave, we can’t see what’s on the periphery that would help us work smarter. We tend to look at the details, not the big picture. People who get ahead know how to balance the tactical with the strategic.</p>
+<p>There are two women in my office who are really good at this. They were hired to manage the many new projects and clients that come through the door. Because I tend to see the big picture but not the details, I had in the past always assumed I needed to surround myself with detail-oriented staff and hired accordingly. Kim and Jessica have shown me the error of my ways and have spoiled me for all time.</p>
+<p>When given an assignment, rather than jumping in to immediately start it, both women begin by first thinking about it, then asking lots of good questions. This saves an incredible amount of time—not to mention money and frustration on their part—because we no longer get halfway down the road only to realize my original idea for the project was less than well thought through. They add value to the company by not obediently following my instructions but rather by thinking and planning—which is what you want to be known for.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Spend time brainstorming with colleagues before beginning complex or large assignments. Choose people who don’t necessarily think the way you do to ensure you’re getting a 360-degree view of the project landscape.</p>
+<p>•  Rather than responding to the details of an assignment, before beginning consider how it could be done faster, cheaper, or more effectively. Then go back to the person who gave you the assignment and discuss changes that you propose for making it more efficient while at the same time providing better outcomes.</p>
+<p>•  Take a stress management class to overcome the need to treat every assignment with the utmost urgency. Here you will learn techniques to manage anxiety that may accompany high-stakes projects.</p>
+<h2 class="mistake-heading">Mistake 48: Viewing Men in Authority as Father Figures</h2>
+<p class="first-p">Carolyn was an upwardly mobile career woman who was smart and assertive—that is, with everyone except those men who were senior to her.</p>
+<p>When they asked her a question, she became tongue-tied and childlike. She came to coaching because she knew she wasn’t projecting the image she wanted to with these men. She acted like a little girl, and, in turn, she was treated like one. Early on I realized that giving her tips for being more assertive or speaking articulately wouldn’t work. She already knew how to do that. The problem was, she couldn’t do it with certain people.</p>
+<p>During one of our early meetings I asked her to tell me about her father.</p>
+<p>As it turns out, he was a former colonel in the army and ran his family as he might a platoon. She described him as authoritative, critical, and impossible to please. When I inquired into how she survived childhood, she said she’d learned to be a good girl, obey all the rules, study hard, and not do anything that might displease him. When she entered the workforce, she responded to men senior to her as if they were her father and she, the dutiful daughter.</p>
+<p>Conversely, Suzanne’s father was nurturing, loving, and compassionate.</p>
+<p>He encouraged her to pursue her dreams and emotionally supported her in the process. She came to coaching because she couldn’t understand why she never pleased the boss. Surely she must be doing something wrong, she thought. I knew her boss and, although I didn’t tell Suzanne this, he was widely known as a critical, egotistical know-it-all. There wasn’t anything she—or anyone else—could do that would please him. What Suzanne didn’t understand was that not all men are like her father, and she couldn’t expect them to treat her as he did.</p>
+<p>What Suzanne and Carolyn had in common was inappropriately viewing the boss as a father figure. Expecting the best from him, or expecting the worst from him, doesn’t allow you to build an independent, objective relationship with your boss or other senior executive.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  If you find yourself responding to the boss or other male authority figures in a way that is unlike you in other situations, ask yourself these three questions:</p>
+<p>1. Whom does he remind me of?</p>
+<p>2. How do I act when I’m around him?</p>
+<p>3. Why do I give up so much power to him?</p>
+<p>•  The answers will help you see why and how you see the boss as your father.</p>
+<p>Use self-talk to differentiate male authority figures from your father. When you’re in a meeting with the boss, tell yourself he’s not your father and you are his equal. Do it as often as needed to believe it and act accordingly.</p>
+<p>Lower your antenna for feelings and focus on the message a male authority figure gives you, not the manner in which it is delivered. This will enable you to hear it objectively and respond appropriately.</p>
+<h2 class="mistake-heading">Mistake 49: Limiting Your Possibilities</h2>
+<p class="first-p">In her classic book Women’s Reality, Anne Wilson Schaef observes that in our culture, those with less power live their lives in a zone circumscribed by people with more power. White men, being on top of the hierarchy, decide what’s appropriate behavior for everyone else, including women. In many ways, Nice Girls Don’t Get the Corner Office is about how women live according to the rules established by men. Men define the rules for the playing field, heavily influence behaviors that are acceptable for women and people of color inside and outside the workplace (it certainly isn’t the other way around); and we live in a society where laws are passed by legislators and Supreme Court justices who are predominantly men.</p>
+<p>Schaef points out that without even realizing it, living our lives this way narrowly circumscribes the choices we make. Like air pollution, if you live in it and breathe it long enough, you come to believe that’s just how the air is supposed to be. It’s not until you see the beautiful blue skies of some unspoiled territory that you realize things can be different. For women, the air is polluted all the time, so we don’t often have the opportunity to see how things can be different. We come to believe that our possibilities are limited, when in fact they’re limited only because we allow them to be.</p>
+<p>Not too long ago a woman was referred to me because she wanted to explore a career opportunity for which she was qualified but uncertain about tossing her hat in the ring for. For many years she had worked at a nonprofit organization as the second in command. She had seen directors (all male) come and go and never really thought of herself as a contender for the top job. The board of directors was made up exclusively of conservative men, and they had never considered her for the job when the top position became available. This made her believe she would never be considered a viable candidate.</p>
+<p>After our first meeting, it was clear to both of us that she had the talent and the experience to do the job; she just didn’t have the confidence. She’d grown up in a household where an older brother was the anointed superstar of the family, and she was given the message that she was good, but not nearly as talented as he was. It was pretty clear why, up until now, she was satisfied in positions where she played second fiddle.</p>
+<p>At our second meeting I wanted to know why now, after all these years, she wanted the top spot. She said she’d been looking around at women colleagues who had begun their careers in pretty much the same position she had—and they were all now executive directors and presidents of their nonprofit institutions. Part of the shift in thinking was out of embarrassment, and part was because she was bored and ready for a new challenge.</p>
+<p>By our third meeting the woman had put together a plan for how she was going to express her interest in the job and show why she was the bestqualified candidate. Within two months (this was a very slow-moving board!) she was the lead contender for the job, and within three months she was sitting in the director’s corner office.</p>
+<p>Women are given so many subtle and not-so-subtle messages about “where we belong” that we all too often remain inside an artificially narrowed box. One of the most powerful women in entertainment history is Sherry Lansing, the former CEO of Paramount Pictures. Recognizing that the chance to run her own studio would never be handed to her, Lansing started her own production company. When her company produced such blockbuster films as Fatal Attraction and The Accused, the studio heads took note. Within a short period of time, she was invited back to play with the big boys and given the top spot at Paramount. Having had the opportunity to speak with her, I can tell you she did it all without lowering herself to some of the typical entertainment dirty tricks but rather by exhibiting a huge EQ and LQ. The lesson here is: If you live your life within the boundaries circumscribed by others, you’ll never know the full scope of your potential—nor will anyone else.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Consciously expand your world of possibilities by enumerating your choices at every fork in the road. If you can’t see them, brainstorm with a friend.</p>
+<p>•  Listen for limiting self-talk such as:</p>
+<p>I could never do what Kathy did. I’m not that brave.</p>
+<p>They’ll never approve of this idea no matter how many facts I present.</p>
+<p>I may as well not even apply for that job. I’m not the best qualified.</p>
+<p>I’m not smart enough to get a PhD.</p>
+<p>I’ll never have enough money to retire early.</p>
+<p>•  Avoid the tendency to disregard unconventional choices. Before making a decision about a direction, sleep on all your choices. One that you may initially discount could be the right one for you.</p>
+<p>•  Read biographies of successful women and learn how they broadened their possibilities.</p>
+<p>•  Ignore naysayers. People told Mary Kay Ash she couldn’t possibly start a successful cosmetics company—and look what she did! One of her favorite sayings that you would do well to remember was “Aerodynamically the bumblebee shouldn’t be able to fly, but the bumblebee doesn’t know that so it goes on flying anyway.”</p>
+<h2 class="mistake-heading">Mistake 50: Ignoring the Quid Pro Quo</h2>
+<p class="first-p">People don’t like to talk about it, but inherent to every relationship there’s a quid pro quo—something that’s exchanged in return for something else.</p>
+<p>The quid pro quo can be obvious, such as I give you a salary and in return I expect you to do a good job, or more subtly, I give you a recommendation and in turn expect you’ll help me get my expense check processed faster.</p>
+<p>It’s an unspoken system of bartering that goes on in relationships. Women aren’t very good at capitalizing on the quid pro quo. Instead, they give away favors and expect little or nothing in return.</p>
+<p>An important part of building relationships at work is identifying the quid pro quo. What do you have that others want or need, and what do others have that you want or need? Every time you give people something they need, a (figurative) chip is deposited into your account. The trick is to always have more chips in your account than you need. The only way you can do this is by interacting with others with generosity of spirit.</p>
+<p>A former client of mine called not too long ago to let me know that she was now at a new company. She said it would mean a lot to her if I would come and speak with the company’s women’s group. When I asked what her budget was, she said there was none. She was hoping I would do it as a favor to her. Given that this is how I earn my living, speaking to groups, it was a big favor to ask, but I did it at no charge. The woman is wellconnected, and I thought one day I might need her help with something.</p>
+<p>About eighteen months later, I needed a location to hold a nonprofit event and I knew the woman’s company had several spaces large enough.</p>
+<p>So I called her and asked if she might be able to help me out. I never mentioned the favor I did for her, although I had no doubt she remembered it. After some hemming and hawing, she said she didn’t think she could arrange it and I politely told her not to worry about it. When I finally found a location for the event, I sent her an invitation, fully expecting she would reciprocate the favor I did for her by buying a ticket for the fund-raiser (even if she couldn’t attend). But this didn’t happen either. So two years later, when she made a career move to another company and once again called on me to do her a favor, I chose not to. The quid pro quo had been broken. With a limited amount of time, I choose to spend mine helping either people who can’t help themselves or those who support me and my goals.</p>
+<p>It really isn’t as manipulative or mercenary as it sounds. We do it all day long without realizing it. Say, for example, that I finish up a report for you because you have to leave early for a doctor’s appointment. I collect a chip.</p>
+<p>Several weeks later I need some information that I know you’ve collected through your research. I cash that chip in when you give me the information. Sometimes the quid pro quo is verbalized (“Remember when I loaned you my laptop last month? Well, I’ve got a favor to ask…”), but more often it’s not.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  When you go out of your way for people, be sure to let them know. A subtle way to do this is by saying something like “Can I finish this report before I leave? Well, I was planning on meeting a friend after work, but why don’t I call him and let him know I’ll be late.” You’ve just collected a chip.</p>
+<p>•  Don’t make things look so easy. Try saying something similar to “I’m happy to report that I convinced the IT department to repair your laptop ahead of several other requests. I knew you would need it before you left on your trip.” There’s another chip in your account.</p>
+<p>•  Don’t underestimate the barter value of things such as verbally supporting someone in a meeting, public praise, a listening ear, or grapevine information. They’re all valuable workplace commodities.</p>
+<p>•  Cash in your chips sparingly, but don’t be afraid to use them. If you’re applying for a job and someone you’ve collected many chips from has information about the hiring source, ask for it. When you need someone to help out in a pinch, ask someone you’ve extended the same courtesy to in the past. Keep in mind that the exchange of chips isn’t always one-to-one, it isn’t always immediately following the point of collection, and it doesn’t have to be made obvious.</p>
+<h2 class="mistake-heading">Mistake 51: Skipping Meetings</h2>
+<p class="first-p">Lose the notion that meetings are supposed to be valuable, interesting, or worth your time. That’s really naive. It’s the unusual meeting leader who knows how to achieve all three of those achievable, but rarely recognized, goals. Also lose the inclination to stay at your desk and work because you believe that’s really important. Wrong again. I realize that most meetings are an incredible waste of time if you think the content is what they’re all about. It’s not.</p>
+<p>They’re called meetings, not workings, for a reason. Meetings provide the ideal opportunity to see and be seen, meet and greet, or play show-andtell. It’s part of the branding and marketing you’ll read about in chapter 5— something most women need to do much more of.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Don’t skip meetings. (How’s that for direct and to the point?) •  Use meetings as an opportunity to showcase a particular skill or piece of knowledge (provided it’s not note taking or coffee making). If you’re good at facilitating, then offer to lead the meeting (it’s much better than sitting there bored). Or if you want to build a relationship, support what someone else says (but only if you really agree with it).</p>
+<p>•  Ask to be invited to meetings where you’ll have the chance to meet senior management or make a presentation about something for which you need support.</p>
+<p>•  Choose a role to play in meetings. The book Mining Group Gold, by Thomas Kayser, provides suggestions for what you can do to be perceived as an invaluable member of your team. From helping to clarify what others have said to asking the questions no one else wants to ask, there are numerous roles you can play that will keep you engaged and get you noticed.</p>
+<h2 class="mistake-heading">Mistake 52: Putting Work Ahead of Your Personal Life</h2>
+<p class="first-p">Don’t make work your life. The CEO of one Fortune 100 company (a man, of course) told me, “If my staff can’t get the job done and have a life outside of work, they’re doing something wrong.” When all is said and done, do you really want written on your tombstone: “She always put the needs of the company ahead of her own”? You owe the company an honest day’s work for an honest day’s pay. You owe the company a reasonable amount of overtime (with or without pay, but always without complaint).</p>
+<p>You don’t owe the company your soul.</p>
+<p>My experience with women who give up what’s important to them to meet the needs of the job is that either they don’t have anything to go home to or they don’t want to deal with what they do have to go home to. Like any other “ism,” workaholism is usually in the service of avoidance. Having activities and people outside work that are important to you helps you remain positive and productive. It’s a fallacy that you have to give up your life to have a successful career. All work and no play makes Jill a very dull girl.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Think twice before canceling plans because you’re asked to or because you’re swamped. Weigh the rewards against the risks involved with doing so. There are legitimately times when you have to cancel, but if these are the rule instead of the exception, something’s wrong with the picture.</p>
+<p>•  Never cancel plans with your children because of a workplace request unless your job is on the line. Even then think twice. You obviously can’t risk losing a job you need for financial reasons, but you might want to ask yourself if you wouldn’t be better off at a company that embraces family values.</p>
+<p>•  Develop outside hobbies and interests. If you don’t have one, create a reason for leaving work.</p>
+<p>•  What do you want written on your tombstone? Now go do it.</p>
+<h2 class="mistake-heading">Mistake 53: Letting People Waste Your Time</h2>
+<p class="first-p">I just know we must have “Go ahead—waste my day” written on our foreheads. Why else would people think they could spend so much time talking to us about nothing? I cannot understand why anyone—man, woman, or child—would come into my office and say, “Would you mind if I ask you a question? Bob is busy at the moment.” Like I’m not? Your time is one of the most precious commodities you have. Once it’s gone, you’ll never retrieve it.</p>
+<p>So we’re supposed to be nurturing and kind and blah, blah, blah, blah, blah. Well, I’m here to tell you, being nurturing and kind is not mutually exclusive of being protective of your time. There’s a time and a place for everything, and when you’ve got a tight deadline, a five-thirty hairdresser appointment, and your in-laws are coming for dinner—it’s definitely not the time.</p>
+<p>Christine Reiter, president of the Pasadena-based consulting firm Time Strategies, works with clients to maximize the use of their time. When I asked her how women differ from men in terms of time wasters, she told me, “The urge to please everyone and not be able to say no is the biggest time waster for women. We don’t like conflict and confrontation. As a result, we have difficulty setting boundaries and making our positions clear.”</p>
+<p>Don’t leave this page thinking my suggestion is that you never make time for others. Doing that would only irreparably damage relationships and prevent you from collecting chips that you can later barter. But do think about how you allow others to take advantage of your time, especially when you just don’t have it to give.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Differentiate the times when people need to talk from those when they want to talk.</p>
+<p>•  Repeat after me: “You know, I would love to talk more, but I’m on a tight schedule today. How about if we continue this conversation tomorrow?”</p>
+<p>•  Use tricks of time management, like keeping a pile of papers on the extra chairs in your office; not putting your pencil down when someone walks in; answering your phone, voice mail, and e-mail only during specified periods of the day; and putting a “Please Do Not Disturb” sign on your door when you’ve got a tight deadline.</p>
+<p>•  A few more tips from Reiter:</p>
+<p>1. Clearly set boundaries about how much time you have—or don’t have—to share, and know the world will not fall apart because of it.</p>
+<p>2. When people ignore the boundary (as they inevitably do with women), enforce it by saying something like “As I said before, I’d love to spend more time with you, but today’s schedule won’t allow me to.”</p>
+<p>3. If others keep you waiting more than twenty or thirty minutes for a scheduled appointment, leave. This includes business lunches, doctor’s appointments, and casual encounters with friends.</p>
+<h2 class="mistake-heading">Mistake 54: Reluctance to Negotiate</h2>
+<p class="first-p">Authors Carol Frohlinger and Deborah Kolb have worked with thousands of women to help them be more confident and competent at negotiation.</p>
+<p>What may surprise you (because there’s so much misinformation out there) is that women achieve negotiation outcomes as good as or better than men do—unless they are negotiating for themselves. It doesn’t matter whether they are negotiating for a raise, a promotion, or credit for the work they’ve done, the fact that they themselves are the beneficiaries is the root of the trouble.</p>
+<p>Carol and I have had several opportunities to discuss why this is the case and what women can and should do about it. Let’s start with the fact that beginning with our time on the playground as children, we are socialized to behave in accordance with stereotypical gendered roles. And, as you know by now, nice girls let others take the lead, don’t talk about money, and don’t toot their own horns. Carrying those messages into adulthood, nice girls are reluctant to advocate on their own behalf—it just doesn’t seem like the right thing to do. Instead, they work hard, hoping that someone will notice and give them the rewards they deserve. Clearly, this is a fallacy. “Failing to proactively negotiate at work costs nice girls not only money but affects career opportunities and job success as well,” says Frohlinger. “Women have to raise their hands to let people know they’re interested when a bigger job becomes available. They have to request the resources required to get the job done. They have to reach agreement on project parameters and deadlines. And, yes, they certainly have to advocate when it comes to compensation.”</p>
+<p>While writing Nice Girls Don’t Get Rich, I had the pleasure of interviewing Dr. Lisa Barron, an assistant professor in organizational behavior at the Graduate School of Management at the University of California, Irvine. Linda published an article, “Ask and You Shall Receive?</p>
+<p>Gender Differences in Negotiators’ Beliefs About Requests for a Higher Salary,” based on a study she conducted with male and female MBA students. The scenario involved all students’ being offered a job with a salary of $61,000 and a bonus of $5,000. They were also told that other students from their program were offered similar jobs at another company with a salary of $67,000 and a bonus of $10,000.</p>
+<p>The students in the study were given information that would allow them to negotiate not only their salaries, but also tuition reimbursement and vacation. In the end, both men and women negotiated for more money, but men wound up receiving significantly more—because they asked for more.</p>
+<p>Lisa found three primary themes that emerged with the amounts men and women asked for:</p>
+<p>1. Entitlement. The men felt they were entitled to even more than what their colleagues had been offered at the other company, whereas the women felt it would be “fair” to get equal to what their colleagues received. In other words, men had more of a sense of entitlement and women more of a desire to ask for what they thought was “fair.”</p>
+<p>2. Worth. The men equated their salaries more with what they thought they were worth. If a colleague was receiving $67,000 annually, they believed they should get more because they were worth more. Women were uncomfortable with the notion of worth, didn’t think of themselves as worth more, or couldn’t measure their worth.</p>
+<p>3. Proving oneself. The women in the study were hesitant to ask for more money before they could prove they deserved it, whereas the men used past experiences as a rationale for getting more money.</p>
+<p>4. Consequences. Both men and women considered the consequences of asking for more money but men weren’t concerned that damage done in the present could hurt them down the road. The women were more worried that the recruiter would think poorly of them or think they were greedy or not nice.</p>
+<p>The tricky part is that it is not enough for women to just ask, they must recognize that stereotyped expectations about whether and how they should negotiate are alive and well. To ignore them is at their peril; women are expected to be too “nice” to negotiate. The best way for women to bargain without blowing themselves up is to make every effort to appear selfless, linking what they want to what’s good for their companies.</p>
+<p>Then there’s the issue that many women equate negotiation with confrontation. It doesn’t have to be that way. In fact, the “win-win”</p>
+<p>negotiation described by Roger Fisher and William Ury in their classic book, Getting to Yes: Negotiating Agreement Without Giving In, is not only a more comfortable approach for most women, it is the only approach that makes sense when the negotiations are taking place with colleagues and clients. Why? Because everything we do before, during, and after the negotiations should enhance the relationship. Furthermore, because this brand of negotiation demands an understanding of the other party’s needs, women, generally considered skilled listeners, are well poised to be excellent at it.</p>
+<p>And there’s still more good news. Negotiating is a learnable skill; you can improve the outcomes you get (and reduce the stress in getting them) if you are willing to invest in yourself. After every important negotiation, think about the things that worked (and why they worked), and also consider what you will do next time to be even more successful.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">Carol Frohlinger provides these tips for how you can better negotiate more effectively for what you want:</p>
+<p>•  Deliver excellence always. You have leverage when negotiating if your work consistently exceeds expectations. Because you clearly provide value to your company, the powers that be will want to do everything they can to keep you satisfied. After all, it’s disruptive when productive people leave the company.</p>
+<p>•  Do your homework. Benchmark as much information as you can about what others in your industry (and even better, in your company or department) have received. Use the Internet as one way to gather data, but don’t rely on online sleuthing exclusively; draw on your networks as well to find what you need to know. Having this data will enable you to establish reasonable objectives for your negotiation.</p>
+<p>•  Be clear about what you want. If you don’t know what you want, you can’t get what you want. At the same time, think creatively about ways your needs can be met. For example, in order to secure more resources, you may be willing to accept a larger project scope or a shorter deadline.</p>
+<p>•  Have a “Plan B.” Consider the alternatives you have if you are unable to reach agreement with the other person or persons. How good or bad are the alternatives? This is the negotiation concept described in Getting to Yes as BATNA (Best Alternative to a Negotiated Agreement). The better your alternatives, the more leverage you have in the negotiation. Also consider the other party’s BATNA; they may have as much to lose as you do if you are unable to reach an agreement.</p>
+<p>•  Anticipate pushback. Anticipate the pushback you are likely to get and plan how you’ll respond. But keep in mind, it’s one thing to know what you are going to say, but it’s another to actually get the words out of your mouth effectively. That’s why, if it’s an important negotiation, you should go one step further and enlist a friend to practice with you. Provide your friend with enough information about the situation and the person with whom you are negotiating so that she or he can play the role convincingly.</p>
+<h2 class="mistake-heading">Mistake 55: Prematurely Abandoning Your Career Goals</h2>
+<p class="first-p">Success breeds success. Eleanor Roosevelt said, “You gain courage and confidence from doing the things you think you cannot do.” The problem encountered by many women is that they often allow others to sidetrack them from their early dreams and career goals. Mary Catherine Bateson, daughter of anthropologists Margaret Mead and Gregory Bateson, wrote a wonderfully insightful book titled Composing a Life. Her observation is that women’s lives, unlike men’s, are not linear but rather constantly shifting.</p>
+<p>“Our lives not only take new directions,” she writes, “they are subject to repeated redirection, partly because of the extension of our years of health and productivity.” It’s this redirection that gets in our way of making plans and pursuing them through to completion. As a result, when we’re interested in returning to them, we may find the workforce is no longer interested in us.</p>
+<p>When I worked at ARCO, I saw numerous well-educated, bright women who were considered only for entry-level positions because they had abandoned their early career goals. They erroneously thought they would be able to pick up their careers where they left off. I once interviewed a woman for a position within corporate communications who had many starts and stops in her career. She had earned a college degree in English, intending to go into the newspaper business as a writer or editor. For the past twelve years she’d held various administrative positions for short periods of time (eight to eighteen months) as she moved around the country with her husband’s job changes. She was a lovely woman who was clearly bright but, when asked, admitted she was not up to speed with state-of-the-art office technology and equipment. Combined with a spotty work history, she wasn’t someone I could in good conscience further to the next stage of candidacy.</p>
+<p>If she had at least kept up-to-date with technology, I would have considered her along with other candidates. If she had achieved any of her personal goals—regardless of how minor they may have appeared—I would have assessed her as more likely to perseveringly pursue the goals of the communications department. Instead, like many other women in her situation, her best chance of eventually getting the position she wanted would be to begin with an entry-level secretarial position and work her way up.</p>
+<p>Even if circumstances prevent you from achieving your goal of being editor in chief of a major metropolitan newspaper, remain involved with your interests and up-to-date with your field of interest. You may have what it takes to be successful, but if you lose yourself in someone else’s priorities or societal expectations, you will be judged not by your potential but rather by your history.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Rather than completely abandon your career goals when life throws you a curve, come up with a strategic life plan that allows you to keep abreast of developments in your field. Talk to friends and family and ask for their support in helping you to remain on your path.</p>
+<p>•  Consider the importance of a college degree not only to your success but to your self-confidence as well. Even if you don’t need it for work, do you want it for you? If so, start downloading the application.</p>
+<p>•  When others attempt to derail you from your path, look at it as normal —but don’t give in to it. When any “system” changes, whether it’s a political system, an ecological system, or a family system, the system tends to want to maintain its equilibrium by going back to the status quo. So guess what? People are used to the status quo being to put your needs on a back burner—and if they had their druthers, they’d keep it that way.</p>
+<p>•  If you decide to be a stay-at-home mom for a while, remain involved with your field through participation in professional associations or community college courses.</p>
+<p>•  Volunteer to do work in your field of interest that will allow you access to the technology and equipment you will need when you return to work.</p>
+<h2 class="mistake-heading">Mistake 56: Ignoring the Importance of Network Relationships</h2>
+<p class="first-p">Once upon a time, in a decade very far away, people would do their jobs, collect their paychecks, go home, and know that as long as they did their jobs well, they could sleep easily at night. They would be taken care of.</p>
+<p>Only in a fairy tale would this scenario be true today. There was a time when IBM was notorious for its full-employment policy. Even during difficult financial times, you wouldn’t be laid off. Your hours might be cut or you might be transferred to the boondocks, but IBM founder Tom Watson prided himself on the full-employment policy. Not anymore.</p>
+<p>Many women still believe in that fairy tale. They go to work, do a good job, try not to make any waves, and think this is enough to protect them from career derailment. As Judge Judy would say: “Wrong.” You are in the center of a complex network of people.</p>
+<p>Your job includes building a relationship with everyone on that wheel.</p>
+<p>You don’t have to do it on the golf course or over beers after work, but you do have to do it if you want to ensure long-term success.</p>
+<p>Rather than share with you a story about a woman whose career was negatively impacted by her failure to maintain network relationships, let me tell you one about a woman whose career was saved by those relationships.</p>
+<p>Alexis is an executive with responsibility for the North American sales group of an international toy company. After quite a few years of working for the company, her boss left and was replaced with someone from outside the firm. Alexis and the new boss didn’t see eye-to-eye on many issues, and dissatisfaction on both ends inevitably arose.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">NETWORK RELATIONSHIPS</h3>
+<p class="first-p">The new boss was ready to fire her and asked human resources to help him do so. He admitted she did a fine job, was a hard worker, and always met her sales goals, but they disagreed on some significant changes he wanted to make in the business. To bolster his case, he suggested they conduct a survey of people in her network, asking for feedback about her performance. He assumed that if he didn’t get along with her, then others must not as well.</p>
+<p>Well, was he surprised by the results. It turned out that Alexis was a superb networker. She built strong relationships not only with customers of the company, but also with vendors, coworkers, and people reporting to her.</p>
+<p>To a person they praised her for her work ethic, integrity, and attention to customer needs. From reading their comments, you would believe they’d named their first, second, and third children after her. It was pretty clear that if the new boss fired her, he would lose goodwill throughout the company’s community of employees and customers. Instead, as a result of her network relationships, he was forced to find a way to work more effectively with her.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">NETWORK RELATIONSHIPS</h3>
+<p class="first-p">Alexis’s story demonstrates the power of network relationships. Most of us aren’t in situations this dramatic, but we all do need to call on relationships every now and then to help us out professionally. And remember: When you need that relationship, it’s already too late to build it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Go back to the blank network diagram on page 162, and in the circle for each category write the names of actual people who impact your work and career.</p>
+<p>•  Develop a plan for how you’re going to build (or maintain) a relationship with each of them. Remember to take into consideration the quid pro quo inherent to each of these relationships: what you have to offer and what you need in exchange.</p>
+<p>•  Join and actively participate in a professional association.</p>
+<p>•  Tell yourself, Spending time building relationships is not a waste of time. And it’s not. The more relationships you have in place, the more access you have to information and resources.</p>
+<p>•  Create a database that includes the names of all the people you meet and the information they share with you.</p>
+<h2 class="mistake-heading">Mistake 57: Refusing Perks</h2>
+<p class="first-p">Toni was promoted to a senior management position in her firm. The company, like many others, had a policy about which levels of employees were entitled to which offices. You know the story—those on the bottom of the food chain get an inside cubicle, next up get a cubicle with a window, next up a double-sized cubicle, and so on up to a corner office, with a door, mahogany furniture, and a predetermined color of carpet. (When I worked in corporate America, I used to say, “I want to be promoted to a door.”) Toni was entitled to an office, with a window (and a door) and faux mahogany furniture. When she was informed it was time to move from her doublesized cubicle with a window, she refused. She didn’t see the need to go to the trouble and expense to move. Mistake!</p>
+<p>Nancy experienced a similar situation. Due to a promotion, she was entitled to a new office, furniture, PC, and so on. In her case, Nancy expected to move into her new space and was waiting for the green light to do so—but the green light never came. One day she went to her boss and asked what was up. He informed her that he’d recently hired someone for whom he would need the office she’d expected. You guessed it: The new hire was a man. Rather than make waves, Nancy stayed in her cubicle, grateful for even being promoted. Even bigger mistake!</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  You don’t take a perk because you want it or think you deserve it. You take it because it manages the impressions others have of you—and those you have of yourself.</p>
+<p>•  When a perk you’ve earned is—shall we say—“overlooked,” bring it to management’s attention. It could legitimately be an oversight. Then again, they could just be hoping you’ll act like most women and never bring it up.</p>
+<p>•  When you’re not given perks commensurate with your position, and you know it’s not an oversight, ask why not. At a minimum, make someone look you in the eye and tell you why you’re not getting what everyone else in your position gets.</p>
+<p>•  If you feel strongly about the slight and are willing to accept the consequences, bring the matter to senior management for a final decision.</p>
+<p>Without being whiny or pointing fingers, explain the situation, what you would like to have happen, and in what time frame. The worst you will hear is no, in which case you let it go unless it’s the hill you’re willing to die on.</p>
+<p>•  When you get a promotion, be sure to ask what it includes. Often information either doesn’t flow automatically or is delayed.</p>
+<h2 class="mistake-heading">Mistake 58: Making Up Negative Stories</h2>
+<p class="first-p">My mother was a master at making up negative stories when things went wrong. If someone was a bit cool to her, she would think out loud, “Maybe the gift I gave him wasn’t nice enough.” If I didn’t get a particular job, it was “Maybe you didn’t wear the right dress.” If my father didn’t get a promotion, he heard, “Maybe you insulted the boss.” As a result, whenever things didn’t go quite as I had planned, I assumed I’d done something wrong—and I know I’m not alone. Many women suffer from this same phenomenon, and for the same reason!</p>
+<p>At work, making up negative stories will serve to continually put you in a position of having to second-guess yourself or, worse yet, being hesitant to take risks for fear of something coming back to haunt you. It can also be immobilizing.</p>
+<p>Let me give you an example. A former client called to discuss a promotional opportunity being offered to her. She would be moving from an individual contributor to manager of her department. Since she had been with her firm for a relatively short period of time, it was quite a compliment to be offered this position. Within hours of being offered the job, however, she had made up so many negative stories about what could go wrong that she became hesitant to accept the assignment for fear of failing at it.</p>
+<p>It wasn’t that she was wrong in her diagnosis about the potential pitfalls; it was that she couldn’t overcome this negative thinking long enough to find the many ways there were to obviate them. Had she not been capable of handling the challenges inherent to the position, she never would have been offered it in the first place. She did wind up accepting the position, and (to no one’s surprise except perhaps her own) she’s doing beautifully.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  To begin, replace negative stories with more neutral ones. Consider alternative scenarios that could explain what has happened that have nothing to do with your doing something wrong.</p>
+<p>•  Focus on solutions to problems, not the problems themselves.</p>
+<p>Wallowing in a sea of negativity will cause you to miss the obvious solutions.</p>
+<h2 class="mistake-heading">Mistake 59: Striving for Perfection</h2>
+<p class="first-p">Having been made to believe we’re totally flawed, imperfect beings, women overcompensate by striving for perfection. Intellectually we know it’s impossible, but emotionally we go there every time we feel insecure or less than competent. What a waste of time and energy! We would be much better off using the time we spend perfecting already good work products or relationships on new and creative endeavors. Elsewhere in this book I talk about how we allow others to waste our time. Well, this is one way in which we waste our own time.</p>
+<p>Julia is the perfect example. Before she came for coaching, she would drive herself crazy checking and rechecking—then checking one more time —everything that left her office. Her compulsion around perfection caused her marriage to fail, created physical problems for her, and made the people who worked with her absolutely nuts. No one wanted to have her on their team because she was known for being so nitpicky. Her career was severely limited by her inability to let go of the small stuff. She unintentionally conveyed the message to others that nothing was good enough for her. She made them feel as if they weren’t good enough. Who wants to work with or for someone like that?</p>
+<p>This is an area where guys really get it. They know when good enough is good enough and move on to the next thing. Where do you think they find the time to network, go to lunch with colleagues, and attend professional association meetings? They do it by realizing it’s more efficient to go back and correct a mistake (if there is one) than to keep reviewing a project to possibly catch one.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Consciously reduce the amount of time you work on any given day or spend on any one piece of work. If you know you have only one hour to proof a report, then you’ll do it in an hour. If you leave the schedule openended, perfection-seeking behavior will result in your putting in more hours at work than necessary.</p>
+<p>•  Ask for feedback. Before putting in extra time on what might already be a completed product, ask a colleague what he or she thinks. It may be that it’s perfectly fine as is.</p>
+<p>•  If your behavior borders on obsessive or compulsive, consider seeking professional help for the purpose of assessing whether medication could be helpful in soothing the anxiety often associated with being perfectionistic.</p>
+<p>•  Strive for 80 percent perfection. The difference between 80 percent and 100 percent won’t be noticed by most people but will buy you more time to shift to other important tasks.</p>
+<p>•  Read The Gifts of Imperfection: Let Go of Who You Think You’re Supposed to Be and Embrace Who You Are or I Thought It Was Just Me (But It Isn’t): Making the Journey from “What Will People Think?” to “I Am Enough,” both by Brené Brown. You may have seen Brown on the TED talk that encourages us to embrace our vulnerability as a means of living life more fully. Both books carry this theme in an inspirational way.</p>
+<p>•  Ask yourself often, Is this a valuable use of my time? If the answer is yes, ask yourself, Why? If your answer is tied to your self-image and what people will think of you, you may be guilty of striving for perfection.</p>
+<p>•  Relinquish the need to be seen as perfect and settle for being viewed as human. After all, you are a human being, not a human doing.</p>
+<h2 class="mistake-heading">Mistake 60: Nixing the Idea of an Entrepreneurial Venture</h2>
+<p class="first-p">When I told my mother I was going to quit my job to start my own business, she replied, “It makes my stomach turn to think of you as unemployed.” Now mind you, I have two brothers, both of whom have their own businesses—but they’re not thought of as unemployed. Yet her comment illuminates why many women, dissatisfied with the opportunities presented in corporate America, are reluctant to venture out on their own. If we’re not thought of as capable enough to run our own businesses, or not encouraged to do so, we’re less likely to believe we can do so successfully.</p>
+<p>In my case, I had more courage than brains. I had no idea how difficult it would be, but my mantra was “Failure is not an option.” Almost thirty years later, I’m still self-employed and proud of it.</p>
+<p>Going back for a moment to one of the women leaders I most admire, Mary Kay Ash, you can see the entrepreneurial spirit at work. When she started her business, the naysayers said she could not possibly start a cosmetics company. No one dreamed she would successfully compete with more established competitors like Revlon, Estée Lauder, and CoverGirl.</p>
+<p>She was a single mom who knew little about cosmetics and even less about running a business. But she had a vision: to create work for women that would allow them to become financially independent and still allow them to lead lives where God could come first, family could come second, and work could come third.</p>
+<p>The vision paid off. She started the company in 1963 with her life savings of $5,000. By 2003, Mary Kay Cosmetics was one of the largest direct sellers of skin-care and color cosmetics in the world, employed more than one million independent beauty consultants worldwide, and realized annual revenues of nearly $1.8 billion. Each woman working for the company sees herself as an entrepreneur walking in the footsteps of Mary Kay. Interviewing several of them for my book See Jane Lead: 99 Ways for Women to Take Charge at Work was an inspirational experience. Not only did they believe their lives were changed by becoming independent beauty consultants, but they continue to live and espouse the values of the company founder.</p>
+<p>The fact is, women have been starting businesses at a higher rate than men for more than two decades. According to the National Federation of Independent Business, women will create over half of the 9.72 million jobs expected in small businesses by 2018. If you’re among the women disillusioned by corporate politics, the inability to live your life on your terms, and the lack of respect paid to women who opt for motherhood and a career, then you might consider how you can start a business that would allow you to be the boss in your very own private corner office.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  For inspiration, read a few biographies of women who started their own enterprises. Consider starting with On Her Own Ground: The Life and Times of Madam C. J. Walker, by A’Lelia Bundles. Madam C. J. Walker was the “first black female millionaire” after developing and marketing African American hair-care products. She also opened up some great career opportunities for African American women.</p>
+<p>•  Read Think Like an Entrepreneur: Transforming Your Career and Taking Charge of Your Life, by Deborah A Bailey. The tips she provides will help you to compete successfully anywhere.</p>
+<p>•  Conduct some informational interviews with local entrepreneurs. Ask them how they got started, what their biggest challenges were, and what recommendations they would give to you about starting a business. Most women are more than happy to help other women get started.</p>
+<p>•  Find and join (or start) a Ladies Who Launch chapter. This group of entrepreneurial women are all about encouraging and supporting femaleowned businesses.</p>
+    </div>
+  </div>
+</body>
+</html>

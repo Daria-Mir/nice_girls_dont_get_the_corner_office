@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 7: How You Look - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 7: How You Look</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 7 How You Look When I coach, I typically begin with behaviors that are easily identifiable— and changeable. This gives people a quick success, because others can readily observe the efforts they put into replacing self-defeating behaviors with more functional ones. This section examines the things you may unconsciously or habitually do that contribute to perceptions of being less capable and competent than you really are. Don’t be fooled by the apparent simplicity of some of these mistakes. Few women make only one of them, and combining several significantly contributes to the appearance of diminished competence.</p>
+<p>Let’s start by dispelling the biggest myth of career mobility: “The best and the brightest are rewarded with promotions and choice assignments.”</p>
+<p>Wrong. Those who possess a competitive degree of competence and look and sound the part of a professional are the ones who move fluidly through their careers. Competence is only table stakes. It’s what gets you in the door. You’re expected to be competent, but competence alone won’t move you forward.</p>
+<p>Many women, especially young women, bristle at the idea of being judged based on how they look. We may have an idealistic view of what should constitute success or simply reject Madison Avenue’s depiction of what a woman should look like. It certainly presents a challenge for all of us who are far from a size 2 and don’t have flawless complexions, blue eyes, and blond hair. On top of that, it’s so subjective. Beauty is, after all, in the eye of the beholder. Still, there are some things we can do to look the part of a professional without feeling as if we’re being inauthentic, and that’s what is focused on in this chapter. As my friend and communications coach Tom Henschel says, “If everyone else comes to work looking like Monday morning and you come in looking like Friday night, it’s not going to work for you in the long run.”</p>
+<p>As cited earlier, research shows that about 55 percent of your credibility comes from how you look. How you sound accounts for an additional 38 percent. Only 7 percent of your credibility is based on what you say. If you don’t look the part, you won’t be recognized as a competent professional— no matter how smart or educated you are. Fortunately, it’s also one of the easiest things you can address on your path toward forging the impression that you are a credible and competent professional.</p>
+<h2 class="mistake-heading">Mistake 99: Obvious Body Ink and Piercings</h2>
+<p class="first-p">A huge shout-out and thank-you to Christine Yelda and the women at Genentech in south San Francisco for introducing me to the term tramp stamp. For those of you who, like me before I was enlightened, have no idea what it means, it’s a derogatory term for a tattoo on a woman’s lower back that shows between her pants and top when she bends over or if she wears revealing clothing. The buzz on the Internet is not particularly flattering to the women who sport them. Urban Dictionary claims, “Fair or unfair, these tattoos have a socially constructed connotation associated with them. These women are labeled as tramps, whores, or other derogatory sexually promiscuous terms.”</p>
+<p>How about tattoos on other parts of your body? I’ll forgo the lecture about why in the world you’d want to have one. I know they’re trendy and one wild evening out with your friends can result in one, but I gotta say you can’t have them showing in most workplaces. Exceptions might be highly creative or artistic arenas.</p>
+<p>Despite the fact that one in five adults now have tattoos, a study conducted by career website Vault.com suggests that 85 percent of respondents think that a tattoo or body piercing negatively affects a candidate’s ability to get a job. Bryan Caplan, an economics professor at George Mason University, went so far as to suggest there’s an inverse correlation between tattoos and lifetime earnings.</p>
+<p>I had an interesting experience with a woman I hired a number of years ago. During the interview she wore long sleeves. Only after hiring her did I learn that those fabric sleeves covered up tattoo sleeves (her forearms were totally covered in ink). Had I seen those tattoos during the interview, I would have never hired her because I think they show poor judgment for people who want to be considered serious professionals. Similarly, I don’t like people who hide things during the interview—whether it’s a tattoo, being fired from a last job, or a drug problem. The fact that you’re hiding something speaks for itself. In this woman’s case, she turned out to be a disaster despite my best efforts to overlook the ink when I walked into the office. Her poor judgment was evident in her decision-making skills and the manner in which she interacted with clients and coworkers. She didn’t make it past the ninety-day probationary period.</p>
+<p>The real question is, do you want tattoos or piercings to be what people are talking about? Do you really want them to define your brand?</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Don’t get a tattoo or an unusual body piercing if you’ve had even one drink, toke, or snort. You’ll be likely to regret it. Similarly, don’t be goaded into getting one by your sorority sisters, girlfriends, or someone you’re dating who thinks they’re hot.</p>
+<p>•   If you just have to get a tattoo or piercing, put it in a place no one at work will ever see. One woman who worked for me knew how I felt about visible tattoos in a consulting office. It took her months to get up the nerve to show me where she put one—on the nape of her neck, covered up by her long hair worn down during working hours! As long as I didn’t see it… •   If you already have prominent tattoos or piercings, hide them during the workday. If it means you have to sweat all summer in long-sleeved blouses, so be it. It’s the price you pay for being part of this trend.</p>
+<h2 class="mistake-heading">Mistake 100: Smiling Inappropriately</h2>
+<p class="first-p">We reached the point in a Leadership Skills for Women workshop where we were discussing how to get people to take us more seriously. A petite Asian woman, an engineer from the Jet Propulsion Laboratory in Pasadena, California, raised her hand to question why her male colleagues ignored her input. When she finished, a ripple of laughter crossed the room. The reason was obvious to the rest of us: The entire time she spoke, she displayed a rather large (and inappropriate) smile.</p>
+<p>Girls are socialized to smile more than boys. Parents smile more at girl babies than at boy babies. When men don’t smile, they’re taken seriously.</p>
+<p>When women don’t smile, we’re often asked, “What’s wrong?” It’s no wonder we aren’t even aware when we smile at the wrong times.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Pay more attention to when you’re smiling. I constantly coach women to “watch the smile.”</p>
+<p>•   Consciously match your facial expression to your message. Aim for congruence between your body language and your message.</p>
+<p>•   Before delivering serious messages, rehearse in front of a mirror. This will give you a better idea of when you’re smiling inappropriately.</p>
+<p>•   Don’t quit smiling entirely—it contributes to your likability quotient, and likability is a critical factor in achieving success.</p>
+<p>•   Be discriminating about how and when you choose to smile. For example, a smile can be intentionally used to soften a less serious message or to convey empathy.</p>
+<h2 class="mistake-heading">Mistake 101: Taking Up Too Little Space</h2>
+<p class="first-p">The use of space is one way we make a statement about our confidence and sense of entitlement. The more space you take up, the more confident you appear. The next time you’re on an airplane, take a look at the differences between how men and women sit. Whereas men sit down and spread out using both armrests, women tend to keep their elbows tucked in close to their sides, trying not to take up too much space. Another place to observe this is on elevators. Most people, men and women alike, are conscious of making room for others as they enter. As the elevator gets crowded, however, it’s more likely you’ll see a woman cower in a corner for fear of taking up too much space.</p>
+<p>The same phenomenon often occurs when a woman steps in front of a room to make a presentation. She tends to stand in one place, moving only slightly within the space she occupies. When you combine taking up too little space with using too few gestures, the overwhelming impression conveyed is that of being demure, careful, unwilling to take risks, timid, or frightened, with little to contribute.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When giving a presentation, use the full amount of space available to you by slowly walking side to side, forward and back. Even if you’re on a large stage, you should come out from behind the podium to take up about 75 percent of the space available.</p>
+<p>•   Choose a seat at a meeting that will give you freedom to move around. Don’t sit where you’ll be forced to keep your elbows glued to your sides. Keeping your elbows on the table and leaning in slightly conveys a message of being more alert to what’s being said. The exception is if you have to pull a chair up to squeeze into the table, as I described earlier.</p>
+<p>•   When standing in front of a group, stand with your feet about as far apart as your shoulders are wide.</p>
+<p>•   When seated, use the coaching tips on gestures provided with the next mistake to appear more expansive and less constrained.</p>
+<p>•   Request a lavaliere or handheld microphone when one is needed. It will allow you to move about more freely than if you have to speak into a stationary microphone.</p>
+<h2 class="mistake-heading">Mistake 102: Using Gestures Inconsistent with Your Message</h2>
+<p class="first-p">The use of gestures is an outgrowth of not taking up enough space. Like all other parts of your self-presentation, gestures should be integrated with your energy. If you’re working to make your presence larger and to take up more space, working on your gesturing is an easy way to begin. The problem is, most women have never learned the art of gesturing. It’s little wonder why. We’ve been taught to sit demurely with our hands folded in our laps. When we have used gestures, we’ve been given the message that we’re too emotional. For fear of being called unladylike or emotional, we’ve let the pendulum swing the other way—no gestures.</p>
+<p>Comedian Joan Rivers is an example of someone who takes up lots of space with her gestures because she wants to convey the message of being larger than life. Her hair, makeup, and gestures all contribute to this impression. Unless you do stand-up comedy, I wouldn’t recommend that you emulate her.</p>
+<p>Hillary Rodham Clinton, on the other hand, uses the prototypical gestures of a politician. She appears tense and almost too conscious of the use of gestures and often reverts to being an “ax gesturer.” You know the move. It’s when points are emphasized using repetitive karate-chop-like gestures. Predictable, consistent gestures distract from the message.</p>
+<p>Gestures should complement, not detract from, your message. A woman who does this well is Christine Lagarde, head of the International Monetary Fund (IMF). Her communications, including her gestures, convey the message of authority while simultaneously maintaining her elegance and natural femininity. The next time you see her on television, turn off the sound and just watch her. You’ll see that she nonverbally communicates a sense of confidence without the brashness of Rivers or the rehearsed look of Clinton.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Allow your gestures to flow naturally from your spoken message and your energy.</p>
+<p>•   Be aware of when you wring your hands because you’re anxious— and stop.</p>
+<p>•   Match your gestures to the size of your audience. The larger the group, the larger the gesture.</p>
+<p>•   Emphasize your points by enumerating them with your fingers (one, two, three).</p>
+<p>•   Communication consultant Tom Henschel advises clients to use gestures that “break the silhouette.” That is, when you stand with your hands at your sides or in front of you, your silhouette shows no gestures.</p>
+<p>When you work on taking up more space, your gestures should move outside the line of that silhouette. You can do this whether you’re sitting at a conference table or standing in a doorway having a chat.</p>
+<p>•   Put energy into your gestures and enjoy taking up the space!</p>
+<h2 class="mistake-heading">Mistake 103: Being Over- or Underanimated</h2>
+<p class="first-p">A communication colleague—Allen Weiner, president of Communication Development Associates in Woodland Hills, California—uses the term carbonation to refer to a person’s degree of animation, which includes not only gestures, but also facial expressions, speed of talking, and other forms of body language. We’ve all listened to and watched people who are overcarbonated. They look and sound as if they’re a can of soda that was shaken before being opened. Not only is this distracting, but it makes the person appear less confident than he or she may actually be. My contention is that women, more than men, are guilty of overcarbonation because we feel responsible for making everyone happy. As a result, women go out of bounds by putting more verbal and nonverbal energy into everything we do.</p>
+<p>Conversely, if a woman has previously been given the message that she’s too bubbly or emotional, she can fall into the trap of appearing undercarbonated, or flat and unanimated. In an effort to conceal her natural ebullience, she causes the pendulum to swing the other way. We ascribe characteristics such as low-energy, aloof, boring (or bored), or depressed to such people.</p>
+<p>The friendship between actresses Carol Burnett and Julie Andrews often puts them on the same stage, where we observe Burnett’s overcarbonation as a counterpoint to Andrews’s undercarbonation. Especially early in Burnett’s career, her exaggerated facial expressions and body movements contributed to her success as a popular comedian. In comparison, Andrews is less animated, more cautious, and ever the demure lady. Neither set of behaviors conveys the message most professional women want to project.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   If you tend to be undercarbonated, speak more loudly. It’s a natural way of increasing your animation.</p>
+<p>•   Because overcarbonation can result from anxiety, practice deep breathing and other relaxation techniques that will reduce overly animated behavior.</p>
+<p>•   Consciously strive to strike a balance between over- and undercarbonation. One way to do this is to observe yourself on a videotape with the sound off. If you were standing outside the meeting, looking through a glass partition, how would you describe the woman you see?</p>
+<h2 class="mistake-heading">Mistake 104: Tilting Your Head</h2>
+<p class="first-p">This is a small mistake with a big impact. The tilt of a head in conversation has the impact of softening a message. It’s almost always used to either imply a question, signal that you’re listening, or encourage the other person to respond. Women tilt their heads significantly more than men in conversation, and in this regard a head tilt can be a good thing. When trying to convey a direct message, however, it can be interpreted as uncertainty or a lack of commitment to what you’re saying—even when you’re dead sure of it. It’s another one of those ways women have learned to communicate difficult messages in a socially acceptable but less assertive way.</p>
+<p>The best place to observe this is on television where people are interviewed. On Sunday-morning programs such as Face the Nation, This Week, or Meet the Press, you don’t see too many head tilts—by either the hosts or the guests. The topics are often of national and international importance, and therefore participants in these discussions typically want to convey a sense of seriousness.</p>
+<p>But if you watch skilled interviewers such as Barbara Walters, Oprah Winfrey, or Katie Couric conduct interviews in which they really want a guest to open up, they effectively use tilting of their heads. They can ask the most personal questions and get away with it because, in part, the tilt of the head makes guests feel as if the host is really interested in what they’re saying. Conversely, notice how these women lose the head tilt when they want to be taken seriously.</p>
+<p>So the message here is not to stop tilting your head entirely. But do be aware of when you might do it at difficult moments as a means of softening a message that shouldn’t be softened.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When conveying a serious message, avoid tilting your head. Look at the person straight on and in the eye.</p>
+<p>•   Use a head tilt to your advantage—such as when you’re listening and want the other person to open up or when you want to convey that you understand how the other person may feel.</p>
+<p>•   A head tilt can also be used to bridge an uncomfortable silence—as if to say, “Take your time. I’m listening.”</p>
+<h2 class="mistake-heading">Mistake 105: Wearing Inappropriate Makeup</h2>
+<p class="first-p">Makeup is tricky. On the one hand, I don’t want to perpetuate Madison Avenue’s image of what a woman should look like. On the other, I know it’s something people notice when it’s too heavy or too light. I once asked the boss of a woman scientist for feedback about what she could do to overcome existing barriers to promotion. He thoughtfully explained how she could be more strategic, speak up more in meetings, and be a stronger advocate for her staff. After an uncomfortable silence, I suggested it seemed he had something to add. Somewhat sheepishly he said, “Maybe she could start wearing makeup.” You can hear that comment as just another sexist remark—or as a valuable insight into what people expect as you climb the corporate ladder.</p>
+<p>I was once shopping in Palm Springs, California, when I noticed a woman who was heavily made-up. Turning to a friend, I nodded and commented, “She looks like a caricature of Tammy Faye Bakker.” As we approached the checkout line and I saw her husband at the time, Jim Bakker, join her, I realized it was Tammy Faye Bakker. In business you don’t want to use the late Ms. Bakker or Lady Gaga as your makeup role model. Makeup is an accessory similar to a piece of jewelry or a scarf.</p>
+<p>People do notice it. Wearing too little can diminish your credibility as much as wearing too much.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Go to the makeup counter of a high-end department store and ask a salesperson (whom you consider to be appropriately made-up) for a free consultation.</p>
+<p>•   Ask a trusted colleague or friend who wears makeup that complements her features if she would be willing to give you feedback on yours.</p>
+<p>•   If you tend not to wear makeup, begin by using small amounts as recommended by a friend or consultant.</p>
+<p>•   Go to a Mary Kay or Avon consultant for helpful makeup hints.</p>
+<p>•   Stand with your back to a mirror and quickly turn around and look at your face. What’s the first thing you notice? That may well be the place to use less—or more—makeup.</p>
+<h2 class="mistake-heading">Mistake 106: The Wrong Hairstyle</h2>
+<p class="first-p">Hair. Can’t live with it. Can’t live without it. Who hasn’t struggled with a bad cut, not quite the right color, or just a bad hair day? Losing all of mine in 2006 during chemotherapy to treat breast cancer gave me an entirely new relationship with my hair—now I’m just glad that I have it!</p>
+<p>The most common mistake I see women make is to wear their hair too long. One of the consultants in our office tells the story of when she received her doctorate in organization development and asked a physician in senior management at the hospital where she worked for feedback about how she could get a promotion she wanted. Looking at her beautiful, waistlength strawberry-blond hair, he replied, “Lose the Alice in Wonderland look.”</p>
+<p>I may not like how he gave her the feedback, but, as they say, feedback is a gift. In a predominantly male environment, long hair diminished her credibility by emphasizing her femininity. We’ll never know if she got that promotion because she cut her hair—but even she agrees that cutting it made a difference in how people treated her.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Don’t scrimp when it comes to finding a good hairdresser. A lowprice leader may not be the best place to find a highly skilled professional.</p>
+<p>•   There’s an inverse proportion of hair to age. Typically, your hair should get increasingly shorter as you get older and go higher on the corporate ladder. Not only is shorter hair more professional, but longer hair tends to emphasize facial features of which we may be less proud as we age.</p>
+<p>•   If you don’t want to cut your hair, wear it up to give it the appearance of being shorter.</p>
+<p>•   Hair, like makeup, is an accessory. Make certain it complements the rest of your appearance.</p>
+<p>•   If your hair is graying, consider a good colorist. Whereas gray or graying hair on men is viewed as distinguished, women aren’t typically afforded the same compliment unless it’s a pure white color and well-styled.</p>
+<p>•   Mary Mitchell, in an article titled “Dress for Success: 9 Tips for Professional-Looking Hair,” offers these two tips:</p>
+<p>1. Skip the Pat Benatar look. Heavily sprayed, scrunched, and gelled hair can be “the equivalent of wearing a skirt slit up to the thigh,”</p>
+<p>says Jennie Brooks, stylist for Ovations Salon in Philadelphia.</p>
+<p>Instead, she suggests products that provide a softer, more polished look that won’t distract from your professionalism. “It’s possible to have an edge while still being professional. Think of an altogether polished look.”</p>
+<p>2. Match your style to the vibe of your workplace, no matter what level you’re at. At the prestigious Hotel Bel-Air in L.A., all employees are required to look sophisticated and yet low-key (so they fit in but don’t rival the star-studded guests). The director of human resources, Antoinette Lara, tells employees, “Think about how you’d wear your hair at a club on a Saturday night. Then do the opposite when you come to work.”</p>
+<h2 class="mistake-heading">Mistake 107: Inappropriate Attire</h2>
+<p class="first-p">The workplace casual trend has made professional attire a bit more complicated. It used to be simple. Women wore dresses or suits to work.</p>
+<p>With workplace casual now the norm on days more than just Fridays, the margin for error increases. Interestingly, just recently the newly appointed CEO of a major food manufacturer made one of his first edicts to do away with workplace casual. When I inquired why he would want this to be his initial foray into his role, the employee I was speaking with said that he thought coming to work dressed casually on Friday makes you think you’ve already started the weekend and productivity goes down.</p>
+<p>It’s the same rationale I used nearly twenty years ago for why I didn’t like workplace casual on any day of the week. Then a friend pointed out to me that at companies like Google and Apple, employees dress casually all of the time, and you can’t say those companies aren’t productive and showing huge returns to their investors. But I still say, follow the maxim “Dress for the job you want, not the job you have,” and you won’t go wrong. Short skirts, seductive clothing, stiletto heels, unshined shoes, and ill-fitting or wrinkled clothes won’t get you where you want to be—at least not in the business world. Like it or not, people notice not only the style of clothes we wear, but also their quality. Even when your office subscribes to what one client of mine calls casual intensity.</p>
+<p>Are there exceptions to the rule? Absolutely. There’s a brokerage firm I work with that has a fairly strict and conservative unspoken dress code.</p>
+<p>When I coach women from this organization and the issue of dress comes up, as a way of arguing the point they inevitably bring up one woman who breaks every single rule of dress outlined above. I mean every rule. And to this I reply, “She’s the exception, and not many of us get away with being exceptions.” It just so happens the woman is superb at what she does, has been with the company for many years, and is known for being eccentric.</p>
+<p>Not only her dress but also her behavior is tolerated because of the value she adds. Most of us wouldn’t get away with it—and shouldn’t even try.</p>
+<p>Can how you dress be a deal buster for hiring, promotions, and assignments that you want? Yes. It’s the kind of thing that, when you get it right, you get no credit for, but when you get it wrong, people notice. Again, as my colleague Tom Henschel says, “If everyone else comes to work looking like Monday morning and you come to work looking like Friday night, there’s a problem.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Look around at the successful women in senior positions in your organization. That’s how you should dress.</p>
+<p>•   Nicole Balkenbusch, senior financial analyst at Procter and Gamble, offers this tip: If you wonder whether or not something is appropriate to wear to work, it most likely isn’t—so don’t.</p>
+<p>•   Even if your office subscribes to workplace casual, dress just a little better than most of the people around you.</p>
+<p>•   When you know you’re going to be making a presentation to management or clients, dress to impress. You’ll rarely go wrong.</p>
+<p>•   Go to the department that sells professional women’s clothing in Nordstrom, Bloomingdale’s, or other similar stores and ask for fashion advice.</p>
+<p>•   View clothes purchases as an investment in your future. Budget enough money to buy several really good outfits a year. When you feel good in clothes, you act more confidently.</p>
+<p>•   Have your color chart done. Wearing colors that complement your natural features has a bigger impact than you might think.</p>
+<p>•   Freelance writer Wendy Allen (@WendyCAllen on Twitter) offers this advice to young women looking to establish a great work wardrobe:</p>
+<p>Invest in these items first, as they offer the most versatility and will help anyone look professional from the get-go.</p>
+<p>Dress pants: Dress pants are likely to get the most wear out of anything in your work wardrobe, so it’s essential to choose a style that suits you and get them tailored to fit. Wool blends will be the most durable, and every woman should own at least three pairs in neutrals like khaki, navy, brown, gray, or black to take her through the week.</p>
+<p>Blazer: A dressy jacket is another wardrobe basic that every woman needs, as it can instantly make any outfit look more professional and serious. While brown and beige can work, most experts advise going with black, gray, or navy.</p>
+<p>Pencil skirt: A black pencil or A-line skirt is an excellent wardrobe staple. You can pair it with everything from a sweater to a suit jacket to adjust the formality of the look. If black is too boring for you, colors like navy and gray can also be good choices.</p>
+<p>White shirts: Crisp, white shirts are essential for completing your professional look. While the classic tailored look is best, you could also add a few shirts that incorporate ruffles or short sleeves to mix things up. Add two to four of these to your wardrobe, and ensure that the fit is perfect, as you don’t want any gaping or buttons coming undone at the office.</p>
+<p>Black heels: Work-appropriate shoes are one area where you should feel comfortable spending a little more, as comfort is key when you’ll be wearing a pair of shoes all day, every day. Look for high-quality leather pumps in black, with a mid-height heel.</p>
+<p>Ideally, they should be closed-toe, as that look is both comfortable and professional. You can always branch out later.</p>
+<p>A suit: If your workplace is formal or conservative, then you’ll need to invest in a suit or two to take you through the week. Suits can actually be a great investment, as you can wear each piece separately, too, so you can get a lot of mileage out of a single suit.</p>
+<p>To start out, choose a suit in a solid black, navy, or gray. Later, when you’re ready to get an additional suit, you can branch out and play with color and pattern. Like with dress pants, fit really matters on suits, so make sure to invest in alterations if necessary.</p>
+<p>Dressy tops: A few dressy tops should also become a key part of your workweek wardrobe. Solid colors or prints can be paired with blazers and suits to build outfits that can easily transition from the workplace to a night out.</p>
+<p>Leather belt: When starting out your wardrobe, you’ll need at least one black leather belt to pair with suits and dress pants.</p>
+<p>Later on, you can add belts that cinch around your natural waist and can be worn over shirts, cardigans, and dresses.</p>
+<h2 class="mistake-heading">Mistake 108: Sitting on Your Foot</h2>
+<p class="first-p">I’m not sure I would have thought of this one myself. It comes from Dr.</p>
+<p>Doug Andrews, chair of the Department of Business Communication at the University of Southern California. He has the opportunity to observe students, both young and older than average, in his classes. He described it as “this thing women do when sitting where they tuck one foot up underneath them.” Dr. Andrews is absolutely right when he says it’s something that he never sees men do and that it conveys the impression of being a little girl rather than a professional woman. I was recently in an antiques store where I was drawn to a photograph from the early 1900s of a six- or seven-year-old girl posed for her portrait. She had one foot tucked under her, and it softened both her and the picture.</p>
+<p>You can also observe this phenomenon on television talk shows. A guest comes out, sits in the chair next to the host, and tucks her foot up beneath her. Can you imagine former Secretary of State General Colin Powell, Microsoft CEO Steve Ballmer, or New York Mayor Michael Bloomberg doing this? It’s almost always a woman guest who does it, and she does it out of discomfort or shyness. It may be cute, but it’s not professional.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   It’s simple. If you want to be taken seriously, sit with both feet on the floor with knees together. In a more relaxed situation, cross your legs at the knee. Never sit with your foot tucked beneath you.</p>
+<p>•   Remember, being “grounded” requires “both feet on the ground.”</p>
+<h2 class="mistake-heading">Mistake 109: Grooming in Public</h2>
+<p class="first-p">When was the last time you saw a man pull out a mirror and check his hair after lunch? (Well, okay, John Edwards did do a little primping.) How about file his nails during a meeting? Even the thought of it is ridiculous. No matter how discreet you think you’re being, grooming in public is noticed and mentally logged by those around you.</p>
+<p>Another habit (often unconscious) that women often reveal is that of flipping long hair behind the ears. It may be when she looks down to read something or it may be used as a coy, flirtatious gesture. Take a moment to think about a group of people who “play with” their hair. If you came up with teenagers, you’re right. Flipping your hair behind your ears makes you appear less mature than you really are. Public primping emphasizes your femininity and detracts from your credibility. Real women avoid PDG (public displays of grooming).</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Never comb your hair or apply lipstick in public. If you can’t resist, excuse yourself and go to the ladies’ room.</p>
+<p>•   If you do go to the ladies’ room to primp, keep it quick. Don’t keep people waiting. Better yet, wait until you get back to the office.</p>
+<p>•   If you see your reflection in a mirror or glassy surface and notice something wrong, avoid the inclination to fix it there. Wait until you can do so in private.</p>
+<p>•   Avoid touching your hair unnecessarily. Think in terms of Every time I touch my hair, I reduce my credibility by one year.</p>
+<h2 class="mistake-heading">Mistake 110: Sitting in Meetings with Your Hands Under the Table</h2>
+<p class="first-p">Sitting in meetings is not the same as sitting at the dinner table. You don’t have to follow the rules learned in childhood for keeping your elbows off the table. Observe how men sit at meetings. When they’re speaking, confident men almost always lean in with their elbows and hands resting on the table. When men begin listening to something that intrigues them, you can picture them sitting with their elbows on the table, chin resting on their clasped hands.</p>
+<p>And what do we do? We often do as we were taught—sit coyly with our hands folded in our laps or under the table. The difference is striking. As uncomfortable as it may be at first, when it comes to being taken seriously, all research points to the need to “put it on the table.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   In meetings, lean forward slightly, resting your forearms on the table with hands lightly clasped. Not only does this make you look more involved in the conversation, but it also puts you in a perfect position to gesture when needed.</p>
+<p>•   While we’re on the subject of meetings, let me slip in two more tips.</p>
+<p>Whenever possible, select a seat next to the most powerful person in the room. For some unknown reason, that person’s power permeates those around him or her. It also conveys the message that you’re not afraid of power.</p>
+<p>•   Don’t be afraid to sit at the head of a long or oval table. Again, this isn’t the Thanksgiving dinner table. From the head of the table, you can see everyone in the room, and, just as important, everyone can see you.</p>
+<h2 class="mistake-heading">Mistake 111: Wearing Your Reading Glasses Around Your Neck</h2>
+<p class="first-p">This habit surely had to start with some librarian in the 1950s. Why is it that women, not men, buy those little chains to hang reading glasses around their necks? Are we more apt to lose our glasses than men, or are we just more willing to call attention to the fact that we’re aging? In some department stores you’ll even find these chains displayed as accessories. In the name of full disclosure, I must admit that since the first edition of Corner Office was released, I have taken to using one of these chains for my own reading glasses. But… I never use it in professional situations, but only when I’m shopping, on an airplane, or working at home so that I don’t lose them.</p>
+<p>At a workshop on developing presentation skills there was one woman, apparently in her mid-fifties, who held on to her reading glasses throughout her videotaped half-hour practice session. Not only did she hold on to them, but she also twirled them while listening to questions from the audience.</p>
+<p>Never once did she actually put them on—leading me to believe they were more a prop than a requirement.</p>
+<p>At the risk of sounding ageist, I need to say once again that, unlike men, it’s the rare woman who finds her credibility increasing with age. I’m on a one-way campaign to change this by attempting to be a role model for how to age with grace, so although I don’t think it’s something to hide or lie about, I also don’t think it’s necessary to emphasize it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   If you’re concerned about being able to read your notes during a presentation, type them in a font large enough to see without glasses. Using a PowerPoint presentation will also serve to keep you on target with your topic without having to put your glasses on and take them off.</p>
+<p>•   If you need a prop, use a marker or a pencil. There’s nothing wrong with holding it; just take care not to tap, twirl, or click it, thereby creating a distraction from your message.</p>
+<p>•   A trick my ophthalmologist taught me is to wear a pair of plain glasses with the readers on the bottom. Even though I wear contact lenses to camouflage my severe nearsightedness, I wear the glasses over them so that I’m not continually putting on and taking off my readers.</p>
+<p>•   Since we’re on the subject of glasses, keep in mind that they can be used as a prop to make you appear more mature if you have difficulty with being taken seriously because you look too young. Even if you don’t require corrected vision, a pair with nonprescription glass can give you the appearance of being a bit more mature.</p>
+<h2 class="mistake-heading">Mistake 112: Accessorizing Too Much</h2>
+<p class="first-p">Accessories can be your best friend—or your worst enemy. I once watched a videoconference in which former secretary of state Madeleine Albright was a keynote speaker. She wore a lovely tailored dress—totally appropriate for the event—but she had on her trademark huge pin. To me, this detracted from her message: Throughout the presentation, I found myself focusing more on trying to figure out what the pin was than on what she was saying.</p>
+<p>I’ve learned to use accessories to manage the impression I often give that I’m very serious. In an effort to convey an impression of more levity, I accessorize with playful pins. One that frequently gets attention is of three women with wild hair and colorful dresses, arm in arm. It’s my way of getting across the message that I may be serious, but I like to have fun as much as the next person. Of course if I’d been given feedback that I was too jocular, my tactic would be different.</p>
+<p>Carefully chosen, accessories add style and personality to otherwise conservative corporate attire. They convey a message about you that may not be heard through your words and presence alone. But when inappropriate or overdone, they detract from your credibility. Accessories make a statement. Consider what you want yours to be.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Don’t wear long, dangling earrings to work. Depending on your size and hair length, aim for posts—no larger than the size of a quarter.</p>
+<p>•   Add an inexpensive pearl necklace and earrings to your accessory kit.</p>
+<p>They never go out of style.</p>
+<p>•   Match accessories to not only your outfit, but also what you will be doing that day. A whimsical pin might be appropriate for a day in the office when you’re meeting only with colleagues, but not necessarily for one when you’re making a strategic planning presentation.</p>
+<p>•   Similarly, the bigger the group you’re speaking to, the bolder the accessories can be. Just be certain not to make the same mistake as Secretary Albright.</p>
+<p>•   Do the same as was suggested in the section on makeup tips. Turn your back to the mirror and quickly swing around. Does anything stand out about your accessories? If so, consider changing it.</p>
+<h2 class="mistake-heading">Mistake 113: Poor Eye Contact</h2>
+<p class="first-p">There are a number of factors that contribute to the tendency to avoid another person’s eyes. In some cultures it’s a sign of respect to look away when speaking with someone who is older or has more authority or stature than you. There’s research that suggests avoiding eye contact is a sign of deception. Children won’t look at us when they know they’ve done something wrong or when they’re being scolded.</p>
+<p>When a woman avoids eye contact, it’s usually a sure sign that she’s uncomfortable or unsure of herself. If the eyes are the window to the soul, then you must use them to allow others to see your sincerity, selfconfidence, and knowledge, and to see the other person’s. A good place to observe this behavior is on television when someone like Ann Curry or even Ellen DeGeneres conducts an interview. Both of these women have learned the art of eye contact. Note how they look people directly in the eye, especially when asking difficult questions. Similarly, note that when they’re embarrassed or someone has said something that catches them off guard, they look away. What also makes these women so good at what they do is that by looking the other person in the eye, they often get a sense of what he or she is thinking and base the next question on this. You don’t have to be a television interviewer to use eye contact to your advantage.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When you go to the movies, observe how the more self-confident female characters use their eyes to convey a message. Make a mental note of the specific behaviors that contribute to this impression.</p>
+<p>•   If you have been given the feedback that you have a tendency to stare, get into the habit of looking slightly up or to the side when thinking about a response. This creates a break in the eye contact long enough to convey a comfortable pause.</p>
+<p>•   When greeting someone, be certain to look him or her in the eye. It puts you on an even footing with the person.</p>
+<p>94. Trailing Voice Mails 95. Failing to Pause or Reflect Before Responding 96. Overrelying on One Communication Style 97. Ambivalence 98. Confusing Problem Solving with Complaining Chapter 7: How You Look 99. Obvious Body Ink and Piercings 100. Smiling Inappropriately 101. Taking Up Too Little Space 102. Using Gestures Inconsistent with Your Message 103. Being Over- or Underanimated 104. Tilting Your Head 105. Wearing Inappropriate Makeup 106. The Wrong Hairstyle 107. Inappropriate Attire 108. Sitting on Your Foot 109. Grooming in Public 110. Sitting in Meetings with Your Hands Under the Table 111. Wearing Your Reading Glasses Around Your Neck 112. Accessorizing Too Much 113. Poor Eye Contact Chapter 8: How You Respond 114. Airing Your Feelings in Online Public Forums 115. Putting a Stamp on with a Steamroller 116. Holding a Grudge 117. Internalizing Messages 118. Believing Others Know More Than You 119. Taking Notes, Getting Coffee, and Making Copies 120. Tolerating Inappropriate Behavior 121. Exhibiting Too Much Patience 122. Accepting Dead-End Assignments 123. Putting the Needs of Others Before Your Own 124. Denying Your Power 125. Allowing Yourself to Be the Scapegoat 126. Accepting the Fait Accompli 127. Permitting Others’ Mistakes to Inconvenience You 128. Being the Last to Speak 129. Playing the Gender Card 130. Tolerating Sexual Harassment 131. Engaging in E-Mail Wars 132. Going for the Bait 133. Crying About the Author Also by Lois P. Frankel, PhD Praise for NICE GIRLS DON’T GET THE CORNER OFFICE Appendix: Personal Development Planning and Resources Book Club Guide Business Plus Newsletters Copyright Copyright This publication is designed to provide competent and reliable information regarding the subject matter covered. However, it is sold with the understanding that the author and the publisher are not engaged in rendering professional advice. If expert assistance is required, the services of a professional should be sought. The author and publisher specifically disclaim any liability that is incurred from the use or application of the contents of this book.</p>
+<p>Copyright © 2014 by Lois P. Frankel, PhD All rights reserved. In accordance with the U.S. Copyright Act of 1976, the scanning, uploading, and electronic sharing of any part of this book without the permission of the publisher is unlawful piracy and theft of the author’s intellectual property. If you would like to use material from the book (other than for review purposes), prior written permission must be obtained by contacting the publisher at permissions@hbgusa.com. Thank you for your support of the author’s rights.</p>
+<p>Business Plus Hachette Book Group 237 Park Avenue, New York, NY 10017 hachettebookgroup.com twitter.com/grandcentralpub First ebook edition: February 2014 Business Plus is an imprint of Grand Central Publishing.</p>
+<p>The Business Plus name and logo are trademarks of Hachette Book Group, Inc.</p>
+<p>The Hachette Speakers Bureau provides a wide range of authors for speaking events. To find out more, go to www.hachettespeakersbureau.com or call (866) 376-6591.</p>
+<p>The publisher is not responsible for websites (or their content) that are not owned by the publisher.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">ISBN 978-1-4555-5412-6</h3>
+<p class="first-p">E3 Cover</p>
+    </div>
+  </div>
+</body>
+</html>

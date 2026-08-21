@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5: How You Brand & Market Yourself - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 5: How You Brand & Market Yourself</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 5 How You Brand and Market Yourself When you think about well-known name brands, which ones come to mind?</p>
+<p>If you’re like most people, names like Kleenex, Coke, and Google immediately pop up. Not only are the names familiar, but they’ve also become synonymous with the product. When we go to a restaurant and ask for a Coke, we may or may not be served a drink made by Coca-Cola. We don’t just do a search on the Internet, we Google it, regardless of the actual search engine being used. “Hand me a Kleenex” doesn’t necessarily mean Kleenex brand. Brand names get a good reputation as a result of two things:</p>
+<p>consistent quality and marketing. One without the other doesn’t equate to staying power or success in the marketplace.</p>
+<p>Dr. Bruce Heller, president of the Heller Group in Encino, California, coaches professionals about the importance of thinking of themselves as brands to be marketed. “You have to look at the workplace as a marketplace,” Heller says. “In this market, your product is you.” You create a brand for yourself by first identifying what distinguishes you from other people in the workplace and then marketing those distinctions as a brand.</p>
+<p>One of Dr. Heller’s favorite phrases—“outta sight, outta mind, outta business”—is particularly important for women to remember. As young girls we often learn that we are to be seen but not heard. Carrying that forward to adulthood translates into doing our work in a quiet and unassuming way. I often hear women say they don’t care if they’re given credit; they’re just happy to make a contribution to the bottom line. The result is that we are overlooked for promotions and assignments we’ve actually earned and deserve. The coaching tips in the next section are designed to help you define your brand, acknowledge the value of your brand, and develop a plan for marketing your brand.</p>
+<h2 class="mistake-heading">Mistake 61: Failing to Define Your Brand</h2>
+<p class="first-p">Not too long ago I interviewed a woman with a doctorate in organization development for a vacancy on our coaching team. Her résumé was impressive. She seemed to have the kind of experience and education I sought, but I wasn’t sure of her specialty area. Because we’re known as a firm with subject-matter experts who can provide executives with unique expertise in their areas for development, one of the first questions I posed to this woman was “Tell me about what you’re best known for.” For the next thirty-five minutes she told me all about what she had done, what her interests were, and the many ways in which she could add value. The problem was, she didn’t answer my question. Despite another twenty minutes of probing and asking the question in several different ways, I never learned what made her unique among all organizational psychologists.</p>
+<p>Peter Montoya, whom I consider to be the guru of personal branding, wrote, “A personal brand is a promise of performance that creates expectations in its audience. Done well, it clearly communicates the values, personality, and abilities of the person behind it.” That’s what was missing from my interview with the woman who wanted to be on our coaching team —but wasn’t selected because of her inability to clearly define her brand for me.</p>
+<p>In another scenario, I was doing a radio show on women and money when a call came in from a woman asking how she could better market her day-care business. I asked her to “tell me what makes your day-care business different from all the others in your community.” There was dead silence before she replied, “I guess I can’t.” As I told her, until you can clearly articulate what differentiates your brand from the others, you can’t successfully market it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Make a list of the three to five things that bring you the most satisfaction at work. We tend to be good at what we like, so focusing first on these will help to point you in the right direction. You might come up with responses such as help others, listen, problem-solve, negotiate, write technical reports, manage projects, collect data, identify obstacles, implement solutions, and more.</p>
+<p>•   Next, translate these behaviors into three key strengths you bring to your workplace. For example, “My ability to listen effectively enables me to gather data from reluctant sources. Tied in with that is my skill at writing, which allows me to report that data in an objective way. Third, once the data is collected and reported, I’ve exhibited the ability to identify and implement solutions to problems.” Practice saying these words out loud so that when the time is right you can recite them fluently and confidently.</p>
+<p>•   Consider how these behaviors distinguish you from others. For example, the ability to gather and report data may be unique in a department or company known mainly for producing a product. Or having skill in building relationships may be unique and valuable in an organization where intellectual capital is the product.</p>
+<p>•   Finish this sentence: “There goes a woman who _______________________.” Now engage in the behaviors required to make that statement a reality.</p>
+<h2 class="mistake-heading">Mistake 62: An Elevator Speech That Doesn’t Go to the Top</h2>
+<p class="first-p">Debra worked for a large entertainment company as an executive in charge of minority recruitment. The company took a table at a fund-raising event, and when she arrived no seats were left at the table. Not one to be shy, she looked around and spotted a table where there were empty seats. After asking if she could join their table, she sat down and was naturally asked where she worked and what she did. Debra said something like this:</p>
+<p>I’m the director of Minority Recruitment at one of the country’s largest entertainment companies. I’m so fortunate to be able to enhance the company’s bottom line by developing programs that attract and retain minority talent. Just this past year alone we increased the number of minority hires by 22 percent over the previous year and reduced minority attrition by 8 percent. It’s been so rewarding to get people at all levels involved in the effort and see such great results!</p>
+<p>For the remainder of the evening she chatted with the folks at the table and gave her business card to several people who asked for it. The next morning there was a message on her voicemail from someone at the table who said he was so impressed with her enthusiasm and passion for what she did that he wanted to talk to her about a job opening he had coming up.</p>
+<p>After an interview he made her an offer she couldn’t refuse, and the rest is history.</p>
+<p>Contrast this to an exercise I do in leadership classes for women where I ask participants to introduce themselves. Inevitably, the first woman to go gives her name, what she does, and how long she’s worked for her company. It’s rare for anyone to give his or her job title and even rarer for them to expand on the impact they make on the company and its bottom line.</p>
+<p>When you’re asked to introduce yourself, what do you say? Are you like Debra, or more like the hundreds of nice girls I’ve encountered who provide lukewarm self-introductions? Does what you say make a memorable impression or get lost in the dozens of introductions we each hear during the course of a regular week?</p>
+<p>Marketing your brand starts with your elevator speech. It must be factual, but should also emphasize your unique skills and how you make a difference. Many women tell me that to do so makes it seem as if they’re bragging. Did Debra sound as if she was bragging or simply relating with gusto how much she loved what she did? It’s not bragging if you speak the truth, use your title, and comment on a few things of which you’re proud.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Prepare an introduction that takes about the same time as an elevator ride and that lets others know who you are, what you love doing, and how you impact your company’s bottom line. This works equally well if you’re an administrative assistant or vice president because it’s all about branding yourself as someone others would want to “buy.” If you don’t believe you make a difference, why should anyone else?</p>
+<p>•   Practice your introduction until it rolls off your tongue without hesitation. This will take a little while, particularly if you’re not used to extolling your own virtues. Ask friends if they’ll give you feedback as to what they would think about you if they didn’t know you and heard you say it. Go back and make adjustments as needed and as your situation changes.</p>
+<p>•   Pitch it with passion. It’s not only what you say that makes a difference, but how you say it. Endow your introduction with energy and enthusiasm.</p>
+<h2 class="mistake-heading">Mistake 63: Minimizing Your Work or Position</h2>
+<p class="first-p">This goes beyond a lukewarm elevator speech. Way beyond. I can’t tell you how many times I’ve heard women respond to the question “What do you do?” with a self-deprecating answer. “Oh, I just manage a legal office.”</p>
+<p>“I’m only an administrative assistant.” “I kind of run the information technology group.” These comments don’t sound like brands I would be interested in learning more about. Instead, they reveal a feeling of embarrassment or lack of pride in what the person does. Every job in every organization is critical to its operation. You may not be the president of Nestlé, but you wouldn’t have your job if it wasn’t necessary to run the business. Identifying why your business needs you is crucial to accurately marketing your brand.</p>
+<p>Perhaps what bothers me most about this phenomenon is that, in many cases, women have diminished their brands because they are buying into what others have said about them or their roles. If at a party you overhear your spouse say that you don’t have a career, when in fact you do temp work to augment the household income; or if your father loudly and proudly talks to anyone who will listen about your brother the lawyer, it might be hard to talk about a more modest career without feeling like a second-class citizen.</p>
+<p>There’s a joke that underscores this point. The first woman is elected president of the United States, and she asks her mother what she’s going to wear to the inauguration. The mother indicates she’s not going to go because she has nothing to wear. After much cajoling, the woman gets her mother to attend the event. Just before she’s about to be sworn in, she hears the chief justice of the United States lean over and whisper to her mother, “You must be very proud of your daughter.” To this the mother replies, “Yes, but her brother is a doctor.”</p>
+<p>As Scottish essayist Thomas Carlyle said, “All work, even cotton spinning, is noble; work alone is noble.” Regardless of what you do, be proud of it and describe it in a way that allows others to see that pride and, in turn, builds your personal brand.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Don’t allow others to place a value on the work you do. Only you can do that.</p>
+<p>•   Remove minimizing words from the description of your work.</p>
+<p>•   Whether you sweep floors or run a sweepstakes for a living, do it and describe it with pride.</p>
+<h2 class="mistake-heading">Mistake 64: Undervaluing Your Consultative Skills</h2>
+<p class="first-p">If you’ve ever helped a coworker to solve a sticky problem, you’re a consultant. If you’ve influenced your boss to take a different tact than one that was originally intended, you’re a consultant. And if you’ve offered advice that prevented a major catastrophe from happening to a friend who was about to fall off a career cliff, then you’re also a consultant. Women frequently overlook the ways in which building relationships contributes to being a “trusted advisor”—an invaluable skill, but one we often chalk up to being just a good listener. I borrow this phrase from a wonderful book with the same title, The Trusted Advisor, by David Maister. In the book, Maister illuminates the ways in which trust and confidence are built over time through listening and understanding. Although the book’s primary audience is consultants, it’s equally helpful to anyone who wants their brand to include the perception of strong consultative skills.</p>
+<p>Because listening and helping others is part of the genetic makeup for so many of us, we don’t place enough credence in the fact that this is a valuable and marketable commodity that can be traded on. Whereas nice girls routinely engage in consultative behaviors but don’t emphasize them, smart women make them a hallmark of their brands.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Gain a deeper understanding of the consultative process inherent to the roles most of us play in our organizations by reading David Maister’s The Trusted Advisor.</p>
+<p>•   Consider yourself an “internal consultant.” Regardless of your position, your experience and expertise, combined with strong relationships, provide you with an entrée to this function. When branding and marketing yourself, don’t forget to use the phrase to describe what you do.</p>
+<p>•   Don’t feel as if you’ve failed as a consultant if all your suggestions aren’t accepted or implemented. By nature consultants try to influence, but leave the final decision up to their “clients.” Always leave the door open for continuing discussion.</p>
+<h2 class="mistake-heading">Mistake 65: Using Only Your Nickname or First Name</h2>
+<p class="first-p">When was the last time you heard a male executive called by the diminutive of his name? Billy Gates. Donny Trump. Andy Cuomo. I don’t think so. The diminutive of anything diminishes its importance. All nicknames and diminutives are used as a fond way of referring to children.</p>
+<p>As adults, it serves the same purpose—but most men drop it by the time they’re teenagers. Michelle Obama may have been able to call the president Barry, but you wouldn’t catch many others getting away with it.</p>
+<p>I’ve also been amazed to watch as a woman introduces herself using her formal name, only to have the person immediately shorten it. A client of mine named Teresa tells me that within moments of introducing herself, she’s called Terri. “I never heard anyone change Jim to Jimmy,” she says.</p>
+<p>Similarly, whenever I hear a woman answer the phone with only her first name, or leave a voice-mail message that says, “This is Sarah. Please leave your message.…,” it makes me wonder why she dropped her last name.</p>
+<p>One woman in a workshop told me she does this because using a hyphenated last name makes it seem too long and dropping it entirely is one way to shorten it. Why does she need to shorten it? Are we talking about the difference between two seconds and three seconds? It’s your name!</p>
+<p>Shortening a name is common among administrative staff—and entirely unnecessary. You will rarely hear a man answer the phone using only his first name. It’s a small but significant difference. Using only your first name relegates you, once again, to a childlike status. Ask a child his or her name and most often you get only the first name. The combination of your first and last names moves you to adulthood.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Even if you’ve gone by Kathy, Debbie, Maggie, or Sandy your entire life, begin introducing yourself using your formal name. Over time, people will take your cue. Change your business cards, desk nameplate, or formal letterhead to read Kathleen, Debra, Margaret, or Sandra. You’ll be much more likely to be taken seriously if you don’t use your childhood nickname for professional purposes.</p>
+<p>•   Always use your first and last names on your voice-mail message, in your e-mail address, when introducing yourself, and when answering the phone.</p>
+<p>•   If people change your name to the diminutive, correct them by simply repeating the name you prefer them to use.</p>
+<h2 class="mistake-heading">Mistake 66: Waiting to Be Noticed</h2>
+<p class="first-p">During a recent downsizing in her corporation, Jacqueline desperately wanted to stay on in either her current position or another one in the company. She knew that behind closed doors, decisions were being made about who would stay and who would go. While she waited nervously to be told her fate, I suggested she had nothing to lose by going to her boss and human resources representative to make a case for staying. It was as if I’d suggested she race nude across the executive floor. Not only couldn’t she fathom coming up with something to say that could possibly make a difference, she couldn’t picture herself going in and saying it.</p>
+<p>Corporate downsizings and the trend toward flat organizations have created the need to be noticed in a positive way—before workforce reductions take place. When it comes to maintaining your job during layoffs, it can be as simple as making a case for why your unique brand will be valuable in the newly formed organization.</p>
+<p>As for flatter organizations, the dearth of opportunities to move up makes assignments and projects that can offer you visibility or specialized training all the more valuable. Recipients of these assignments are often those who subtly (and at times not so subtly) call attention to the ways in which their strengths play to the requirements of the work. Waiting to be noticed will not get you where you want to be. You’ve got to know your brand and sell it when the opportunity arises. Women, especially those who are not particularly good at “selling” themselves, are often overlooked—not because of lack of capability, but because of modesty or the mistaken belief that their accomplishments will eventually be noticed.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   If there’s a vacancy or assignment you want, ask to be considered for it.</p>
+<p>•   When you’re ready to make a career move, talk about it out loud. Let people know you’re ready for the next challenge. The more people you talk to about it, the more likely you are to hear about opportunities when they arise.</p>
+<p>•   Continually showcase your achievements in subtle ways. One suggestion is to prepare a weekly or biweekly status sheet listing your accomplishments or those of your department. Another is to share your achievements in the form of “best practices.” For example, at a staff meeting you could share with your colleagues how you solved a particular problem or overcame an obstacle that threatened a deadline.</p>
+<p>•   Develop a marketing plan. Envision your future and write down the specific steps you’ll take to get there.</p>
+<p>•   Spend time engaged in learning, soliciting feedback or getting coaching, and doing something different than what you’re already good at.</p>
+<p>These three things prepare you for unexpected challenges and opportunities.</p>
+<p>•   Ask someone in a position senior to yours to be an advocate for you by proposing your name.</p>
+<h2 class="mistake-heading">Mistake 67: Refusing High-Profile Assignments</h2>
+<p class="first-p">This entire book is the by-product of something a client told me when we were about to start a coaching session. As the director of operations at an East Coast branch of a manufacturing firm headquartered in Los Angeles, Sandra was asked to sit on the executive committee of her company. She had long complained that she wasn’t recognized for her achievements in turning around what had been a money-losing operation. The request to sit on the EC made a strong statement about not only her value to her own division, but also the contributions she could make throughout the firm.</p>
+<p>And what did Sandra do? She turned it down because in the past she had attended several of their meetings and saw them as “a waste of time.”</p>
+<p>The first words out of my mouth were “Honey, you gotta quit bein’ a girl!” I couldn’t help myself. Without considering the bigger picture, she acted in a manner consistent with the values she’d learned in childhood—to work hard and not waste the company’s time or money. And at that very moment all the mistakes I had seen women make throughout my career because of how they were socialized came flooding into my head. For years I had talked to men and women about the ways in which parental messages impact their careers, but I had neglected the fact that boys and girls get different messages. On the way back to Los Angeles from my meeting with Sandra, I outlined all of a book I called “Quit Bein’ a Girl,” which was later changed to Nice Girls Don’t Get the Corner Office.</p>
+<p>The opportunity to showcase your capabilities through a high-profile assignment isn’t limited to something as grand as being invited to sit on your company’s executive committee. Being asked to facilitate an important meeting, to make a critical client presentation, or to make a presentation to your senior management are all examples of high-profile assignments you can’t afford to pass up.</p>
+<p>I understand that we’re all oversubscribed, that meetings can go on for what seems like an eternity, and that making client presentations can be a lot of work and a little risky. So what? Use these opportunities to profile your unique capabilities and build relationships with others who are viewed as movers and shakers. Remember, 90 percent of success comes from just showing up!</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When you’re asked to sit at the table, graciously accept the invitation.</p>
+<p>If you don’t have the time, make the time. It’s an investment in your future.</p>
+<p>•   When offered a position or assignment that’s new to you, take it. If others have enough confidence in you that you can do the job, you should, too.</p>
+<p>•   Request potentially risky but high-profile projects. No guts, no glory.</p>
+<p>•   Volunteer to give presentations to senior management. The benefits typically outweigh the risks, and you can’t get comfortable doing it unless you do it. Exposure to senior management is critical for recognition.</p>
+<p>•   Keep in mind that in the workplace, senior executives are your customers. Therefore, you need to be in situations where you can identify their needs and serve them.</p>
+<h2 class="mistake-heading">Mistake 68: Not Sitting at the Table</h2>
+<p class="first-p">In the last mistake, I talked about figuratively not sitting at the table. Now I want to focus on literally not sitting at the table. My dear friend Diane, who manages a branch office for a large financial institution, was over for dinner one night, and I asked how her annual off-site with senior management went. My ears perked up when she mentioned that her division vice president invited her to sit at his table for dinner one night, but she left the seat open so that someone who has less regular exposure to him could have it. Before I could accuse her of being a nice girl, she added that a peer of hers (a man who has the same opportunities to interact with the VP throughout the year as she does) took the seat instead. Even Diane’s husband’s mouth dropped open hearing this.</p>
+<p>As nice a thought as it is, leaving a seat open next to the most senior person in the room is a huge branding mistake. Not only does it deprive you of having the ear of the boss, it deprives you of being seen sitting next to the person in power. Whether it’s a regular meeting or a special event, finding the chance to speak one-on-one with executives in your company is something you should be seeking out, not giving up.</p>
+<p>Another way in which this happens that always surprises me is when a woman enters a conference room or other meeting room for what she knows will be a packed meeting. She looks around the room and sees chairs surrounding the table and others on the periphery of the room. Invariably, the nice girl will take a seat on the periphery to leave the seats at the table for “more important” people.</p>
+<p>This is not Thanksgiving, and you are no longer six years old and relegated to the children’s table. If you want your voice heard and to be seen as someone who belongs playing with the “big boys,” then you have to literally sit at the table.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When you’re invited to sit at the table, sit at the table!</p>
+<p>•   If there aren’t enough chairs at the table to accommodate everyone, pull one up and squeeze it in.</p>
+<p>•   When given a choice of seats, sit next to the most powerful person in the room. Their power will cascade over to you.</p>
+<h2 class="mistake-heading">Mistake 69: Being Modest</h2>
+<p class="first-p">Both boys and girls are taught in childhood to be modest—but women take the lesson way too far. There’s a time and a place for modesty. When you’ve moved a mountain, broken the sound barrier, or produced a miracle, it’s neither the time nor the place. When people fail to notice your major accomplishments, it’s your job to illuminate them. Making things look easy or seamless when in fact they required herculean efforts isn’t a great marketing technique.</p>
+<p>Helena provides a great example of being much too modest. As director of executive development, she and her team are responsible for performing management assessments, designing individualized development programs for each top member of management, and providing executive coaching.</p>
+<p>When her company merged with another firm, the size of her job nearly doubled, yet the size of her team remained the same. Nonetheless, she found creative ways to get the job done with the people available to her.</p>
+<p>During her annual performance review, Helena’s boss commended her for the extra effort she put in and gave her a generous bonus. Pleased that he’d recognized her good work, she modestly responded, “It really wasn’t anything.” She had gone into the meeting wanting to bring up the need for additional staff, but when he complimented her and gave her the bonus, she was completely thrown off kilter and failed to parlay his recognition into a marketing opportunity. As a result of her modesty, she had to come up with another strategy for requesting more head count, since getting the job done “really wasn’t anything.”</p>
+<p>Another example of modesty is the degree to which we display degrees, framed letters of commendation, or photos of us taken with dignitaries. I was in one client’s office when she had to step out to take a call. While she was gone, I looked around the office at the many items of personal memorabilia and photos she had on her credenza. Then I spotted a picture of her with Hillary Clinton at a conference on women’s affairs—hidden behind all of the other items! When she came back in I pointed to the picture and asked why she didn’t have that particular picture front and center given that it was so impressive. Her reply? You guessed it. She didn’t want to make it seem as if she was too full of herself.</p>
+<p>I’m pleased to report that this client, fifteen years later, is now vice president of a division of her company, and in every office I’ve subsequently visited the picture is prominently displayed. Is this why she’s been so successful? Of course not. But moving from hiding her accomplishments to letting others know about them did make a difference in how she marketed her brand.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Completely, totally, and permanently erase the statement “Oh—it was nothing” from your vocabulary.</p>
+<p>•   When reporting accomplishments, give them the import they deserve.</p>
+<p>Helena should have said something like “It took everyone on the team working long hours and weekends, but I’m proud of what we did and glad you appreciate it.”</p>
+<p>•   When given a compliment, look the person in the eye and respond with a simple “Thank you.” Avoid downplaying your efforts.</p>
+<p>•   Forward notes of appreciation or acknowledgment about your work to your manager.</p>
+<p>•   Prominently display awards, plaques, or other items that speak to your achievements.</p>
+<p>•   Keep an “atta gal” file—a collection of accomplishments of which you are proud: thank-you notes, outstanding performance reviews, and the like. Review it at those moments when you begin to doubt yourself.</p>
+<h2 class="mistake-heading">Mistake 70: Inappropriate Use of Social Media</h2>
+<p class="first-p">I was recently called by a prestigious institution as a reference for a woman who once worked for me. She was a phenomenal employee, and I was happy to give her a good reference. After asking me a few questions about this woman, whom I highly recommended, he asked, “Do I have to worry about her doing anything that could be embarrassing to our organization?”</p>
+<p>The question caught me by surprise. As it turns out, he had googled her and found her Myspace page from years ago when she was barely in her twenties. There he found pictures of her with a nose ring, drinking beer, participating in a wet T-shirt contest.</p>
+<p>We’ve all done things we wouldn’t want a prospective employer to know about. I’m only thankful we didn’t have social networking sites early in my career! Even as it is now, I had to figure out how to keep friends and family members from posting what I consider to be less than professional pictures and comments on my Facebook page. I encourage you to do the same. There should be nothing on any social networking site that could possibly tarnish your reputation or cause someone to question your values, behavior, or your brand. Once it’s posted, it’s hard to put the toothpaste back in the tube.</p>
+<p>Here are a few other mistakes to avoid, contributed by branding expert Ryan Rancatore (personalbranding101.com):</p>
+<p>1. Incomplete Profiles. They mean one of two things:</p>
+<p>Your background is so empty that you can’t even complete a simple profile.</p>
+<p>You are lazy.</p>
+<p>2. Multiple Names. Facebook, Twitter, and LinkedIn are all micronetworks that form your overall network. Are you confusing your connections with different messaging, names, and images across all these sites? The most powerful corporate brands know that a consistent image is key to building a memorable, identifiable brand. You should strive for the same consistency.</p>
+<p>3. Not Interlinking Your Profiles. Why is this important? The more touchpoints that exist to connect with your network, the better.</p>
+<p>Seeing you come up again and again across social networks creates a memorable brand.</p>
+<p>4. Being a Robot. Never, ever send a LinkedIn request with the stock message that reads “I’d like to add you to my professional network on LinkedIn.” Rancatore says when he receives a message with this request, he reads it as “I’d like to add you to my professional network, but I don’t have the courtesy to take ten seconds to include your name or a personal message.”</p>
+<p>5. Tunnel Vision. Do your postings scream, “ME ME ME”? A solid rule of thumb is that 90 percent of what you share should be made up of personal insights and thoughts along with a heavy dose of helpful links, while 10 percent should directly benefit you.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">Here are some tips from Poonam Sagar, digital media consultant and coach at PT Infotech Solutions (infotech.co.id) in Indonesia, for how you can use social networking to your advantage:</p>
+<p>•   Be friendly. It’s called social networking, not social narcissism (although some people do confuse the two). Your social media outlets represent your personal brand, and, as I mentioned earlier, people want to affiliate with brands that are likable and emotionally intelligent. If you use your outlets to express negative emotions or critical diatribes about other people or products, your brand will quickly lose its luster.</p>
+<p>•   Be helpful and generous. There’s a currency associated with sharing valuable information. Post links to articles or blogs that you know are of interest to others in your network. Others will come to see you as a resource —something you definitely want associated with your brand.</p>
+<p>•   Consider creating your own website. New technology has made it inexpensive and even somewhat easy (depending on your level of technical expertise in these matters) to get a website up and running in a matter of hours. The one that was recommended to me due to its ease of use is weebly.com. Check it out, and if you need help, it might be worth it to barter your expertise for that of a techie friend who can provide you with assistance.</p>
+<p>•   Post compelling and quality content online. Whatever you decide to share about yourself online needs to be engaging and optimized for search engines. If you’re writing brilliant blog posts, or sharing the world’s wittiest status updates, it doesn’t do any good if nobody can find it.</p>
+<p>•   Choose your connections wisely and manage your privacy settings on social media platforms. Send and accept connections requests only from people you know, want to know, or who add value to your network.</p>
+<h2 class="mistake-heading">Mistake 71: Ineffective Use of Social Media</h2>
+<p class="first-p">It’s one thing to use social media inappropriately (in ways that can be damaging to your brand); it’s another to use it ineffectively (in ways that don’t benefit your brand). I am not exactly what you’d call an early adopter —someone who jumps on the technology band wagon early—but even I know the power of social networking. It’s why I have Facebook and LinkedIn pages. (I do, however, draw the line at tweeting.) A few colleagues and I even had a blog for a few years—until the blogosphere took over the Internet and it was clear people couldn’t possibly absorb all the information available to them. The outlets I use serve the purpose of disseminating career information that complement my writing, speaking, and coaching. In short, keeping the Dr. Lois Frankel brand in the public eye as a resource for women’s career issues.</p>
+<p>I’ve already talked about the risks of not getting into the social media game. Now, ask yourself if you are using social media as effectively as possible to help you build or maintain your brand. As a woman, we already know you’re doing more social networking than your male colleagues, but we also know that the nice girl in you is most likely not using it to your advantage. As a recovering nice girl, I myself am loath to ask for recommendations and introductions that could be valuable to me. What was that your mother always told you? Do as I say, not as I do!</p>
+<p>Digital media consultant and coach Poonam Sagar gives us more insight into what you should be thinking about when it comes to your online brand, as well as tips to put into practice:</p>
+<p>Who are you? What expertise do you have? What do you want to be known for accomplishing? How do you want to be known and recognized by colleagues, other professionals, and potential employers? The information you put in your social media profiles and what you post develops your online brand.</p>
+<p>Google yourself and reflect on the “person” that emerged from the search—are the results congruent with who you want to be online?</p>
+<p>The three basics of effective online social networking are:</p>
+<p>•   Familiarity: What are you getting into? Don’t sign up for a social networking platform or web application without understanding what you will use it for.</p>
+<p>•   Consistency: It’s important to carry the same voice, image, and persona across multiple social networking platforms. Complete your profiles on the social platforms you wish to use with a crisp résumé and a professional photograph. Develop your personal tagline.</p>
+<p>•   Participation: Social networking is a gift economy. The more you participate productively with others, the higher your own profile will be.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Research online the social networking platforms to understand how they use your data, and the conventions that govern the way the community operates, before you create your accounts.</p>
+<p>•   Create a schedule that works for you for social media conversations.</p>
+<p>For example, fifteen minutes every alternate day. Remember that it doesn’t have to take a lot of time.</p>
+<p>•   Control your personal information online with privacy settings. Post only information and pictures that you are happy for everyone to see.</p>
+<p>Remove tags from undesirable pictures that might have been posted online by friends. Connect only with people you want to communicate with online.</p>
+<p>•   Acknowledge and appreciate your connections. Share their posts, endorse or recommend them on LinkedIn and Twitter, and, finally, remember to thank them.</p>
+<h2 class="mistake-heading">Mistake 72: Staying in Your Safety Zone</h2>
+<p class="first-p">I once asked a man why he’d applied for a particular position when he knew he did not meet the stated requirements. His reply was simple: “I’m smart. I’ll learn them.” Women tend to remain in positions too long for fear of getting in over their heads. Unless a woman is 100 percent confident that she meets all the expectations for the job, she won’t consider throwing her hat in the ring. Men are more likely than women to seek stretch assignments —ones they’ve never done before but want to prove they can.</p>
+<p>In the modern job market, we look at people who stay in a job too long in the same way we used to judge job-hoppers—as if there’s something wrong with them. Staying in a job too long gives the impression of being complacent and, perhaps, not staying up on the latest technical developments in the field. Women even refuse assignments for which they are handpicked if they feel they’re not qualified for the job. Big mistake.</p>
+<p>There’s no surer way to be crossed off the list for future opportunities than by refusing an offer—and there’s no greater burden than a good opportunity.</p>
+<p>Ironically, even people who stay in their comfort zones aren’t attracted or impressed by other people who do the same. Most folks consider those who are enthusiastic, take risks, and exhibit a can-do attitude as charismatic or people they would like to emulate.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Unless the responsibilities within a particular job change significantly, look for a new assignment about every three years—five years maximum.</p>
+<p>•   Don’t let your fear of failure cause you to overlook jobs you could do with minimal training.</p>
+<p>•   Stay up on developments in your field by taking classes or reading books. If you haven’t learned anything new lately, you’re not growing.</p>
+<p>•   Volunteer for assignments that stretch your skill set or enable you to learn entirely new ones that will flesh out your portfolio. If you’re willing to take the calculated risk of possibly failing, it’s not selfish to learn on the job.</p>
+<p>•   Start looking for your next job the day you start a new one. You may not actually make a move for several years, but being open to the possibilities creates a proactive, preemptive focus in the job market.</p>
+<h2 class="mistake-heading">Mistake 73: Giving Away Your Ideas</h2>
+<p class="first-p">This story is all too common. Woman has idea. Woman expresses idea.</p>
+<p>Idea gets ignored. Man expresses same idea. Man gets promoted. Who’s to blame? Woman. She let her idea be stolen instead of calling attention to the source. Why? Because she’s unsure of herself to begin with and doesn’t want to appear selfish, territorial, confrontational, or not a team player.</p>
+<p>Every time you give away an idea, you give away a little of your selfrespect. Do this enough times, and your self-confidence begins to dwindle immeasurably.</p>
+<p>Don’t make the mistake of assuming your idea is overlooked because you’re a woman. I’ve observed meetings at which women’s ideas were ignored for the simplest of reasons: Perhaps they didn’t speak loudly enough to be heard, or they whispered their concept to the man sitting next to them and he offered it as his own, or the timing was wrong. These are factors you can address fairly easily and unobtrusively.</p>
+<p>It’s not only about not giving your ideas away, it’s also about finding ways to sell them. Your ideas have value in the marketplace called work.</p>
+<p>Each time you make a suggestion that’s actually implemented, you’ve made a sale. Make enough of these sales, and you’ve collected more of those invisible chips that can later be subtly bartered for favors, plum assignments, or perks.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Get in the habit of asking a question after expressing an idea or making a proposal. Try something like “My recommendation is that we prioritize our solutions and select the top two for immediate implementation. Are there any objections to getting to work on this immediately?” This increases the likelihood of acknowledgment and discussion.</p>
+<p>•   When someone proposes the same thing you previously suggested (albeit in a slightly different way), bring the attention back to where the idea originated by saying, “Thank you for building on my original suggestion, Joe. Let me add a few things that I’m certain we’ll agree on.”</p>
+<p>•   Speak loudly enough to be heard.</p>
+<p>•   Take the risk of putting your ideas out directly and confidently.</p>
+<p>•   Whenever possible or appropriate, put your ideas in writing. It gives them a kind of credibility that just the spoken word lacks, and reminds people where the ideas came from. The written word is still one of the most powerful forms of communication, and some people respond much more favorably if they can “see” what you’re saying.</p>
+<p>•   Whatever you do, don’t lean over and whisper your idea to the person sitting next to you!</p>
+<h2 class="mistake-heading">Mistake 74: Working in Stereotypical Roles or Departments</h2>
+<p class="first-p">For nearly three decades I’ve watched women in stereotypical roles— administrative assistants, personnel department staffers, clerks—go to school at night and earn college degrees in the hope of moving up the corporate ladder. I’ve also seen women with degrees enter the workforce in stereotypically female roles as a strategy to get a foot in the door in the hope of being noticed and promoted. Unfortunately, I haven’t seen many who were successful in either scenario. Spending time in a “female ghetto”</p>
+<p>makes you more likely to be branded as unworthy of a senior assignment.</p>
+<p>Do I think this is right? Of course not.</p>
+<p>Look around your company. Are there departments in your organization like this? Human resources and personnel often fall into this category. The fact that there are more women nurses than male and more women grammar school teachers than male has traditionally caused pay in these areas to be less than the work warrants.</p>
+<p>Are you in one of these situations? If so, your status will not be viewed on a par with people working in departments where men and women are represented in essentially equal numbers. A good example of this is found in the banking industry. When tellers were predominantly men, the position was considered somewhat prestigious. As more and more women filled these roles, the pay scale for tellers declined and the position lost its glitter.</p>
+<p>Remaining too long in such a role or department will eventually limit your marketability.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Seek assignments in departments or fields where there are comparable numbers of men and women.</p>
+<p>•   When asked to take a stereotypical role, consider whether the longterm benefits outweigh the short-term ones.</p>
+<p>•   Never volunteer to make coffee or copies for a meeting. If asked, suggest the responsibility be rotated or assigned based on seniority.</p>
+<p>•   If moving out of a stereotypical role requires additional training or education, get it. It’s worth the investment in your future.</p>
+<p>•   If you acquire the training needed to move out of a stereotypical role and it fails to yield results, consider the possibility that you’ve been “typed”</p>
+<p>and might need to seek a new organization.</p>
+<h2 class="mistake-heading">Mistake 75: Not Soliciting Enough Feedback (or Ignoring It)</h2>
+<p class="first-p">There’s a word on the street about all of us. It’s what people say about us behind our backs or when we leave a room. This is the stuff that succession planning meetings are made of. A bunch of executives sit around a room and give their impressions of you. Creating your personal brand allows you to influence those impressions. You cannot build your brand without getting feedback. Neither can you effectively market yourself without feedback.</p>
+<p>Feedback is a little like medicine. You resist taking it, but you know it will make you better.</p>
+<p>Then there are the people who respond to feedback by either ignoring it (and hoping it will go away) or brushing it off with “That’s just one person’s opinion.” Perception is reality. People do not know you by your intentions; they know you by your behavior. You can explain or justify your behavior, but that doesn’t solve the problem of having a brand that doesn’t meet customers’ expectations. Sooner or later, people stop buying it. As we tell our clients: “When three people say you’re drunk—lie down.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Ask your human resources department to conduct a 360-degree feedback assessment. This will allow you to see yourself as others see you and provide the opportunity to work on areas for improvement. If that’s not possible, get in the habit of routinely asking people what you could do more of, less of, or to continue to be even more effective in your job.</p>
+<p>•   Make it easy for your boss to give you feedback by regularly asking for it. Here again, don’t ask, “How am I doing?” but rather what you can do more of, less of, or continue to do.</p>
+<p>•   When given feedback, respond with a nondefensive inquiry: “Can you tell me more about how and when I do that?” Avoid responding with explanations for how and why you do something.</p>
+<p>•   When the feedback stings, ask for time to think about it. If you need clarification, get back to the person and ask for it when you can do so unemotionally.</p>
+<p>•   Most people are reluctant to give honest feedback, so when you get it, consider it a gift.</p>
+<p>•   If you ask for feedback, it implies that you’re going to do something with it. Let people know what you’re doing to address your development areas. It calls their attention to any changes you actually make.</p>
+<h2 class="mistake-heading">Mistake 76: Being Invisible</h2>
+<p class="first-p">Did you know that the capture of Osama bin Laden was made possible by a woman? Much has been made of the team of Navy SEALs who bravely carried out the mission, but it would not have happened at all had it not been for a dedicated CIA analyst. According to one of the SEALs, this woman “teed it up” for success. She obviously cannot reveal her name for security purposes, but what’s most interesting to me is how many people don’t even know she exists! Contrast that with the SEAL who went outside the bounds of propriety and actually wrote a book about the capture.</p>
+<p>I facilitate a leadership program (for men and women) in which participants from the same company work in small groups to solve a realworld problem faced by their firm. Using a specified problem-solving model, they are asked to come up with a solution that includes problem identification, causes, and recommendations for overcoming it, as well as the preparation of a presentation for senior management. On the last day of the program, senior executives from the company are invited to listen to the presentations and comment on the viability of what is suggested. Many times the end product is so good that the proposed solutions are incorporated into the company’s business plan.</p>
+<p>Inevitably, the women in the program are the worker bees in this exercise. They keep the guys focused; they prepare the overheads or PowerPoint slides for the presentation; they ensure that everyone’s opinion is heard and taken into consideration. When it comes to who will lead the presentation, it’s entirely another story. In nearly twenty years of doing this particular exercise, I can’t recall one time when a woman took the lead.</p>
+<p>Instead, they suggested that the most verbal man lead the presentation team.</p>
+<p>Women are invisible enough without having to take extra steps to be doubly certain they aren’t seen or noticed! These situations present the perfect opportunities to market your brand. Don’t hand it over to a competitor—even if it is friendly competition.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Volunteer to chair regular department meetings.</p>
+<p>•   Submit a proposal to make a presentation in your area of expertise at a professional association meeting.</p>
+<p>•   Write articles for local newspapers, professional journals, or your company newsletter.</p>
+<p>•   When volunteers are asked to speak to senior management, seize the opportunity.</p>
+<p>•   In meetings, make certain you don’t remain invisible. Voicing your ideas is a great way to market your brand. Make your motto “Early and often” when it comes to making your presence known.</p>
+<h2 class="mistake-heading">Mistake 77: Overlooking Opportunities to Re-Brand Yourself</h2>
+<p class="first-p">What happens when you go back to school, get a degree or certificate, and everyone still sees and treats you as an administrative assistant? Or when you’ve gotten feedback that you’re not coming across as you thought you were and you do a course correction, only to find no one notices? How about when you’ve been laid off from a job in a field that is going the way of the dinosaurs? Pamela Mitchell, founder of the Reinvention Institute in Miami, Florida, and author of The 10 Laws of Career Reinvention, would tell you it’s time to reinvent yourself!</p>
+<p>Here’s a quick quiz from Pamela to help you determine if reinvention should be in your future:</p>
+<p>1. On Sunday nights I feel:</p>
+<p>a) Excited—it’s the final moment of the weekend, and I’m excited to get back to work tomorrow.</p>
+<p>b) Stressed—it’s the final moment of the weekend, doggone it!</p>
+<p>c) Anxious—it’s the final moment of the weekend, and I’m not looking forward to work tomorrow.</p>
+<p>d) Relaxed—it’s the final moment of the weekend, and I enjoy it!</p>
+<p>2. At work I feel:</p>
+<p>a) Energized—I have lots of great projects and/or a great team, and I enjoy going to work.</p>
+<p>b) Bored—I am doing the same thing I’ve been doing for a while.</p>
+<p>c) Jaded—I don’t enjoy the people I work with, and I don’t think things will change.</p>
+<p>d) Challenged—I’m always learning something new, and I have fun at work.</p>
+<p>3. My relationship with my boss is:</p>
+<p>a) Supportive—she or he goes to the mat to get the resources I need to do my job.</p>
+<p>b) Distant—I rarely get face time with her or him, and she or he doesn’t come to me often for things.</p>
+<p>c) Antagonistic—I don’t work well with her or him; there’s a lot of conflict in our communication.</p>
+<p>d) Nurturing—she or he spends a lot of time helping me develop my skills and talents.</p>
+<p>4. The senior team of my company views me as:</p>
+<p>a) Essential—I contribute a lot to the company’s goals, and they know about it.</p>
+<p>b) Nonexistent—I’m not on their radar screen at all.</p>
+<p>c) A pain—there have been a few situations where I didn’t agree with what was going on, and I made my feelings known.</p>
+<p>d) Competent—my boss tells them I do my job well.</p>
+<p>Now score your responses:</p>
+<p>Mostly A’s: You enjoy what you do, and you’ve got the momentum to prove it! It’s not time yet to switch careers; instead, work on an annual reinvention plan as insurance for any unexpected changes.</p>
+<p>Mostly B’s: You don’t feel passionate about your work, and that shows up in the office. It’s time to lay out a reinvention strategy.</p>
+<p>Mostly C’s: You don’t enjoy your job, and the people you work with know it. Time to get moving on a career change before you find yourself in a “forced” reinvention!</p>
+<p>Mostly D’s: You’re still growing, learning, and taking pleasure in your job. Don’t rest on your laurels; focus on using the opportunities in front of you to build your reinvention skill set.</p>
+<p>Don’t be a nice girl who suffers in silence or falls into the group of people Henry David Thoreau describes as those who lead “lives of quiet desperation and go to the grave with the song still in them.” Follow these tips that Pamela shared on the Katie Couric show, Katie, for how you can start creating a “brand”-new you.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Begin with a mini-reinvention. Change your hair color, lose weight, or take on a new sport or hobby. These small steps will shift you toward thinking outside the box for the bigger changes you want to make.</p>
+<p>•   Grab a buddy. Reinvention is lonely work. Identify a friend or coworker who you know is struggling with some of the same things you are and schedule time each week to talk about what you both plan to do, what you have done, and your visions for your futures.</p>
+<p>•   Ban excuses. Excuses are simply manifestations of fear. Rather than talk about why you can’t change, come up with not only reasons why you can, but why you will.</p>
+<p>•   Step outside your comfort zone. The life you want to live is just outside your comfort zone.</p>
+<p>•   Give yourself time. Most people want immediate results, but that’s not realistic. Set goals and keep track of progress so that you can appropriately reward yourself for success along the way.</p>
+<h2 class="mistake-heading">Mistake 78: Ignoring Your Legacy</h2>
+<p class="first-p">What is the forensic evidence that I existed? When they dust for fingerprints, what will they find?” This is how one executive described the desire to leave something of himself behind in the workplace where he had spent so many years devoted to his company. When I told a friend about this insightful comment, her response was “I don’t think about leaving a legacy.</p>
+<p>I just want to do a good job.” Ah, yes. Nice girls are selfless and selfsacrificing, when, in fact, if you are really doing a good job, then you are likely doing things that will leave a legacy.</p>
+<p>Your legacy doesn’t have to be a building with your name on it, a huge charitable foundation, or an endowed chair at your alma mater. Most of us leave much more modest legacies, but we don’t think of them as part of our brands. Depending on where you are in your career at the moment, it might not be on your radar screen, but I encourage people at all levels to consider what they want their legacies to be so that they can engage in behaviors that will ultimately lead to the satisfaction of knowing their professional presence made a difference.</p>
+<p>Studio City–based consultant and psychotherapist Susan Picascia and I developed the following chart to describe the various tasks inherent to each phase of our careers. These phases are not dictated by our ages, but rather the time we’ve each spent in the career of our choice. You’ll note our chart is similar to Maslow’s hierarchy of needs, but with a focus on career, because we believe that striving for professional fulfillment is part of everyone’s developmental process. It’s when that process is thwarted that we experience malaise or indifference to our work.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">STAGES OF CAREER DEVELOPMENT</h3>
+<p class="first-p">On the chart you’ll see many of the things we’ve already covered in this book, including personal branding and creating your legacy. These two things go hand in hand. I’ve seen too many women who’ve made remarkable contributions to their organizations underplay their impact and fade into obscurity, whether due to ineffective branding, changing jobs, or retirement. Existentialist philosopher Jean-Paul Sartre said that the loudest statement we make about who we are is our choice of career. The brand you establish in that career will be one of your greatest legacies.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Be a mentor. This you can do at any age or career stage. If you’re not a mentor to people inside your company, then mentor young women in the community. The website mentoringgroup.com has a wealth of information to assist you with developing a meaningful relationship with mentees.</p>
+<p>•   Take risks—speak the unspoken. If you’ve reached the stage of your career where your reputation is established, the fact that you’re still employed tells you the company values your contributions, and you most likely can “get away with” saying things that people on the way up can’t.</p>
+<p>It’s the perfect time to take some risks and be the voice for concerns you’ve had for a while but have never had the courage to express.</p>
+<p>•   Create new systems or processes. You have expertise and a perspective that others may not. Consider bringing together technical experts from all age-groups to work on a task force that will add value to the company’s bottom line by developing new systems or processes. Use your external network of experts to help—you not only benefit from their expertise, but you also have a legitimate reason to stay in touch. And if or when you leave the company, you never know when or how you might need members of your network.</p>
+<p>58. Making Up Negative Stories 59. Striving for Perfection 60. Nixing the Idea of an Entrepreneurial Venture Chapter 5: How You Brand and Market Yourself 61. Failing to Define Your Brand 62. An Elevator Speech That Doesn’t Go to the Top 63. Minimizing Your Work or Position 64. Undervaluing Your Consultative Skills 65. Using Only Your Nickname or First Name 66. Waiting to Be Noticed 67. Refusing High-Profile Assignments 68. Not Sitting at the Table 69. Being Modest 70. Inappropriate Use of Social Media 71. Ineffective Use of Social Media 72. Staying in Your Safety Zone 73. Giving Away Your Ideas 74. Working in Stereotypical Roles or Departments 75. Not Soliciting Enough Feedback (or Ignoring It) 76. Being Invisible 77. Overlooking Opportunities to Re-Brand Yourself 78. Ignoring Your Legacy Chapter 6: How You Sound 79. Couching Statements as Questions 80. Using Preambles 81. Explaining 82. Asking Permission 83. Apologizing 84. Using Minimizing Words 85. Using Qualifiers 86. Not Answering the Question You’re Asked 87. Talking Too Fast 88. The Inability to Speak the Language of Your Business 89. Using Nonwords 90. Using Touchy-Feely Language 91. The Sandwich 92. Speaking Softly 93. Speaking at a Higher-Than-Natural Pitch</p>
+    </div>
+  </div>
+</body>
+</html>

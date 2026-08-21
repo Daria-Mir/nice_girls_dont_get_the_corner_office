@@ -1,0 +1,10 @@
+# Exclude OS files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Exclude original PDF book files (designed HTML chapters are committed instead)
+*.pdf
+
+# Exclude unused root-level raw files
+/Lois-P.-Frankel-Ph.D.-image.jpg

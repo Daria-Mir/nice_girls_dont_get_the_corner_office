@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 6: How You Sound - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 6: How You Sound</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 6 How You Sound There’s a Chinese curse that afflicts many nice girls: “May you have a wonderful idea and not be able to convince anyone of it.” The best ideas fall on deaf ears if they’re not communicated in ways that instill confidence and credibility. Dr. Albert Mehrabian, professor emeritus of psychology at UCLA, developed what is known as the “7%–38%–55% rule”: 7 percent of your credibility comes from what you say (the content of your messages); 38 percent comes from how you sound (tone of voice, loudness, etc.); and 55 percent comes from how you look (dress, posture, nonverbal messages, etc.).</p>
+<p>These factors also contribute to what’s known as gravitas—what some believe to be at the core of executive communication. In a research paper on executive presence, gravitas is described by Sylvia Ann Hewlett and coauthors as “elegant packaging that attracts impressed attention, allowing your hardcore skills, accumulated knowledge, depth of experience and raw talent to stand out and draw others to you.”</p>
+<p>This next section examines behaviors contributing to how you sound and gives you specific language to practice. Try saying some of the Coaching Tips out loud to get a feel for how they might sound. Avoid the inclination to discard a tip just because it feels uncomfortable or awkward—it may be the one you need most. Remember, combined with how you look (which I cover in the next section), how you sound comprises more than 90 percent of the perception of your credibility.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COMPONENTS OF CREDIBILITY</h3>
+<h2 class="mistake-heading">Mistake 79: Couching Statements as Questions</h2>
+<p class="first-p">This is one of the most common mistakes I hear women make: asking a question as a safe way of expressing an idea without being perceived as too direct or pushy. Such questions typically take the form of “What would you think if we…” or “Have you considered…” By asking a question rather than making a statement, we relinquish the ownership and outcomes of our ideas. Consider this exchange:</p>
+<p>Ann: Do you think we should budget more money for development this year so that we can meet unexpected but emerging needs?</p>
+<p>Pete: No. I think we should put more money into marketing. We first need to create buzz and then worry about filling the need.</p>
+<p>Ann: That’s true, but we have to be prepared to fill the need upon demand, and that requires development funds.</p>
+<p>Pete: So why’d you ask me?</p>
+<p>A senior woman I coached was having little success shaking the perception that she was intimidating. As a tall and imposing figure, and one who worked with military-like precision in the defense industry, it was easy to see how her direct reports might be afraid to stand up to or disagree with her. When I first met with her, we role-played a typical scenario where she wanted input from her team but wasn’t getting it. She started by asking a question about what I thought of a particular process. When I answered, she responded with a “yes, but” question—“Yes, but don’t you think…” This went on for several iterations, and I understood completely what was getting in her way.</p>
+<p>The woman’s questions weren’t intended to engage discussion; they were intended (consciously or not) to get others to do what she wanted them to do. On the surface, it appeared she was interested in the opinions of others. But her staff knew that what they said wasn’t going to make a difference, so they stopped telling her what they thought. I later learned that another coach had told her she should ask more questions to dispel the notion that she didn’t care about what her staff thought. I’m sure that coach hadn’t quite envisioned how the suggestion would be applied!</p>
+<p>The result of posing your statements as questions is that others won’t hear you as owning your ideas; rather, they’ll see you as manipulative, or they’ll assume there’s room to pick apart your proposal or ignore it entirely.</p>
+<p>If you ask a question to camouflage a statement, it’s a little like trying to teach a pig to sing—it frustrates you and annoys the pig. If you’re worried about sounding too strident or pushy, consider adding language to the message that would make it more palatable—but at all costs avoid turning it into a question if it isn’t truly a request for information.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Start making statements. Each time you find yourself couching an opinion in the form of a question, stop and turn it into a statement.</p>
+<p>•   Save your questions for those times when you legitimately need information or are interested in someone’s opinion.</p>
+<p>•   Put ideas out in the affirmative: “I propose we prepare ourselves for emerging needs by putting the bulk of our budget moneys into development.” Even if someone disagrees with you, your affirmative statement leaves you in a much stronger position to defend your proposal.</p>
+<p>•   Adding a tagline such as “I’m interested in your thoughts,” or “You can hear I feel strongly about this, and at the same time I’d like to hear what others think,” after a proposal or statement can make you more comfortable with being direct without making you appear uncertain.</p>
+<h2 class="mistake-heading">Mistake 80: Using Preambles</h2>
+<p class="first-p">A preamble is a concoction of words and nonwords used before getting to the main point. It’s like a closet filled with clutter. When there’s too much clutter, you can’t see what’s in the closet. The same is true with words. The more words you use, the more diffused your message becomes and the less likely the listener will hear your unique message.</p>
+<p>Women use preambles as a means of softening their messages for fear of being perceived as too direct or aggressive. What’s your response to this preamble?</p>
+<p>You know, I was thinking about this problem we’re having with productivity. In fact, I’ve been talking to other people about it, too. A lot of us share the same concerns over reduced productivity during the last three quarters, so I’m not alone in this. Come to think of it, it might be even more than just those three quarters. It’s something we’ve known about for a long time but haven’t measured. At any rate, we’ve all been trying to find a way to address it, and I think I may have come up with an idea. I’m not saying it’s the best idea or the only idea —just that it’s one idea. In fact, other people have ideas, too, but I’ll leave it up to them to share those with you. Now, my idea involves… And the point is… This person’s motto must be “Why use fewer words when I can use more?” This same message could have been delivered powerfully and confidently using 75 percent fewer words: “Productivity has been an issue we’ve struggled with for some time now, and I have a proposal for addressing it.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Give your bottom line first. Organize your thoughts before you open your mouth by asking yourself two simple questions: What’s my main topic? and What two or three points do I want the listener to consider?</p>
+<p>•   Let your mantra be “Short sounds confident.” If the message is an important one, practice before delivering it. Hone it using as few words as possible.</p>
+<p>•   Try combining affirmative declarations with short messages: “I propose we conduct a cross-functional analysis to determine the causes of and cures for reduced productivity during the last three to four quarters.”</p>
+<h2 class="mistake-heading">Mistake 81: Explaining</h2>
+<p class="first-p">Remember the old television show I Love Lucy? Since originally airing in 1951, there has never been a time when it was not on the air—it’s been in syndication in dozens of languages for more than sixty years. In the show, whenever Ricky was exasperated with some stunt Lucy pulled, he sternly admonished her, “Lucy, you got some splainin’ to do.” With this, Lucy knew she was in trouble and a sheepish look would take over her face. By demanding that she explain herself, Ricky was relegating Lucy to the level of a child—and she responded in a childish way. Explanations coming from an adult woman make them seem unsure of themselves and, at times, somewhat childish.</p>
+<p>The lengthy explanation is the counterpoint to the preamble. You finally make your point—then you undermine it with an even longer explanation that causes others to mentally check out. Preambles, combined with explanations, are lethal. Why do nice girls tend to pair these fatal flaws more than men? There are a few reasons. More words soften a message, and heaven forbid we sound too powerful. Another is that we fear we haven’t been thorough or complete enough, so in an effort to be “perfect,” we keep talking. A third reason is that our statements frequently are not acknowledged, so we continue talking in an effort to get feedback. And, finally, we overcompensate for our insecurity. We think the more we talk, the better case we make… when in fact the opposite is true.</p>
+<p>Let’s pick up the preamble from the previous mistake and pair it with this lengthy explanation:</p>
+<p>I’m not saying it’s the best idea or the only idea—just that it’s one idea. In fact, other people have ideas, too, but I’ll leave it up to them to share those with you. Now, my idea involves doing some kind of a climate survey. You know, the kind where we go out to the employees and ask them questions about their processes, job satisfaction, relationships with their supervisors, and so on. A lot of companies are doing this now. We can use either an outside consultant or our own staff. If it’s all right with you, I would be willing to look into what the best way to accomplish this would be. Or, if you prefer, you can name a task force to investigate options. On the other hand, if you want I will investigate the options and get back to you.</p>
+<p>As I said… lethal.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Shorten your explanations by 50 to 75 percent.</p>
+<p>•   Use the headline model to plan your verbal communications in advance, sort out your thoughts when responding to a question, and keep your messages succinct. The more you use this model, the more natural it will become.</p>
+<p>•   Here’s what the entire message would sound like if you used all the coaching tips from the past three mistakes with the headline communication model (see next page):</p>
+<p>I propose we conduct a cross-functional analysis to determine the causes of and cures for reduced productivity during the last three to four quarters. The results will give us three pieces of invaluable data: (1) where our greatest strengths lie; (2) what mistakes we’re currently making; and (3) where we should go from here. I’ll be happy to take the lead on this. Do you have any thoughts?</p>
+<p>•   Resist the internal message that screams INCOMPLETE. Saying everything you know related to a topic isn’t necessary. Depending on your level of expertise, it may be incomplete to you, but not to the other person.</p>
+<p>This is a case where less is more.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">HEADLINE COMMUNICATION</h3>
+<h2 class="mistake-heading">Mistake 82: Asking Permission</h2>
+<p class="first-p">Have you ever noticed that men don’t ask permission? They ask forgiveness. My hunch is that women ask permission more out of habit than from really needing someone to give them the green light. It’s a variation on asking questions to play it safe—but potentially more self-defeating. In our society we expect children, not adults, to ask permission. Every time a woman asks permission to do or say something, she diminishes her stature and relegates herself to the position of a child. She also sets herself up to hear “No.” By seeking permission before acting, we are less likely to be accused of making a mistake—but we’re also less likely to be viewed as confident risk-takers.</p>
+<p>Women ask permission for things as simple as taking a day off and as ridiculous as whether they can spend money on a particular service required by the department—despite the fact they have already been given signing authority. I’ll never forget a woman who complained to me that she was denied permission for a one-day off-site for her staff while a male coworker took his team on a boondoggle to a local resort for three days. When I inquired as to how she went about making the plans, she admitted she thought she was being politically correct by asking the boss if it would be all right to have everyone gone for a day; his reply was that he preferred this didn’t happen. She then went to her coworker and asked him how he’d gotten the boss’s approval. He said, “It never occurred to me to ask.”</p>
+<p>Regardless of your position, you’re entitled to take independent action within a given set of boundaries. Your job is to identify those boundaries, clarify them with your boss, and act within them. From administrative assistants to department managers, I observe many who won’t make a move without first getting permission. Believe me, your boss wants you to take the ball and run with it. It’s what you’re paid for, and it makes his or her job infinitely easier.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Inform others of your intentions; don’t ask for permission. By informing others you show respect for their need to know, but without your action being contingent upon their approval.</p>
+<p>•   Assume equality.</p>
+<p>•   Turn this: “Would it be all right with you if I work at home tomorrow? I’m expecting a delivery midday,” into this: “I just wanted to let you know I’ll be working at home tomorrow. I’ve got a delivery coming.”</p>
+<p>•   You can assume that if people have a problem with what you’re saying, they’ll let you know. You can then negotiate from a position of greater strength.</p>
+<p>•   If using affirmative declarations is difficult for you, soften your message with a follow-up phrase. Rather than asking for permission, try something like this: “I plan to prepare a position paper to address each of the concerns of our client. When it’s complete, I’d like to get your input before sharing it with the client.”</p>
+<p>•   Similarly, don’t fall into the trap of responding to statements posed as questions. You’ll wind up in a spitting match.</p>
+<p>•   A legitimate question is one in which you are asking for information you don’t have. By all means ask these types of questions, but avoid holding a group hostage with your questions. Be aware of the body language of others that suggests they’re ready to move on. Ask additional questions off-line.</p>
+<h2 class="mistake-heading">Mistake 83: Apologizing</h2>
+<p class="first-p">I was watching the British Open just after Tiger Woods had lost a tournament. The sportscaster interviewing him expressed sympathy for an obviously bad day in which he’d missed some easy shots and just hadn’t played up to his normal standard. His response was “I didn’t play poorly.</p>
+<p>The wind and the conditions were just against me today.” It was a reminder of how even in the face of obvious errors and poor performance, men will deny or minimize the mistake rather than assume responsibility or apologize.</p>
+<p>Women can take a lesson from this. Apologizing for unintentional, lowprofile, nonegregious errors erodes our self-confidence and, in turn, the confidence others have in us. Whether it’s inadvertently bumping into someone on the street or making a small mistake in the office, a woman is far more likely to apologize than a man. It’s second nature to us and often done in place of confronting the real source of the mistake—the other person’s poor communication. It’s a conflict-reducing technique, but one that makes you look like you’re at fault when in fact you’re not.</p>
+<p>Here’s an example. A woman opened a coaching session by telling me that her boss had just finished berating her over the fact that she hadn’t informed him of some meeting she’d attended that he wanted to attend as well. The fact was, she had forwarded to him an e-mail with the information about the meeting, but he’d either failed to read it or forgotten to mark it on his calendar. When asked how she handled the situation, I could tell she was proud of her response. Because we happened to have previously talked about the phenomenon of women apologizing, she knew she didn’t want to do that. Instead, she very politely told him, “I forwarded the e-mail to you the same day I received the information. If you’re saying that in the future you would like me to check with you to be certain you receive information such as this, I’ll be happy to.”</p>
+<p>This was a great response for a number of reasons. First, she didn’t fall into the trap of apologizing. She reported that by not doing so she felt far more empowered and less like a child who was being scolded. Second, is there a boss anywhere who wants employees marching into his or her office to confirm receipt of a bunch of e-mails? By thinking on her feet, she came up with an alternative she knew he wasn’t going to go for. Essentially, in a very diplomatic way, she put the onus on him to read his mail.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Start counting the number of times you apologize unnecessarily.</p>
+<p>Consciously reduce this number by saving your apologies for big-time mistakes (and there aren’t many of those).</p>
+<p>•   When you do make a mistake worth apologizing for, do so only once, then move into a problem-solving mode.</p>
+<p>•   Turn the inclination to apologize into an objective assessment of what went wrong and ways to fix it.</p>
+<p>•   Combine the previous coaching tips with an unapologetic statement such as “Based on the information initially provided to me, I had no idea that was your expectation. Tell me more about what you had in mind, and I’ll make the necessary revisions.”</p>
+<p>•   Avoid using apologies that put you in a one-down position as a way of ensuring you’re liked. Always begin from a place of equality—regardless of the level of the person with whom you are dealing. He or she might have a higher position than you, but that doesn’t make the person any better than you.</p>
+<h2 class="mistake-heading">Mistake 84: Using Minimizing Words</h2>
+<p class="first-p">Although women may not have cornered the market on the use of minimizing words, we certainly use them more than most men. Minimizing words are those that diminish the importance or size of an achievement. My cousin’s teenage daughter recently demonstrated this, and the incident served as a reminder that this is something learned early in girlhood in response to the message “Don’t brag or boast.”</p>
+<p>During a family event, her grandfather proudly announced that she had won several scholastic awards. When I expressed my congratulations and inquired as to which ones, she responded, “Oh, they’re just Golden State awards.” Now, I have no idea what these awards are, but I do know she had to do something above and beyond the norm to achieve them. By using the word just, she minimized the importance of the recognition.</p>
+<p>The workplace equivalent is to downplay success or attribute it to something other than talent, hard work, or know-how. In response to congratulations or compliments, women will often say something like “It was really nothing,” or “I guess I just got lucky.” Say those phrases enough times, and you’ll begin to believe them.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Practice saying, “Thank you for noticing,” or “Thank you. I’m pleased with how it turned out.” Say it again and again until it rolls off your tongue in response to a compliment.</p>
+<p>•   Objectively describe your achievements without using qualifiers.</p>
+<p>Avoid “It was only…,” “I just…,” or “I surprised myself…”</p>
+<p>•   If you want to be modest, try saying something like “Thank you. I am quite proud of what I achieved and must give some credit to those who helped me along the way.”</p>
+<p>•   Read Power Talk: Using Language to Build Authority and Influence, by Sarah Myers McGinty. This book provides great insight into the importance of matching your communication to the situation as well as techniques for how you can ensure that your message is taken seriously.</p>
+<h2 class="mistake-heading">Mistake 85: Using Qualifiers</h2>
+<p class="first-p">Another way in which women calm their fears about being too direct, opinionated, or committed is to use qualifiers. They serve the purpose of softening, and weakening, your message. Qualifiers include comments such as:</p>
+<p>“It’s kind of like…”</p>
+<p>“We sort of did…”</p>
+<p>“Perhaps we should…”</p>
+<p>“Maybe it would be better if…”</p>
+<p>“We could…”</p>
+<p>Yikes! It’s maddening. Equivocating comments prompt people to ask or think:</p>
+<p>“What is it like?”</p>
+<p>“What did you do?”</p>
+<p>“Should we or shouldn’t we?”</p>
+<p>“Is it better or isn’t it?”</p>
+<p>“Can we or can’t we?”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Give your opinion in clear, certain terms. This doesn’t mean dogmatically, just directly and without qualifiers.</p>
+<p>•   Here again, if you feel you need them, taglines can help you soften a strong opinion without invalidating it. For example, “I feel strongly that we should act now rather than wait for all the reasons mentioned. I’m curious to hear what others think.”</p>
+<p>•   If you’re really not sure, then preface your remarks with why you’re not sure or what would make you more committed. “Given the facts we have so far, I’m not sure we should move so quickly. I would need more data before making a final decision,” is still more clear than equivocating.</p>
+<h2 class="mistake-heading">Mistake 86: Not Answering the Question You’re Asked</h2>
+<p class="first-p">Have you ever felt like a deer caught in the headlights of an oncoming car when asked a question you didn’t expect? You feel your heart start to pound. Your mind races trying to locate a few points that would make you sound halfway intelligent and informed. The seconds ticking by feel like hours. And what do you finally do? You start talking in an attempt to fill the silence and hope something will eventually come to you.</p>
+<p>Consider this exchange between a senior vice president and one of her direct reports:</p>
+<p>SVP: Do you think we should tell our shareholders about the anticipated loss for the fourth quarter or wait until we’re sure how much the loss will be?</p>
+<p>DR: Well, we could tell them now in preparation for the fourthquarter financials. On the other hand, if we wait, we’ll sound more credible in terms of actual numbers. If we tell them now, we’ll have to deal with lots of questions we can’t answer. If we wait, it may appear we’re trying to hide something. There are pros and cons either way.</p>
+<p>Guess what? The VP already knows there are pros and cons. She can probably articulate them just as well as you. What she wants is an answer.</p>
+<p>My Indonesian clients (who, regardless of gender, communicate in a stereotypically feminine way) call this basa-basi—“wishy-washy.” Women often make the mistake of thinking they have the luxury of thinking out loud in response to tough questions. They believe putting all the options on the table is the most helpful and fair thing to do. The obvious problem is that it leaves the questioner without an answer. If you ask me, it’s just another way women hedge their bets and play it safe. One colleague calls this “hiding in plain sight.” If there ever is a time to make a declarative statement, it’s in response to a direct question.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Directly answer the question you’re asked. Just as in school, there are only four kinds of questions: true-false, fill in the blank, either-or, and essay. The question above was either-or: Should we share the information now or wait? The first words out of your mouth must be one or the other— or your own third alternative. In this case the sentence could begin with “Neither. I think we should let the results speak for themselves when the financials are announced.”</p>
+<p>•   The inability to answer a question directly and succinctly can stem from the desire to have the perfect or “right” answer. I often hear people answer a yes-no question with “But I can’t give you a yes or no answer.”</p>
+<p>Oh yes you can. You do it by taking a risk and putting yourself on the line.</p>
+<p>It’s better to err on the side of starting a debate than it is to sound wishywashy.</p>
+<p>•   Go back to the headline communication model to organize your thoughts. Tom Henschel, president of Essential Communications, coaches clients to “chunk” answers mentally in terms of the bottom line and two or three pieces of supporting data. An appropriate response to the question above using this model would sound like this: “I suggest we share the information now. There are two primary reasons I advise this. First, I believe it’s better to err on the side of full disclosure rather than be accused of withholding information. Second, we’re pretty sure there’s going to be a loss, but if we’re wrong and there isn’t, people will be relieved and we’ve lost nothing.”</p>
+<p>•   When answering an essay question, use a numbered framework to order and express your thoughts: “I have three ideas.…” or “There are two paths we can take.…”</p>
+<p>•   Take an improvisation class. Part of being able to answer questions directly is knowing how to think on your feet. The techniques you learn in improvisation will be helpful to you in a number of ways.</p>
+<h2 class="mistake-heading">Mistake 87: Talking Too Fast</h2>
+<p class="first-p">When I was interviewed the first time on the Today Show by Ann Curry, I was thrilled. I don’t know what got into me (probably high on the adrenaline rush I was experiencing), but after the interview I asked if I could give her a coaching tip. She hesitated, but then said sure. My tip for her was to speak more slowly because speaking so rapidly makes it seem like she’s trying to take less time. Without being defensive, she replied that the control booth is always whispering in her ear, “Speed it up.” As I told her, you don’t hear Matt Lauer speeding it up—even though I’m sure they’re telling him the same thing (or they’re not because they know they can’t get away with it with a man).</p>
+<p>Was Ann replaced in the coanchor spot in 2012 because she spoke too fast? I don’t think so. None of us really knows the answer to that question, but I can tell you she was a smart, gutsy woman with a lot of heart. Just before our interview started she looked me in the eye, gave me a fist bump, and said, “Let’s do something good for women.” My own opinion (and it’s just that) is that Ann’s departure was a case of being on the wrong playing field. The format and tenor of the Today Show changed over the years, and Ann is better suited to reports with more gravitas. The pieces she has done subsequently certainly showcase her talent in this arena.</p>
+<p>But I digress! Many of us, having been given the message that we talk too much, are fearful of taking up too much floor time. We speed up our communications so that we can get our entire message out before being interrupted or given a sign that we’ve talked too much. We wind up sounding like the man in the old FedEx commercial who could talk at the speed of light. Much like physical space, taking the appropriate amount of time to verbally express ourselves is a sign of entitlement. That is: I’m entitled to be seen and heard.</p>
+<p>Because so much of your credibility is dependent on how you sound, regardless of the actual content, it’s important to convey confidence, accuracy, and depth of thought. Speaking too quickly does just the opposite.</p>
+<p>It can be interpreted by others as implying that you don’t deserve the time you’re taking from them or that your message isn’t important enough for them to spend time on. Rushing through your message can be construed as not being thorough or thoughtful in your approach. These interpretations can, in turn, cause the listener to question the accuracy of what you are reporting.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Practice speaking at a moderate pace. Practicing a presentation to music is helpful—provided it’s not a Sousa march.</p>
+<p>•   Join Toastmasters. These groups, which you can find in most cities, enable professionals to meet during the lunch hour and practice public speaking. Members give one another feedback at the end of each presentation. It’s one of the best ways to gain comfort with not only talking, but public speaking, too. You’ll find contact information in the appendix.</p>
+<p>•   Read Smart Talk: The Public Speaker’s Guide to Success in Every Situation by Lisa B. Marshall. The book is filled with practical suggestions for how you can look and sound like a pro in front of an audience.</p>
+<p>•   Ask a friend or colleague to discreetly give you a sign when your speech speeds up.</p>
+<p>•   Tell yourself you’re entitled to take all the time you need to convey your message (providing you do it in the way suggested in previous tips).</p>
+<h2 class="mistake-heading">Mistake 88: The Inability to Speak the Language of Your Business</h2>
+<p class="first-p">Every business and profession has a language and jargon all its own. We may joke about phrases such as “Let’s make sure we’re all on the same page,” “She drank the Kool-Aid,” and “Let’s take this off-line,” but when we fail to use the language, it conveys a lack of familiarity. Influence comes from knowing the business, and one of the best ways you can exercise your influence is to use language unique to your industry and profession. Women often assume if they know and are good at their piece of the business, that alone will make them influential. Wrong.</p>
+<p>One woman we worked with wondered why she was continually overlooked for promotions. She received consistently good performance reviews and was frequently praised for her expertise and contributions to the department. In an attempt to identify high-potential employees, her company regularly administered management assessments to a certain level of staff. The assessment included a few tests and an interview with an organizational psychologist. The result: She was described in the report as being of above-average intelligence, a good problem solver, and potentially a good manager, but lacking in her ability to speak about parts of the business other than her own.</p>
+<p>Do you know the ROI, bottom line, and performance indicators for your company? If not, it’s time to find out.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Read the Wall Street Journal. It will provide you with not only information that could be helpful to you in your work, but also a common language of business.</p>
+<p>•   Ask someone in your finance department to explain the basics.</p>
+<p>•   Subscribe to industry magazines or newsletters.</p>
+<p>•   Take a class in accounting for nonfinancial professionals.</p>
+<p>•   Get involved with your own personal finances and budgeting.</p>
+<p>•   Attend professional association meetings.</p>
+<p>•   Research benchmarks and best practices in your field.</p>
+<h2 class="mistake-heading">Mistake 89: Using Nonwords</h2>
+<p class="first-p">Nonwords are habitual sounds and phrases you use to fill up silence. When they infuse your speech, they make you sound unsure or hesitant. Nonwords can be uh or er, but can also be short interjections such as Know what I mean? or See?. Any repetitive sound used as a substitute for a brief pause becomes a nonword and detracts from your message.</p>
+<p>If every sound you utter were transcribed, uh, well, you wouldn’t, uh, want your speech to read as if you, uh, didn’t know what you were talking about, know what I mean? Becoming conscious of these credibility busters can be the toughest part of changing the habit. Once you begin to track your nonwords, no matter how diligent you are, you’re probably hearing only about a tenth of the ones you actually say.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Ask a trusted colleague for feedback about your use of nonwords.</p>
+<p>•   Set up a real-time feedback loop with friends or colleagues. For example, over a cup of coffee have them snap their fingers every time you use a nonword.</p>
+<p>•   Involve people outside work in your real-time feedback. The more feedback you get, the faster you’ll break the habit.</p>
+<p>•   Videotape yourself making a presentation and review it for how you sound.</p>
+<p>•   Put a voice recorder on your desk and hit the Record button before you answer the phone or make a call. Listen to the recording later and count your nonwords.</p>
+<p>•   Become comfortable with silence—it can be a powerful tool in your communications.</p>
+<h2 class="mistake-heading">Mistake 90: Using Touchy-Feely Language</h2>
+<p class="first-p">Yet another way women display their insecurity around being direct is to use the proverbial touchy-feely language. The best way I can describe this is to show you what it sounds like in comparison to non-touchy-feely language (I feel wishy-washy just writing it!).</p>
+<p>Touchy-Feely More Confidently Stated “It feels like we should…” “I believe it would be best to…”</p>
+<p>“I might…” “I intend to…”</p>
+<p>“You could consider…” “I would advise you to…”</p>
+<p>“How would you feel if we…” “What would you think if we…”</p>
+<p>“One could argue that…” “The opposition would say…”</p>
+<p>“My thought is that we…” “My proposal is that we…”</p>
+<p>You get the picture. Both sides convey the same literal messages, but the ones on the right side are more assertive. They make a stronger statement about the speaker’s commitment to what’s being said and about her desire to become visible. You might think I’m just splitting hairs here, but our language strongly conveys meta-messages about us, our values, and our intentions.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Practice beginning your sentences with declarative I statements, such as “I think…,” “I believe…,” I propose…,” “I intend…,” “I would like…,”</p>
+<p>or even “I feel…”</p>
+<p>•   Take more risks around stating your thoughts with conviction.</p>
+<p>•   Develop a more businesslike vocabulary by reading books and articles targeted to businesspeople.</p>
+<p>•   When writing letters or e-mails, go back and edit them with the intention of strengthening your written word.</p>
+<p>•   Don’t entirely relinquish touchy-feely language—just be more discriminating in how you use it. It can serve a purpose when counseling or coaching coworkers.</p>
+<h2 class="mistake-heading">Mistake 91: The Sandwich</h2>
+<p class="first-p">I don’t know who came up with the idea for giving feedback using the sandwich technique, but it’s manipulative and undermines your ability to be straightforward. The sandwich model suggests that when you’re giving feedback, you should couch the negative between two pieces of positive feedback. Fageddaboudit. It doesn’t work. It may be easier for you, but not for the recipient. I hesitate to give you an example of how it works because I don’t want you to get the idea you should include it in your communication skills repertoire, but for the sake of clarity, here’s what it would sound like:</p>
+<p>Greg, I’d like to talk to give you some feedback about your recent work on the Jackson project. I really like how you spent considerable time up front building a relationship with the client. They seemed to appreciate it. On the other hand, I would have liked you to put more time into doing the research necessary to create a robust proposal to them. Overall, I’d say you’re doing a good job of managing the client’s expectations.</p>
+<p>Now, what is Greg going to walk away with? He’s going to be asking himself if he’s doing a good job or not. Even though the last message was a positive one, the middle, more critical message, is most likely what he’s going to focus on. Separating positive and negative feedback is a much more effective way of delivering a clear message of expectations and reinforcing appropriate performance. Giving critical feedback is difficult no matter how skilled or practiced you are at it. It’s one reason why I use the seven-to-one rule of feedback (described in the coaching tips below).</p>
+<p>Women in particular often don’t like being the bearers of bad news. In fact, most of us avoid it like a ten-pound box of chocolates. To be effective, feedback has to be specific, behavioral, and focus on positive results. A better way to approach Greg would have been as follows:</p>
+<p>Greg, I’d like to give you a little feedback about the Jackson proposal. It seemed to me that the research you presented wasn’t thorough enough and left a number of questions unanswered for the client [specific]. In the future, I’d like you to conduct a more thorough review of what the competition is doing and contrast the benefits of using our process and people [behavioral]. This would enable the client to make an informed decision in a shorter period of time [positive results].</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Giving critical feedback is much easier if you’ve followed the sevento-one rule. Over time you must give seven pieces of positive feedback for every one piece of negative. This enables the recipient to hear your developmental message and not see you as overly critical.</p>
+<p>•   When you give positive feedback, make certain it’s free from implied criticism. Like a left-handed compliment, it sounds something like this from your mother-in-law: “Dinner tonight was just delicious. It’s soooooooo much better than the last three meals you cooked for us.”</p>
+<p>•   Keep in mind that ongoing feedback should be both positive and negative.</p>
+<p>•   Giving direct feedback can be made easier by using a model called the DESCript:</p>
+<p>D = Describe why you’re having the conversation. Frank, I’d like to talk to you about something that happened last week when we were working together on the Acme project.</p>
+<p>E = Explain in behavioral terms how you see the situation and Elicit from the other person his or her perceptions. I felt the bulk of the work fell on my shoulders because you arrived late and left early four of the five days. I’m wondering how you see the situation.</p>
+<p>S = Show that you’ve heard what’s been said and Specify what you want to see happen. I understand you had a family problem to deal with, and if I’d known that in advance, I could have made different arrangements or asked that someone else work with me. In the future it would be helpful if you would let me know when you’re not able to devote 100 percent of your attention to a project we’re working on together.</p>
+<p>C = Tie the desired behavior to Consequences (positive or negative, depending on the severity of the problem or length of time it’s been discussed). Thanks for hearing me out. If we find ways to communicate better internally, we can provide increased value to our clients.</p>
+<h2 class="mistake-heading">Mistake 92: Speaking Softly</h2>
+<p class="first-p">When I was about fourteen years old, I worked in a dry-cleaning store owned by a woman who was prone to migraine headaches. If you’ve ever been in a dry cleaner’s midday during the week, you know there’s a hum of machinery and pressing equipment. I was speaking quite loudly to someone working a few feet away, and the owner came over and whispered in my ear, “Don’t you know that young ladies don’t speak loudly?” For many years after that I was careful not to speak too loudly for fear of sounding unladylike. Three decades later I realized the woman most likely had a headache and just wished I would keep quiet. I wonder how many other young women have been given the same message—and for perhaps the same reason.</p>
+<p>The volume of our voices is one more way in which we can manage others’ impressions of us. Women tend to have softer voices to begin with.</p>
+<p>When we speak softly, the message conveyed is one of uncertainty or lack of confidence. Volume also impacts body language. The louder you speak, the more gestures you tend to naturally use. By combining appropriate volume and gestures, you immediately convey a sense of authority or subject-matter expertise.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When speaking before a group, pretend the person farthest away from you is a little hard of hearing, and speak loudly enough so that he or she can hear you.</p>
+<p>•   Take a voice, acting, or singing class to learn how to project your voice.</p>
+<p>•   If people tend to ask you to repeat things or to speak more loudly, consider this message something you must address.</p>
+<p>•   Videotape yourself making a presentation or even just discussing a subject in a meeting. If you find it difficult to hear what you’re saying but everyone else can be heard just fine, this is another indicator that volume is something you want to work on.</p>
+<p>•   Listen to your own voice-mail greeting. Objectively assess how you would characterize the voice on the other end. Practice leaving a message that expresses self-confidence—this is frequently other people’s first impression of you.</p>
+<p>•   Imagine your listeners as customers. Your voice should envelop them so they lean back comfortably in their chairs. If they have to lean forward, straining to hear you, you’re not taking good care of those customers.</p>
+<h2 class="mistake-heading">Mistake 93: Speaking at a Higher-Than-Natural Pitch</h2>
+<p class="first-p">Why is it that a woman can be speaking with another woman in a natural pitch—but when a man comes into the room, she’s suddenly a falsetto? This is not something you usually catch a man doing. When a woman’s voice reverts to sounding high and thin, it becomes like a little girl’s voice. What does a little girl’s voice sound like? Coy, demure, sweet, and not at all authoritative. Which is probably the effect some women want their voices to have.</p>
+<p>Again, people respond not only to the content of your message, but to the sound of it as well. Higher-pitched messages, which are stereotypically more feminine, tend to be discounted. Why do you think for so many years during early broadcasting that newscasters were all men? Walter Cronkite was someone we trusted even though we knew little about the man’s character. To this day, male voices predominate in the national evening news. From Anderson Cooper to Charlie Rose and Scott Pelley, men are the so-called voices of authority.</p>
+<p>Although I can’t tell you why it happens, I do know that lower voices are accorded more attention and respect. As voices go up in pitch, credibility goes down. Perhaps it’s simply ingrained in our culture that lower voices are typically male, and we tend to grant more authority in general to men. Even men who have higher-pitched voices face the same problems with credibility as do women. Ross Perot’s somewhat diminutive physical stature, combined with a voice that was higher-pitched than normal for most men, didn’t help him in the political arena.</p>
+<p>Think about the voices of Meg Whitman, CEO of Hewlett-Packard, and Queen Elizabeth. Although the queen is largely seen as a titular head of state and Whitman heads one of the world’s largest companies, their voices contribute to how seriously we consider what one has to say over the other.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   When you wake up, make a noise. It can be any noise, like Ummmmmmm or La la la la la. You’ll notice that this is your natural, unconstricted pitch—one you should try to maintain throughout the workday.</p>
+<p>•   Join a choral group and find your pitch. You won’t be able to sing falsetto for long.</p>
+<p>•   Consciously breathe and relax your neck and shoulder muscles. Vocal pitch often rises because of tension and the restriction of the vocal cords.</p>
+<p>•   Imagine your neck and chest cavity to be large, spacious openings.</p>
+<p>Picture your voice rolling around inside you. Reframe any small, constricted images of your voice.</p>
+<h2 class="mistake-heading">Mistake 94: Trailing Voice Mails</h2>
+<p class="first-p">We used to joke that my mother-in-law didn’t know how to say good-bye.</p>
+<p>Long after she and I had finished discussing the last item on either of our agendas, she just couldn’t bring herself to close the conversation. The same holds true for many women when they leave voice-mail messages.</p>
+<p>Regardless of how succinct and articulate the initial part of the message is, it winds up something like this: “Okay, well, I guess that’s everything. Uh, call me if you have any questions. That’s it, I think. Okay. Bye.” Trailing voice mails can undo the effectiveness of your initial (and most important) message. They can make you look indecisive.</p>
+<p>I once worked with a client who told me that people left her rude, abrupt voice mails and she didn’t know how to respond to them. I asked her to save a few for me to listen to during one of our meetings. I also asked her to save some of her own voice-mail messages by asking trusted colleagues to forward them back to her. Upon listening to both sets of messages, it was immediately evident that those she had problems with were from men. They weren’t rude and abrupt; they were just succinct. Hers, on the other hand, used more words than necessary as she thought out loud and scrolled through her mental agenda. In comparison, they sounded softer—because they were softer. More words soften a message. Fewer words make it more memorable.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Most business voice-mail systems give you the opportunity to go back and listen to your message. To find out if you’re guilty of leaving messages that trail off, go back and listen to a few before sending them.</p>
+<p>•   In advance of your call, create a mental checklist of what you want to cover so you’ll know when you’re finished and it’s time to hang up (my mother-in-law could have really used this tip).</p>
+<p>•   If you find that this is a mistake you make, force yourself to end after you’ve made your point. Stop talking. Say good-bye. Hang up.</p>
+<p>•   Prepare a standard tagline for the end of messages (voice mail or otherwise). Saying something like “Call me if you have questions” and hanging up immediately will work.</p>
+<h2 class="mistake-heading">Mistake 95: Failing to Pause or Reflect Before Responding</h2>
+<p class="first-p">I’m sure you’ve heard the term pregnant pause. It’s a brief period of time that causes others to anticipate and pay attention to what you’re about to say. In your desire to please others and not take up too much time, you may respond to questions too soon, not giving yourself enough time to reflect on your answer. A pregnant pause before speaking is a powerful tool to add to your communication skill set. Remember the old commercial: “When E. F.</p>
+<p>Hutton talks, people listen.”</p>
+<p>A pause before speaking does several things. It conveys a message of thoughtfulness about what you’re about to say. It generates interest on the part of the listener. A pause and the ensuing silence give others the impression that you’re self-confident. And they give you time to put your thoughts into a concise framework.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Practice counting to three before replying to a question—even when the answer is on the tip of your tongue.</p>
+<p>•   During the pause, ask yourself what the main point is that you want the listener to take away. Let that point be your lead sentence.</p>
+<p>•   Use the second hand of a clock or watch to time a three-second pause.</p>
+<p>In the middle of a conversation it may seem to you like an eternity, but, as you will see, it’s only momentary.</p>
+<h2 class="mistake-heading">Mistake 96: Overrelying on One Communication Style</h2>
+<p class="first-p">Most of us have a preferred style of communication that involves focusing primarily on:</p>
+<p>•   Data •   Feelings •   Action •   Ideas I use the word primarily because we typically use at least one of the other modes in many of our day-to-day communications. So think about this. If you’re the kind of person who communicates your ideas using feelings (as many women prefer), and you’re trying to influence someone who likes to communicate using facts (as many men prefer), then you’re going to encounter a natural disconnect. When you say, “I feel this is the right thing to do,” the other person is thinking, I don’t care what you feel; give me a logical reason why we should do this. In situations like this, great ideas are often overlooked or even ridiculed because they weren’t communicated in a way the other person could easily process.</p>
+<p>The antidote to this dilemma is to vary your communication style based on the preferences of the person you’re trying to influence. If you think this smacks of being phony, think again. Your message doesn’t change, just the words you use to deliver it. Use your EQ here to observe individual preferences and apply the right style to each interaction.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Try using this chart to help you identify the right communication method to use with different people:</p>
+<p>If the other person… Then… Has an office that looks like no one works there, is always extraordinarily well-groomed, and doesn’t like small talk… It’s likely they will want you to communicate using data, facts, and figures. Do not try to schmooze with them; it will backfire. Come prepared with all the information needed to make or support your case so that a decision can be made logically and rationally.</p>
+<p>Is someone who is always organizing the holiday parties or picnics, remembers everyone’s names (and the names of their dogs), and who has a lot of personal memorabilia in the office… It’s likely they will respond best to communications using feelings, values, and precedents. Start your conversations with a little small talk, then shift to the business at hand.</p>
+<p>When trying to influence this person, show that you’ve checked with others and your proposal was well-received or explain how it will benefit the people impacted by it.</p>
+<p>Usually has little time or patience for long conversations, has an office that looks like a bomb went off in it, and shows little concern for style or fashion… Use an executive summary, communicating only in bullet points. Present your ideas in a way that suggests action can be quickly taken and results will be happening sooner rather than later. Be prepared to answer questions, but don’t provide more information than is absolutely required to make your point.</p>
+<p>Seems like a big-picture thinker, someone who sometimes lives in a world of ideas more than reality, can be creative, and has an office that sports toys, novelty items, or modern art… Your best bet to effectively influence them is to present your ideas as state-of-the-art or cutting-edge in ways that will competitively position your company or department. Speak logically and factually, but with an emphasis on the future or how your proposal will distinguish the company from others in the field.</p>
+<p>•   Take the free communication styles inventory at keirsey.com. This will enable you to identify your own preferred style of communication and those of others. While there, check out the books available that go into more depth about communication style preferences.</p>
+<p>•   If it looks like you’re not getting through to someone, try shifting your communication style. Sometimes that’s all it takes to get their attention.</p>
+<h2 class="mistake-heading">Mistake 97: Ambivalence</h2>
+<p class="first-p">One of the things that drive our male coworkers nuts (and probably male spouses, too) is the apparent ambivalence that women seem to have with making a decision and committing to a direction. I carefully selected the word apparent here because that’s how men perceive the cognitive process employed by many women who lack the confidence and courage to jump into the pool with both feet. A professor in graduate school called this “the “Coney Island dip.” We dip our toes into the water and see if we’re prepared to go all the way.</p>
+<p>Ambivalence, or the inability to make a choice due to conflicting internal messages, isn’t the exclusive domain of women, but we exhibit our fair share of it. There are a number of factors that can cause ambivalence, among them:</p>
+<p>•   Lack of data •   The belief that others know more than we do •   Having been criticized in the past for decisions made •   A genuine desire to weigh all options •   Fear of making a wrong decision •   Not wanting to hurt someone’s feelings Regardless of what contributes to your appearing ambivalent, the result is that others perceive you as lacking the capability of making a commitment, having the courage to stand by your convictions, and possessing the resilience to turn around a decision that didn’t pan out as planned.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Develop time frames within which to make decisions. When the boss asks you to take a lateral assignment in a different city and your immediate response is ambivalence, put a specific time frame on when you’ll get back to him or her. Say something like “I’m honored you would recommend me for this position. It’s a big decision and I’d like to think about it for a few days. I’ll get back to you within forty-eight hours.” A response like this does not appear ambivalent, but rather thoughtful.</p>
+<p>•   Be clear about why decision making is postponed and use data to support it. For example, “I’m not inclined to make a decision about this just yet. We’ve surveyed only one-third of our clients, and additional data is needed to be certain we’re on the right path. A good decision will require input from at least 60 percent of the clients this action will impact.”</p>
+<p>•   Avoid thinking out loud as a routine way of communicating. When you think out loud, you are cueing the listener that you’re reflecting on a number of options or issues. It’s okay to do this once in a while, but do it too often and you’ll be labeled indecisive.</p>
+<p>•   Use a trusted friend as a sounding board, not your boss or management. If you’re the kind of person who truly needs to thrash ideas around before making a commitment, then do it with a friend or family member.</p>
+<p>•   Keep in mind that most decisions are adjustable. For this reason, it’s better to commit one way or the other than to appear wishy-washy.</p>
+<h2 class="mistake-heading">Mistake 98: Confusing Problem Solving with Complaining</h2>
+<p class="first-p">I have one inviolable rule in my office: “No complaining without an accompanying solution or request for help with finding a solution.”</p>
+<p>Unaccustomed to their right to present alternatives to problems without being accused of being pushy or overstepping their bounds, nice girls tepidly put a problem on the table then tiptoe around it. No one likes a complainer—even if there’s legitimacy to the expressed concerns.</p>
+<p>Men complain among themselves, but rarely to management. It’s that stiff upper lip thing that probably precludes them from wanting to be seen as a crybaby. Instead, either they suck it up when something bothers them or they strategically try to figure out a way to solve the problem or find a way around it. Women, on the other hand, take things to heart and often wind up making mountains out of molehills, much to the consternation of their male colleagues.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•   Never ever, ever complain. Instead, follow Winston Churchill’s wise maxim: “Never ever ever give up.” If something bothers you, identify what would make the situation better and then do it or propose it (but don’t ask permission to do it!).</p>
+<p>•   Don’t be duped into being the mouthpiece for the complaints of others. Even if there’s a critical mass behind a concern, it doesn’t mean you should be the one to bring it up. Do that enough times and you’ll be seen as a malcontent. The exception is when it’s your legitimate responsibility to take action on concerns because of your position or your role.</p>
+<p>•   If you don’t have a clue how to solve a problem, approach others with it in the spirit of true problem solving by brainstorming and applying creativity to sticky situations.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 8: How You Respond - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 8: How You Respond</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 8 How You Respond So far we’ve looked at the behaviors in which you actively engage that detract from or diminish your credibility. In this last section we’ll examine how you respond to the ways others treat you. Often these responses are so automatic that we don’t consider the ramifications they may have on us and our careers. Similarly, they can be formed by old experiences and interactions that are no longer relevant in the present.</p>
+<p>For example, many women have been socialized to respond to inappropriate treatment in a polite, docile, or acquiescent way. One tragic example of this is a woman who told me what happened to her at a movie when she was about seven or eight years old. She and her older cousins routinely went to a Saturday matinee. One Saturday a man sat down next to her and began to molest her. She allowed this to continue for several minutes then told her cousins she wanted to change seats, but not why.</p>
+<p>When they moved, the man moved along with them and began doing it again. She became immobilized. She allowed it to happen until the movie was over.</p>
+<p>In relating the story many years later, she wondered why she hadn’t told him to stop or asked her cousins for help. Sadly, her response isn’t unusual for women. We’re not taught to defend ourselves or get angry when someone is disrespectful to us. In my book Women, Anger, and Depression:</p>
+<p>Strategies for Self-Empowerment (Health Communications), I contrast the messages little boys are given regarding anger to those given to little girls.</p>
+<p>Whereas boys are typically taught the art of self-defense, girls are taught to turn the other cheek. As a result, we’re more likely to tolerate behavior we should never allow to happen. Unlearning those early childhood messages is a huge step on the path to living an empowered life.</p>
+<h2 class="mistake-heading">Mistake 114: Airing Your Feelings in Online Public Forums</h2>
+<p class="first-p">In 2009 Dawnmarie Souza, a paramedic in Connecticut, used Facebook to call her boss a “scumbag” and suggest in unflattering terms that he wasn’t qualified to be a supervisor. The company had a policy that prohibited employees from using the Internet to say derogatory things about coworkers and the company, and she was promptly fired. Then the National Labor Relations Board (NLRB) found out about the termination and, believing that the policy was overly broad, filed a complaint against the company.</p>
+<p>The NLRB ultimately found that the policy violated the National Labor Relations Act, giving employees the right to “discuss the terms and conditions of their employment with others.”</p>
+<p>This is one that I definitely did not have to address a decade ago. Even if the laws are changing to protect your First Amendment right to free speech, it’s just plain foolish to use social media to air your grievances—against anyone. It’s a pitfall more for women than men because (1) we tend to be more emotional; (2) we use social media more; and (3) we want to show our support for others. Pamela Mitchell, Founder of the Reinvention Institute, whom I mentioned earlier, was telling me about a client of hers who has a bad habit of using her Facebook page to address every bone she has to pick with others. Whereas in the past people would pick up the phone and commiserate with a friend to get something off their chests, now they post their feelings on Facebook and get immediate reinforcement from their friends and colleagues.</p>
+<p>As early as middle school, mean girls are using social media to write awful things about one another. It’s the twenty-first-century version of the slam book—a notebook that was passed around in which students would make comments about kids they didn’t like. This extends into adulthood with technology that has made it possible to say anything you want about someone else and in a matter of seconds have it distributed to hundreds of people in your network. The obvious problem is, it’s also available for viewing by anyone with access to a computer.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Don’t use social media as your personal pulpit for punishment. It will almost always come back to bite you.</p>
+<p>•   If you’ve got a gripe, go directly to the person. This is what grownups do. They don’t talk behind people’s backs or make anonymous comments. They give others the courtesy of being able to respond to their grievances. And if that fails, they move on.</p>
+<p>•   If you’ve got a legitimate beef with a company or institution with which you do business, use a recognized public forum such as tripadvisor.com, yelp.com, or angieslist.com to factually explain your concerns.</p>
+<h2 class="mistake-heading">Mistake 115: Putting a Stamp on with a Steamroller</h2>
+<p class="first-p">Another complaint men have about some women is that they never know if they’re going to get Dr. Jekyll or Mr. Hyde. The inability to predict someone’s reactions is one of the largest factors contributing to mistrust. We trust people who are consistent with us. They can be consistently nice to us or rude to us; it really doesn’t matter. Either way, you come to trust how this person will treat you.</p>
+<p>In many cases, inconsistent behavior is not the by-product of indecision, but rather the result of holding things in for too long. Nice girls can be like those old-fashioned radiators that operated on steam. If you let the steam build up for too long, the radiator would explode. When a nice girl finally has had enough and can’t take it any longer, she blows up—and often at something that’s inconsequential. There’s a reason for the saying “It’s the straw that broke the camel’s back.”</p>
+<p>When this happens, we can be described as putting a stamp on with a steamroller. Far too much emotion for what the situation warrants. People then wonder about how rational we are, make assumptions about what time of the month it is, or question our mental stability. I recall once when I had a private practice of psychotherapy, I was working with a woman who was severely depressed. She held everything in, finding it too risky to say what she really wanted or needed at home and at work. Then one day her husband called in a panic and said, “You have to do something! She’s gone crazy. She’s breaking every dish in the house!” And that was her first step on the path to being more mentally healthy than she had ever been before in her life.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Take more risks around regularly saying what’s really on your mind.</p>
+<p>When you hold too much in for too long, you’re going to either be depressed or at some point (and usually not an opportune one) explode.</p>
+<p>Expressing yourself in the moment, or close to it, allows you to hold an adult conversation rather than throw a hissy fit.</p>
+<p>•   Give yourself permission to not react in the moment, but rather revisit an issue after you’ve had time to cool off. Women tell me all the time that they just can’t think of what to say as a retort and as a result wind up feeling badly about an encounter they had with someone. You don’t have to be quick on your feet, but you do owe it to yourself and those with whom you interact to circle back as soon as possible after an incident to discuss how you felt and what you’d like to see happen differently in the future.</p>
+<p>•   Trust your emotions. Many times we think we’re making mountains out of molehills, so we overlook things that we actually have strong feelings about. Pretty soon all of those things we thought we had let go of become the straw that breaks the camel’s back. Even if you don’t address an issue directly with the person who caused you to have the feeling, you can talk to a friend about your reaction and use that as an opportunity to let off steam.</p>
+<p>•   For difficult conversations, practice using the DESCript method in</p>
+<h2 class="mistake-heading">Mistake 91: . It really is a great tool to help you prepare what you want to say</h2>
+<p class="first-p">in a way that encourages dialogue and diminishes the likelihood of a blowup.</p>
+<h2 class="mistake-heading">Mistake 116: Holding a Grudge</h2>
+<p class="first-p">As the saying goes, “Hell hath no fury like a woman scorned.” When I said this in a public forum I was accused of being sexist. Look, I didn’t invent the saying; I’m just letting you know what people think when you can’t move beyond a real or imagined slight.</p>
+<p>A number of years ago I was brought in to do conflict resolution with two very talented women who could not stand to be in the same room with each other. This presented a dilemma for the boss (a male), who needed them to work collaboratively due to the fact that their roles in the company had some overlap. All he wanted them to do was play nicely together in the sandbox, and all each of them wanted was to be left alone by the other.</p>
+<p>Their behavior not only made his life miserable but also reflected negatively on him when his management would ask, “Can’t you control your staff?”</p>
+<p>I first met with each woman individually to get her perspective on the situation. As is usual in these cases, the story was like dual sides of the same coin, each with her own personal spin on what had transpired to result in a standoff. Then came what they thought would be the painful part, getting them in the same room to start the healing process. And here’s how grudges can dissipate: don’t focus on the past; focus on what you need to move forward. The only ground rule I have for conflict resolution sessions is that you can’t rehash what happened in the past. It does absolutely no good. You’ve probably obsessed over the other person’s transgressions for days, weeks, or months. Moving on requires you to identify what you want and need from the other person and what you have to offer them. The following coaching tips build on this premise.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Don’t let slights fester. It’s how they grow into seemingly unsolvable problems. Although an immediate, knee-jerk response to a slight is often counterproductive, sleeping on it and addressing it the next day should give you enough time to plan your communication.</p>
+<p>•   When addressing what you perceive to be a slight, start from a place that assumes the best of intentions rather than the worst. Most emotionally healthy people don’t want to hurt your feelings. They do so in a moment of not thinking, haste, or frustration. Cut people a little slack until you learn their intentions.</p>
+<p>•   Prepare in advance for meetings that are designed to clear the air.</p>
+<p>Don’t wing it. First, enter the discussion with a clear statement about your feelings concerning what transpired (not with a description of what happened). Something like “I was really embarrassed when you announced in front of the entire team that my department came in last for sales this quarter before you had the discussion with me.” Next, let the other person know what you need from them in the future. This might sound like “What would be helpful for me to remain motivated and keep my team motivated as well is for you to give me a heads-up when those numbers come in so that I can discuss them with the sales folks.” Finally, let the other person know what you have to give to them in return: “If you’ll just do this, you have my word that I’ll work vigorously to meet our sales quotas next quarter.”</p>
+<p>•   Once you have this discussion, let it go by focusing on the future.</p>
+<h2 class="mistake-heading">Mistake 117: Internalizing Messages</h2>
+<p class="first-p">Parents are guilty of giving children all kinds of messages that they carry with them for a lifetime. Not all of these are negative, but they do impact our self-esteem and how we see ourselves in the world. Whether it’s “You’re just like your father—you’ll never amount to anything,” or “You’re such a sweet girl. You’re going to grow up and get married and have lots of children,” the message sets the stage for a self-fulfilling prophecy.</p>
+<p>The messages are also not always verbal. Sometimes they’re implicit expectations for how you should behave. Much of my coaching work begins with helping clients get in touch with those early-childhood messages and examine the impact they have on the present. Our greatest strengths are often learned in response to implicit and explicit parental expectations or demands. As a result, we tend to overrely on these and are reluctant to relinquish ones that are no longer effective.</p>
+<p>Let me give you an example. Claudia was the oldest of seven children in her family. Both parents were alcoholic and depended on her to help raise the younger kids. As with many children who come from alcoholic homes, she was hypervigilant, very responsible, and quite protective of her siblings.</p>
+<p>No one told her she had to do this; she just did. These same behaviors served Claudia well early in her career. Her supervisors appreciated how she would show initiative, take new team members under her wing and show them the ropes, and always be on top of potential problems or barriers to achieving departmental goals.</p>
+<p>Later in her career, however, these identical behaviors kept her from reaching her full potential. What was once viewed as being on top of problems was now described as being too critical. Whereas her willingness to take new people under her wing was once appreciated, now she was seen as intrusive and overly controlling. And one of her greatest strengths, initiative, was now interpreted as “grandstanding”—trying to get the best projects for herself.</p>
+<p>Claudia had internalized the messages of childhood all too well—even though they were never actually verbalized. This will give you an idea of how well we must internalize verbal messages. Our work with Claudia was not to get her to stop doing all those things that served her well early in her career, but rather to provide her with a set of alternative behaviors from which she could choose when the situation called for it. For example, rather than always volunteering for difficult assignments, she needed to be more conscious of who else might benefit by learning from this project. And rather than being quick to point out mistakes, she might let some of the smaller ones go so that others could learn from them and not view her as quite so nitpicky.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Ask yourself which lesson learned in childhood contributes to your greatest strength and what complementary behaviors may be required to balance the strength.</p>
+<p>•   There’s a tape that plays in our heads with childhood messages. When the messages on that tape hold you back from achieving your goals, use self-talk to tape over it. Consider therapy if the messages are so strong that you have difficulty taping over them.</p>
+<p>•   Post in a conspicuous place and frequently recite Eleanor Roosevelt’s famous maxim: “No one can make you feel inferior without your consent.”</p>
+<h2 class="mistake-heading">Mistake 118: Believing Others Know More Than You</h2>
+<p class="first-p">Betty is an organization development consultant with her own practice. For many years prior to forming her consultancy, she was an organization development manager at the corporate headquarters of a nationally known fast-food chain. Between the two experiences, she can legitimately be called an expert in her field. One day she met with a prospective client who wanted to talk to her about doing a team-building session. As this aggressive, know-it-all executive laid out the problem, Betty began to think it wasn’t team building he needed, but a conflict resolution intervention between two employees.</p>
+<p>After the executive finished explaining what he wanted and why he wanted it, Betty suggested that team building might not be the appropriate path to take. She pointed out that when there is conflict between two employees and you do a team-building program, you may not get the results you want and needlessly include other team members in their dispute. The executive wouldn’t listen. He had used consultants in the past for situations such as these, and he knew how they worked. He was certain the situation would be improved through the team building.</p>
+<p>As with many consultants, Betty had to weigh the client’s wishes against her best professional judgment. Does she walk away from the business opportunity to prove her point, or could she possibly help this group using the methodology demanded by the client? In the end she opted for the latter and facilitated a two-day off-site for the executive’s department of twelve staff members. She thought that perhaps he was right—he made a convincing case for the off-site, and Betty was open to giving it a try.</p>
+<p>The team building proved to be a total disaster. The majority of the time was spent trying to mediate the conflict between the two individuals whom the executive had mentioned in their first meeting. While at first Betty used the interaction between these two as a learning opportunity for everyone present (teaching listening and negotiation skills, for example), eventually the team tired of the tension in the room and began to mentally check out.</p>
+<p>In the end the conflict was never resolved, and the other team members felt that the experience was a waste of their time.</p>
+<p>Betty learned the hard way that women often underestimate how much they know and put more stock in a stranger’s opinion than in their own wisdom. From doctors to car salesmen, we think others know better. Betty acquiesced to the executive’s assertion that he knew better than she—and the results were catastrophic. Her reputation within the company was damaged, and the executive wound up blaming her lack of expertise rather than recognizing that she was correct in her initial diagnosis and recommendation. In the long run she would have been better off saying no to the opportunity. Unlike men, we tend to admit it when we don’t know something—but fail to trust ourselves when we do. Men can tell us something entirely wrong with more authority than any woman ever will.</p>
+<p>Worse yet, we believe it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Before assuming someone knows more than you, ask a few probing questions to determine his or her expertise. “Why do you recommend that?”</p>
+<p>or “How do you know that?” will at least convey the message that you’re not a pushover.</p>
+<p>•   Before asking someone else’s opinion, be certain you really need it.</p>
+<p>As discussed earlier, asking a question to which you know the answer can diminish your stature.</p>
+<p>•   If something doesn’t sound or feel quite right to you, it probably isn’t.</p>
+<p>Buy time to think by insisting on a time-out to consider what’s been suggested.</p>
+<h2 class="mistake-heading">Mistake 119: Taking Notes, Getting Coffee, and Making Copies</h2>
+<p class="first-p">Although it happens more covertly nowadays, at any minute during any given day there has to be a woman somewhere in the world tearing her hair out about this problem. How many times have I heard a man say, “Let’s have ______ [fill in the blank with any woman’s name] take notes. She has the best handwriting.” Or, “Linda, would you mind making the coffee?”— as if it’s really a question. Also, in certain female-dominated industries (which I will not name, but think The Devil Wears Prada), using employees to carry out your personal chores is common.</p>
+<p>In workshops and seminars women frequently ask, “What should I do when I’m asked to make coffee for or take notes at a meeting?” The easy answer is, “Don’t do it.” What’s harder is avoiding it. Each time we accept one of these tasks, we perpetuate the stereotype that a professional woman’s role is to nurture, care for, and serve others at work. The inevitable result is that we feel either badly about ourselves or angry at the situation. Neither solves the problem. How can you respond to inappropriate requests? Well, it just so happens I have a few coaching tips.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Tell your boss about how you feel being given these tasks and suggest that the responsibilities be rotated. If he or she tells you it’s no big deal, respond simply and nondefensively with “It’s a big deal to me.”</p>
+<p>•   When asked in front of a group if you’ll make copies or take notes, practice saying in a neutral, unemotional way, “I think I’ll pass, since I did it last time.”</p>
+<p>•   Show that you’re a good “meeting manager.” Make a checklist of meeting tasks and suggest that the department administrative assistant be assigned them.</p>
+<p>•   Introduce your corporate culture to the custom of having the newest person on the team perform these tasks.</p>
+<p>•   When asked to do personal errands, let the boss know you’re happy to do them when you have time, but otherwise you don’t want to take away from being able to do a good job at what you were hired for. This may not be what he or she wants to hear, but consider your options. If you carry out the errands, you’ll feel resentful; and if you don’t, you may be fired. Pick your poison. If the errand requests persist, it’s time to look for another job, ask for a transfer, or wait the boss out for a specified period of time.</p>
+<h2 class="mistake-heading">Mistake 120: Tolerating Inappropriate Behavior</h2>
+<p class="first-p">Ebonisha was transferred to a developmental assignment in the finance department at her company headquarters in December. She was given an office on the executive floor—but when she arrived, she realized it had no desktop computer. Simple, she thought. I’ll just call the IT group and get one. When she called, she was told there were none currently available, but there should be one she could have in about a week. Two weeks passed and no computer. She called once again, and the IT manager apologized. His wife just had a baby and her request slipped between the cracks. The computer intended for her had been given to someone else (a man, of course). He’d see what he could do. By now it was Christmas and her office was closed for two weeks.</p>
+<p>I met with Ebonisha in her office in mid-February—still no computer.</p>
+<p>She showed me a note she’d written to the IT manager:</p>
+<p>I understand you’ve been quite busy and that you are shortstaffed. However, I think two and a half months is a bit long to wait for a computer I need to perform my work. I would appreciate it if you would get the computer to me as soon as possible.</p>
+<p>What’s wrong with the note? you ask. It’s too understanding, too understated, and not specific. Here’s my edited version:</p>
+<p>It’s been two and a half months since I first asked you for a PC, and, despite numerous promises, I still have not received it. Since this seriously impedes my ability to perform my job, I will expect one in my office no later than Friday. If this is not possible, or it does not arrive, I will assume it is due to matters out of your control and will ask your boss and mine for assistance. Please call later today to discuss further.</p>
+<p>This Describes the problem. Explains why it’s a problem. Specifies desired outcomes. Lays out Consequences. It contains all the elements of the DESCript method described under Mistake 91.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Take a self-defense class. Defending yourself physically will shift your thinking about defending yourself verbally.</p>
+<p>•   Use more I messages as opposed to You messages. The latter tend to be more confrontational and point the finger rather than solve the problem.</p>
+<p>Listen to the difference.</p>
+<p>Turn this:</p>
+<p>“You’re always interrupting me!”</p>
+<p>Into this:</p>
+<p>“I would appreciate it if you would let me complete my sentence.”</p>
+<p>Or turn this:</p>
+<p>“You can’t do that to me!”</p>
+<p>Into this:</p>
+<p>“I’m not happy with how I’ve been treated. I’d like to offer some alternatives.”</p>
+<p>•    Don’t swallow your feelings—they’ll only catch up with you in one way or another. Get in the habit of asking yourself how you feel when you’re treated less than respectfully and express it in the form of an I message:</p>
+<p>“I feel like a child when I’m spoken to in that way.”</p>
+<p>“I feel disrespected when my ideas are ignored.”</p>
+<p>“I feel that I’m being taken advantage of.”</p>
+<p>“I feel that I’m entitled to a reason why my request is being denied.”</p>
+<p>•   Just because you don’t react in the moment doesn’t mean you don’t have the right to go back and revisit an inappropriate encounter. When you’re caught off guard, it can be difficult to come up with the right words.</p>
+<p>It’s your prerogative to go back later and say, “I was thinking about something that happened yesterday, and I’d like to tell you how I felt about it.”</p>
+<h2 class="mistake-heading">Mistake 121: Exhibiting Too Much Patience</h2>
+<p class="first-p">It may be true that all good things come to those who wait, but women take the maxim to an extreme. When the term impatient is applied to a man, it means he’s a go-getter, always on the go, or ready to move ahead. When the same term is applied to a woman, it means she expects too much, has a sense of entitlement, or doesn’t understand how things work around here.</p>
+<p>Patience is not a woman’s virtue.</p>
+<p>In Kyoko’s case, she was told to just be patient and she would get the promotion she had been promised. So she waited. And she waited. And she waited some more. After six months of waiting, her boss was transferred to another division. When she asked him about the promotion before he left, he told her the new person would handle it. Of course you know what happened. The new person came in and knew nothing about the promotion —nor did he care. Granting promotions wasn’t exactly high on his list of priorities.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    The squeaky wheel does get the grease—and it won’t soil your skirt.</p>
+<p>One executive told me he has no problem if someone pushes him once, pushes him twice, but three times is too many. Until you’ve pushed at least once, you haven’t advocated for yourself.</p>
+<p>•   Don’t believe it when someone tells you you’re impatient. It’s only a way to get you to quit bugging him or her.</p>
+<p>•   When you’re told to be more patient, ask the person to give you an idea of when you should revisit the matter. If he or she suggests a time too far in the future, press for a time frame that meets your needs. “That’s much longer than I had anticipated or we had originally discussed. Why don’t we say in two weeks rather than a month.”</p>
+<p>•   If you’re asked to wait longer than you think is needed, ask, “Why so long?” There may be a legitimate reason; if there isn’t, you can explore other options you may have.</p>
+<h2 class="mistake-heading">Mistake 122: Accepting Dead-End Assignments</h2>
+<p class="first-p">There comes a time in everyone’s career—man or woman—when an assignment is offered that has “dead end” written all over it. To take it or not to take it—that is the question. And the answer is: it depends. Don’t be quick to accept an assignment just because you think you’re supposed to or you don’t want to appear ungrateful. You never know where it might lead.</p>
+<p>On the other hand, it may only lead to a dead end.</p>
+<p>I once coached a young woman who was offered a transfer to a small, remote division of her company. Not only that, the division was losing money. Anxious to prove she was capable of turning around a struggling division, and wanting to make her mark so she could move on to bigger and better things, she took the job without a second thought. If she had only done a little more inquiring about the division and the person previously in the position, she would have found that he was leaving because there were rumors that the division was about to be sold. She’d been there only eight months when the deal was announced and she wound up working for a much smaller and less prestigious company. Don’t think it didn’t cross my mind that she was offered the transfer because she was (1) a woman; (2) young; and (3) naive.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Never accept any job assignment before first checking it out. Find out what the company has planned for the particular department or division, how it is perceived by others in the company, why the position is vacant, and to what future jobs the position typically leads.</p>
+<p>•   It’s better to err on the side of turning down a dead-end job than to accept one in which others have failed or languished. You’ll know this only if you do your homework in advance.</p>
+<p>•   Consider the following five factors a plus when deciding whether or not to take what appears to be a dead-end assignment:</p>
+<p>1. It has accessibility to senior management.</p>
+<p>2. There’s potential for advancement within twelve to eighteen months.</p>
+<p>3. You have unique skills that would turn the dead end into a freeway.</p>
+<p>4. It allows you to significantly expand your network of contacts.</p>
+<p>5. You have nothing to lose.</p>
+<p>•   Consider the price of taking a lateral assignment. Although these can often be good opportunities to acquire new skills, they also delay upward mobility. If the economic situation is such that there aren’t many upward opportunities or the organization is flattening, a lateral is a good move.</p>
+<p>Otherwise, ask around about how men in similar situations have been treated and ask that you be treated the same.</p>
+<h2 class="mistake-heading">Mistake 123: Putting the Needs of Others Before Your Own</h2>
+<p class="first-p">As women, we frequently find ourselves in positions where our needs come second to those around us. Whether it’s taking care of a disabled parent, delaying your education until your husband completes his, or canceling your plans because a child has asked you to do something for her, the results are the same. Your needs don’t get met. Of course, there are times when this can’t be helped or it’s the only right thing to do. But when it becomes the norm rather than the exception to the rule, it’s time to take a look at what you do to perpetuate it.</p>
+<p>In the workplace we see the phenomenon manifest itself when there are limited funds, perks, or opportunities. Wanting to play fair or be kind, a woman will put her requests on hold or lower her expectations. Pretty soon she feels as if she has no choice at all and doesn’t see that she has created the problem.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Make sure you know what you need or want by routinely asking yourself what it is. Many times women are so accustomed to denying their own needs that they no longer know what they are.</p>
+<p>•   Between work and home, stop for twenty minutes and do something for yourself. It can be dropping by the library to read the newspaper, going to a park and listening to music, or calling a friend from your cell phone.</p>
+<p>•   Learn to negotiate. Whether you read a book or take a class, it’s important to be familiar with the many techniques of negotiation. For example, did you know it’s been proven that those who ask for more wind up getting more? Or that by dividing up your needs like a salami and asking for just one piece at a time, you are more likely to have all your requests approved?</p>
+<p>•   Avoid giving in just because it’s easier or you don’t want to make waves. This is another place where reading the book Nice Girls Just Don’t Get It, by Carol Frohlinger and me, would be helpful. We provide tangible tools for getting the things you most want in life.</p>
+<p>•   As many times as it takes to believe it, tell yourself it’s not selfish to have your needs met—even though it might inconvenience others.</p>
+<p>•   Make sure you have a life outside work that you want to go home to.</p>
+<p>Workaholism is often an excuse for not having a life.</p>
+<h2 class="mistake-heading">Mistake 124: Denying Your Power</h2>
+<p class="first-p">When I had a private psychotherapy practice, I intentionally chose downtown Los Angeles for the location of my office. I wanted to serve the large community of businesswomen who spent the better part of their lives working in corporations around the city. My clients were well-educated and successful women. They also had something else in common: They could not see or acknowledge their own power.</p>
+<p>As these women told me stories of how they were taken advantage of, ignored, or in other ways abused at work, I would often say something like “How is it that a powerful woman like yourself allows others to treat her that way?” To a person, the response was to deny she was powerful.</p>
+<p>“Powerful? I’m not powerful,” was a typical reply. And this became the focus of my first book, Women, Anger, and Depression: Strategies for SelfEmpowerment.</p>
+<p>When I examined the phenomenon more closely, it became apparent that women denied their power because of the messages they received growing up. Power was associated with men and, as such, was a masculine term.</p>
+<p>Their perceptions of power had to do with who was in control—and they knew they weren’t. Just looking at the top of most major corporations still proves this. As of this writing, only 4.5 percent of CEOs at the nation’s one thousand largest companies are women. Wouldn’t it be wonderful if a generation from now a woman finds this book and is not appalled, but rather amazed that statistic could possibly be true?</p>
+<p>Juanita is an example of someone who, in denying her personal power, found herself depressed and falling short of her career aspirations. She was an attorney with one of Los Angeles’s most prestigious law firms. She had been with the firm almost five years and didn’t seem to be getting anywhere. Younger, less experienced male lawyers who joined the firm after her were given higher-profile client cases and, in some situations, more paralegal assistance. Needless to say, this contributed to feelings of depression and incompetence. Eventually, it became a catch-22 for Juanita —as she struggled with her depression, she was given even fewer “meaty”</p>
+<p>cases, which in turn exacerbated the depression.</p>
+<p>As we explored why these other lawyers seemed to be surpassing her professionally, Juanita expressed resignation over the fact that it was simply an “old boys’ club,” and there was little she could do to change the situation. In other words, she felt powerless. When I suggested that she had more power in the situation than she was giving herself credit for (even if it was only to pick up and leave), she denied that she was in any way powerful.</p>
+<p>It’s not an insignificant fact that Juanita came from a family where she was the only girl among six children. Her father, a Mexican immigrant, presided over a traditional household where the boys were revered and Juanita was pretty much viewed as “just a girl.” And so my work with Juanita was about helping her find and define her own brand of power.</p>
+<p>Without that, I knew the depression would continue, and she had no chance of either improving her work situation or finding a job where she would be better respected.</p>
+<p>As is the case with so many women, Juanita had to reframe the definition of power so that it would apply to her as well as men. She knew her father and brothers were powerful—and she wasn’t anything like them; ergo, she must not be powerful. As Juanita and I talked extensively about different kinds of power, she came to realize that for women power isn’t defined as controlling others, but about having control of one’s own life.</p>
+<p>Denying your unique brand of power erodes self-confidence and perpetuates a self-fulfilling prophecy. It was only after many months of taking baby steps in expressing her needs with both her family and her boss that Juanita’s depression gradually lifted and she was able to see the connection between power and having responsibility for her life’s direction.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Read my book Women, Anger, and Depression: Strategies for SelfEmpowerment. It’s designed to be a workbook to help you first identify childhood messages about power and anger and then find ways to express yourself in more empowered ways.</p>
+<p>•   Redefine power by considering the ways in which you have more control than you allow yourself to use. For example, you have the choice to say “enough” when you’re being exploited or to say “no” to unreasonable requests. In many ways this book is about reclaiming your power.</p>
+<p>•   Use self-talk or posted affirmations to reprogram how you think about power. For example, write, “I am as powerful as I choose to be,” or “Only I determine how powerful I am,” and post it near your desk where only you can see it or in a portfolio you take to meetings.</p>
+<p>•   When someone suggests you’re powerful, accept the compliment gracefully—even if you don’t feel it at the moment. Over time the belief will become part of your self-messages.</p>
+<h2 class="mistake-heading">Mistake 125: Allowing Yourself to Be the Scapegoat</h2>
+<p class="first-p">Eva is a human resources representative with a well-known toy manufacturer. She was providing counsel to an employee who was struggling with her relationship with a very difficult boss. One day Eva got a call from her own boss, the division’s vice president of human resources, who told her that the woman’s boss (also a vice president) wanted to fire the woman. Eva suggested she call the boss and schedule a meeting with him and the employee for the purpose of facilitating a dialogue. Wanting to preserve his own power in this scenario, the HR vice president said no; he’d arrange it. Eva, understanding the politics involved in such situations, agreed to let him broker the meeting.</p>
+<p>When she heard nothing about the meeting, Eva called the HR vice president and left a message asking if the meeting had been arranged. She heard nothing back. She sent an e-mail. No reply. Based on feedback she was getting from others, it seemed things were improving, and Eva assumed the meeting wasn’t necessary. Then she got a call from the woman’s boss.</p>
+<p>He wanted to meet immediately. When Eva showed up for the meeting, the HR vice president was there, and the woman’s boss was apoplectic over the fact that Eva hadn’t made an appointment to come talk to him. The HR vice president, who’d insisted on scheduling the meeting himself, sat there silently. Eva could say nothing to assuage the man’s anger as he ranted for the next forty minutes about her (Eva’s) ineptitude.</p>
+<p>Talk about sticky situations. If Eva told the man that the HR vice president had said he would schedule the meeting, she risked losing the support of her boss. If she didn’t, she was the scapegoat. She decided it was better to be the scapegoat than to risk having two vice presidents angry with her.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Diplomatically let people know you don’t like being scapegoated.</p>
+<p>What Eva should have done was speak with her boss after the meeting and let him know he’d failed to support her. Without pointing a finger or blaming, she could have said something like “I’m confused over what just happened in there. It was my understanding that you wanted to schedule the meeting. I left several messages for you and never heard back.” At this point her boss would have only two choices. The high road would be to admit his mistake and apologize. Not likely to happen given the fact he’d sat silently in the meeting and let her take the heat. More realistically, he’d tell her it was her responsibility to follow up. Either way, just having the conversation would let him know she didn’t appreciate being scapegoated, and would be the best shot at preventing it from happening again. Is this to say it wouldn’t happen again? No—only that she’d put him on notice that she recognized what had just happened and was unwilling to silently shoulder the blame.</p>
+<p>•   Other language you can use to avoid being scapegoated:</p>
+<p>“There’s no need to point a finger or assign blame, but I want you to know I followed the instructions I was given. Why don’t we focus on how to move forward?”</p>
+<p>“I’m happy to redo the report if it’s not what you want, but I would like to make clear it was prepared in accordance with our policy related to confidential information.”</p>
+<p>“What would be helpful to me in the future would be if we all would meet together to review the process. It seems different departments had different ideas about what the end product would look like.”</p>
+<h2 class="mistake-heading">Mistake 126: Accepting the Fait Accompli</h2>
+<p class="first-p">Your office is redesigning its work spaces. There are two large offices with windows and three smaller interior ones available for staff of your department at your same level. When the floor plan comes out, you notice you’ve been put in one of the smaller offices while a male peer who has been with the company less time has been given one of the larger spaces with a window. When you speak with the space planning department about it, you’re told, “Too late. The plan has already been submitted to office services, and they’ll be setting up the phones and computers next week.”</p>
+<p>If you accept what they say, you’ve accepted the fait accompli—a French term meaning “an irreversible or predetermined decision.” It’s a technique people use when they don’t want to change their plans. When it comes to dealing with women, they often bet on the fact you won’t argue and will accept it as fact. It’s also used as a negotiation strategy. An insurance company will send you a check to settle a claim before they’ve even spoken with you. They’re betting you’ll cash it rather than go to the trouble of contesting the amount.</p>
+<p>Women are far more likely than men to go for the bait. Whether it’s accepting a lower performance rating than you expected or a less convenient time to take vacation because you’ve been told “That’s just how it is,” you’ve taken less than you’re entitled to without an argument. If you’re like most women, you’ll find a way to rationalize the decision and wind up believing it’s what you really deserve. Instead, use the tips on the following page to enhance your negotiation skills.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    If it’s important to you, don’t accept less than you deserve without a fight. There are times when it won’t be worth winning the battle only to lose the war, but there will be other times when the principle matters.</p>
+<p>•   Always accompany your complaint with a proposed solution. Using the preceding scenario of the offices, an example would be, “Then it’s not too late. The phones haven’t been moved yet. I suggest the offices be assigned based on seniority or some other objective factor.”</p>
+<p>•   Use the “broken record” to counter claims of fait accompli. Like a record with a scratch, you repeat your concerns, using different words, as many times as necessary to engage a dialogue. Here’s how it works:</p>
+<p>Space planning: Too late. The plan has already been submitted to office services, and they’ll be setting up the phones and computers next week.</p>
+<p>You: Then it’s not too late. The phones haven’t been moved yet. I suggest the offices be assigned based on seniority or some other objective factor.</p>
+<p>Space planning: I’ve already sent all the plans and change requests to office services.</p>
+<p>You: It may be inconvenient, but they haven’t taken action yet. I’m sure adjustments could still be made based on a more equitable method of assigning space.</p>
+<p>Space planning: I really don’t have time to redo the forms.</p>
+<p>You: I would be happy to help you once we agree on a fair way to assign space.</p>
+<p>Space planning: I don’t have the authority to make the changes.</p>
+<p>You: Who does? I will speak with them or we can meet together.</p>
+<p>The broken record doesn’t always yield the desired results, but it sure gives you a good shot at it—especially if you do it without anger or judgment.</p>
+<h2 class="mistake-heading">Mistake 127: Permitting Others’ Mistakes to Inconvenience You</h2>
+<p class="first-p">This story, a variation on the scapegoating and time-wasting themes, demonstrates how one woman handled being inconvenienced by her boss’s mistake. Maria was an internal efficiency expert who went from division to division of a defense company, providing expert advice on streamlining processes. Before she went to one particular location, her boss told her that what the plant wanted was simply an outline for a training program. She developed the outline and met with the plant manager, who expressed disappointment over the brevity of what she had to offer. What he expected was a full curriculum with accompanying materials and for her to facilitate the training program. Maria appropriately told the manager it was her understanding that all he wanted was an outline, but she would doublecheck with her manager.</p>
+<p>When she called her manager, he told her to just go ahead and give them what they wanted. She was dumbfounded. Maria, being an efficiency expert, had scheduled her work around other plant requests and didn’t have the time to prepare a project of this magnitude. When her boss reiterated the need to give the plant manager what he’d asked for, she realized she was going to be working long nights and weekends for the next several weeks.</p>
+<p>His failure to ask the right questions of the plant manager caused her to be greatly inconvenienced.</p>
+<p>Maria was savvy enough to know she had to do it, but she wanted to be sure this didn’t happen again. Although she could have talked to the boss about it directly, she felt that this was too confrontational for her. Instead, the next time he gave her an assignment, she said, “Let me be clear on what the expectations are here—I don’t want to be in the situation again where I show up unprepared as happened last month.” She then repeated her understanding of the requirements and added, “If, when I get there, it turns out to be more complex and to require more time than I’m allotting, will I have your support in letting the plant manager know we’ll have to reschedule his project?” Perfect! She tactfully let her boss know she didn’t like what happened last time and wasn’t going to be held responsible for his failure to get the facts straight at the outset. Although she can’t control what the boss does in the future, she can make every effort to preclude its happening again.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Assess the risk against the profit of meeting unreasonable expectations caused by someone else’s mistake. There will be times, as in Maria’s case, where you’ll have no choice but to put in the time needed to meet a customer’s needs. But there will also be times when you have the latitude to push back by saying something like “This wasn’t what we originally discussed and agreed to. Since I’ll have to rethink the plan and put more time into it than I anticipated, I won’t be able to have it completed within the initially proposed time frame.”</p>
+<p>•   Before rearranging your life to correct someone else’s mistake, try to negotiate a win-win solution. Let the person know you want to provide the best service possible—and that to do so, you may need more time or resources. Ask for what you realistically need to do the job in a reasonable manner.</p>
+<h2 class="mistake-heading">Mistake 128: Being the Last to Speak</h2>
+<p class="first-p">Oh, boy. This one is a big problem for women. I’ve conducted workshops and team-building programs for women as well as mixed groups for more than twenty years. There’s a particular exercise I do that involves giving the group a problem and ambiguous instructions for solving it, then observing how participants respond. In all that time, with literally thousands of participants, I can count on one hand the number of times a woman was the first to speak in the exercise when there were both men and women present.</p>
+<p>The inclination to hold back when men are present is a huge mistake.</p>
+<p>Whether it’s a small team meeting or a larger group, those who speak early and often are seen as more credible, greater risk-takers, and possessing more leadership potential than those who speak later. Speaking early in meetings shouldn’t be confused with being pushy or domineering. Nor should you worry about being accused of talking just to hear your own voice—I’ll give you some tips that will make that unlikely. The longer you wait to speak, the more likely it is that someone else will say what you’re thinking—and get credit for it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    In a group, be among the first two or three people to speak, and speak every ten to fifteen minutes thereafter.</p>
+<p>•   If you can’t be among the first to speak, make sure you’re not the last.</p>
+<p>•   You don’t always have to give an opinion when you speak.</p>
+<p>Supporting what someone else has said, asking a legitimate question, or commenting on an emerging theme are equally good ways to make your presence known without appearing as if you like the sound of your own voice.</p>
+<h2 class="mistake-heading">Mistake 129: Playing the Gender Card</h2>
+<p class="first-p">Part of my career was spent as an equal employment specialist. In this position my responsibilities included investigating and responding to scores of claims, from sex discrimination to violations of the Rehabilitation Act.</p>
+<p>The common thread through 90 percent of these cases was not discrimination but poor management. And like it or not, poor management is not illegal. Despite the fact that there are also laws to protect those who file claims of discrimination from retaliation, I never saw a claim that helped anyone’s career. It didn’t always hurt, but it never helped.</p>
+<p>There is no doubt in my mind that sex discrimination is a real part of a woman’s employment experience. Except in egregious cases where the discrimination is so blatant it cannot be defended, a company will make every effort to protect its reputation, its management, and its staff. I distinctly remember investigating one case in Texas where a woman said she was discriminated against by her boss because she was a woman. Her claim was that he verbally abused, demeaned, and embarrassed her in front of her peers. Interviews with nearly twenty employees revealed he didn’t do this just to her—he did it to everyone. Using this as the defense, the company won the case. When it was over, the manager received no more than a slap on the wrist.</p>
+<p>In another case, a woman filed an internal complaint that she was treated differently than her male colleagues when it came to assignments. Despite the fact that my investigation showed she was right—she was treated differently and for no apparent reason other than that she was a woman— the company opted to defend the manager’s decisions. She filed a claim with the Equal Employment Opportunity Commission, but before it could be investigated, she was terminated for what I thought was fabricated “cause.” It took the commission nearly a year to investigate her claim, find in her favor, and order her to be reinstated with full pay and benefits retroactive to the date of termination. She did come back to work, but, as you might imagine, it was so uncomfortable that she eventually quit voluntarily. She may have won the battle, but she lost the war.</p>
+<p>Even if you don’t go so far as to file a formal internal or external charge of sex discrimination, there is a stigma attached to women who “make noise” publicly about it—people suddenly become uncomfortable with you.</p>
+<p>They begin to act differently around you and treat you more carefully. In most cases this is counter to what women want—which is to be treated fairly. These are a few reasons why I strongly urge women to explore every other alternative available to them before playing the gender card.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Before suggesting there has been sex discrimination, try directly confronting the problem from an objective standpoint. Identify the manifestations of the problem, not the causes. For example, if you think you’ve been overlooked for a promotion because you’re a woman—don’t go there at first. Instead, ask your boss or human resources representative why you didn’t get the job and what you should do to be considered a better candidate in the future.</p>
+<p>•   Don’t try to change the system alone. You’ll wind up being a martyr.</p>
+<p>If enough other women feel as you do, form a task force to look into the issues, define the problem objectively, and propose solutions.</p>
+<p>•   Think long and hard before verbalizing concerns about sex discrimination to anyone in your company. It’s not something companies take lightly. Many have adopted stringent zero tolerance policies, which means any suggestion of discrimination will be immediately and thoroughly investigated. Once you put the ball in motion, it’s often impossible to stop it.</p>
+<p>•   If gender is a legitimate impediment to success in your current workplace, you have only three options: Put up with it (which I don’t recommend—it will only further diminish your self-esteem); pursue the formal internal channels for addressing it (which may or may not yield the desired results); or leave (which is the only option over which you truly have control).</p>
+<h2 class="mistake-heading">Mistake 130: Tolerating Sexual Harassment</h2>
+<p class="first-p">No woman should ever feel she has to tolerate sexual harassment, which is different from sex discrimination. Whereas sex discrimination refers to decisions made on the basis of gender, sexual harassment refers to decisions made based on a woman’s willingness or unwillingness to respond to requests for sexual favors or tolerate an intimidating, hostile, or offensive work environment. There isn’t quite the same stigma attached to a claim of sexual harassment, because most smart employers know women do not make the charge frequently or frivolously.</p>
+<p>A general rule used by many labor lawyers is the “one bite of the apple”</p>
+<p>theory. A coworker gets one shot at asking you out on a date. Once you say no thanks, the person has had his (or her) one bite of the apple, and further propositions may be construed as sexual harassment. Since it’s socially acceptable to date coworkers, one bite of the apple can be defensible. The situation is quite different, however, when the coworker is senior to you.</p>
+<p>Given the norms around workplace dating, it is incumbent upon you to make your wishes clearly known when you have no interest in the other person.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    In the case of quid pro quo harassment (requests for sexual favors), your first and best recourse is to tell the harasser in no uncertain terms that the behavior is not wanted or welcome. In the case of environmental harassment (making the workplace uncomfortable or intimidating), you should similarly let it be known that you want the jokes, innuendos, or comments to stop. Once you say “No” or “Stop,” the behavior moves from being socially acceptable to harassment.</p>
+<p>•   If the behavior doesn’t stop immediately, ask your human resources department for help. If you simply want it to stop and don’t want to pursue it further than that, they’ll most likely speak with the person and that will be the end of it. It’s important that you not tolerate the behavior—allowing it to persist can give the impression you liked it at one time, then changed your mind.</p>
+<p>•   If, after speaking with human resources, the unwanted behavior continues or if there is retaliation of any kind, consider filing a formal internal charge of sexual harassment. At this point an investigation into your allegations will most likely be conducted. Outcomes can vary from a verbal warning to transfer or termination of the offender.</p>
+<h2 class="mistake-heading">Mistake 131: Engaging in E-Mail Wars</h2>
+<p class="first-p">Thank you to Amy Franko of Impact Instruction for suggesting this mistake made by many women who would rather have it out in e-mails or texts than face-to-face. I hate to admit it, but I, too, have gone a few rounds with people in an e-mail war. These types of interactions are rarely satisfying and never productive. A poison-pen e-mail may make you feel better in the moment, but if you’re anything like me, you later regret not taking the high road. There are a few exceptions.</p>
+<p>Let’s go back for a minute to the difference between transactional and personal relationships. The former is one where goods or services are exchanged on a onetime or infrequent basis, whereas the latter are longterm relationships with people I know, like, or want or need to have in my life for one reason or another. You may choose to confront in writing someone with whom you have a transactional relationship. It may serve the purpose of documentation or providing detailed clarity about your concerns.</p>
+<p>This is certainly acceptable and understandable.</p>
+<p>On the other hand, if you do the same thing with people with whom you have a personal relationship, you will most likely escalate the problem and damage the relationship. In this case, you have also given the other person ammunition in writing that can later be used against you if you were inappropriate, vulgar, or mean-spirited in your communications.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    When using written communications to confront an issue, keep it factual, civil, and professional. If you wouldn’t make the comment to someone’s face, don’t say it in an e-mail, text, or letter.</p>
+<p>•   If two rounds of correspondence don’t solve the problem, it’s time for a face-to-face. Another reason why you want to remain civil.</p>
+<p>•   Avoid the inclination to respond in kind to inappropriate correspondence that you receive. Stooping to the level of the other person will ultimately backfire on you.</p>
+<p>•   Don’t copy everyone in your address book on your correspondence where problems or concerns are discussed. It’s not about getting people to take sides, it’s about resolving the problem.</p>
+<h2 class="mistake-heading">Mistake 132: Going for the Bait</h2>
+<p class="first-p">After a keynote that I did for Nestlé’s women’s affinity group where I requested input for the update to this book, Jeanette Rojas, a financial analyst with the firm, came up to me and said she hoped I might touch on being a lesbian in the workplace. At first I struggled to find a place to put it, because I couldn’t associate being a lesbian with a mistake per se. I followed up with her by phone to find out more about her thinking and realized she was talking about the way you respond to people in the workplace who are either curious about or uncomfortable with your sexuality.</p>
+<p>I asked Jeanette if she felt as if it were her responsibility to educate people who ask inappropriate questions or make inappropriate comments.</p>
+<p>To her credit, she said she did not. She believes who she is, acting with authenticity in all aspects of her life, speaks for itself. In other words, she doesn’t go for the bait. Instead, she chalks it up to the other person’s ignorance or discomfort. Nonetheless, it is a challenge she and other lesbians face when they are out of the closet.</p>
+<p>You don’t have to be a lesbian to be baited. Nice girls get baited in all kinds of ways. People say things that are offensive, off-the-wall, or thoughtless to women of color, differently abled people, pregnant women (married and not), single moms, and women going through a divorce. When that happens, you have to make a decision: Address the comment or ignore it. If you address it, you’re sometimes thought of as defensive. If you ignore it, you might feel badly about yourself or internalize a message as true when in fact it’s not. The ultimate call about whether or not to go for the bait, particularly when others are making comments of a personal nature, is one that each woman has to make for herself, based on her values. With that said, the following tips might be useful in making that decision.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Give yourself permission to think about how you want to respond to an inappropriate comment or question. One of the things women tell me is that they have a hard time coming up with a response in the moment, but later they think of something they wish they had said. It’s okay to say you want to think about, then circle back and say something like “I was thinking about your comment and realized it made me feel uncomfortable because…”</p>
+<p>•   Before responding, ask the person where the question is coming from.</p>
+<p>Oftentimes we realize that what seems inappropriate or baiting is actually coming from a place of wanting to learn more. In this case, you can choose to educate or not.</p>
+<p>•   Continue to work on developing a sense of confidence and selfcomfort. When we’re comfortable and have done the work that’s needed to feel grounded with who we are, warts and all, we are far less likely to go for the bait. This comfort allows us to be our most authentic selves, rather than feel that we have to explain or defend ourselves.</p>
+<p>•   Don’t feel as if you have to respond at all if a comment or question makes you feel uncomfortable. Instead, let the person know you’re not comfortable answering and change the subject.</p>
+<h2 class="mistake-heading">Mistake 133: Crying</h2>
+<p class="first-p">You had to know I would get here sooner or later. You don’t need a PhD to know many women cry when they’re happy, when they’re sad, when they’re frustrated, when they’re angry, when the sun is shining, when it’s not—well, you get the point. While most women know they shouldn’t do this at work, there are times when you just can’t help it. You don’t need an example—you’ve either seen it or done it. Let’s cut straight to how you can at least minimize it or recover professionally from it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•    Don’t substitute tears for anger. Women often cry because they’ve been taught being angry isn’t ladylike or acceptable. When you feel the tears well up, silently ask yourself the question What’s making me angry?</p>
+<p>•   When you do cry at work, immediately ask to be excused. Don’t sit there bawling. It only makes people uncomfortable. By removing yourself temporarily from the situation, you let others off the hook (which they’ll appreciate) and give yourself time to become composed. Make it a stock response to say, “I hear what you’re saying. Give me some time to think about it and get back to you.”</p>
+<p>•   Studio City–based psychotherapist and business coach Susan Picascia provides her clients with these four tips:</p>
+<p>Put words to the tears and focus on the problem instead of your feelings. Say something like “As you can see, I have strong feelings about this. Why don’t we focus on specific outcomes to solve the problem?”</p>
+<p>Don’t be seduced by seemingly humanistic organizations (hospitals, nonprofits, and the like) into thinking crying is okay.</p>
+<p>Crying gives people the impression you’re not in control, not competent, and weak. We like to think there is room for these very human, very real emotions in the workplace. But we’re not there. People have negative associations with crying in the workplace—and it crosses gender lines. Women are no more compassionate than men in this arena.</p>
+<p>If you find yourself welling up frequently or easily, you may want to look inside with a good friend, coach, or psychotherapist. We cry when we’re on overload, angry, anxious, hurt, or for a reason appropriate to a situation. If you’re welling up a lot, you may find your thinking is too negative or catastrophic. Few things in the workplace are life-and-death or so dramatic they can’t be addressed reasonably well. Keep your emotions from causing you to think the worst. Think positively about what may seem like a very scary experience and you will cry less.</p>
+<p>When someone goes for your jugular in a personal way, don’t go for the bait and do set him or her straight. Focus on the content of your conversation by saying something like “Stan, this is not about me overreacting, this is about a workload problem we need to solve.”</p>
+<p>About the Author DR. LOIS FRANKEL, president of Corporate Coaching International, a Pasadena, California, consulting firm, literally wrote the book on coaching people to succeed in businesses large and small around the globe. Her books Nice Girls Don’t Get the Corner Office; Nice Girls Don’t Get Rich; Nice Girls Just Don’t Get It (coauthored with Carol Frohlinger); and See Jane Lead are international best sellers that have been translated into more than twenty-five languages worldwide. Stop Sabotaging Your Career, a book based on her experiences as a pioneer in the field of business coaching working with everyone from CEOs to entry-level professionals, is a mustread for both men and women.</p>
+<p>Sought after as a public speaker for her witty, warm, and practical presentations that simultaneously engage, educate, and entertain, Dr.</p>
+<p>Frankel is among the top names of international speakers. She has appeared on the Today Show, Larry King Live, CNN, Tavis Smiley, and 20/20 and also been featured in USA Today, People magazine, and the Wall Street Journal.</p>
+<p>Dr. Frankel can be reached through either of her websites:</p>
+<p>www.corporatecoachingintl.com or www.drloisfrankel.com and at www.facebook.com/drloisfrankel www.twitter.com/drloisfrankel Also by Lois P. Frankel, PhD Nice Girls Don’t Get Rich See Jane Lead Stop Sabotaging Your Career Women, Anger, and Depression Nice Girls Just Don’t Get It Praise for</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">NICE GIRLS DON’T GET THE CORNER</h3>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">OFFICE</h3>
+<p class="first-p">“Good advice… The pointers work equally well for men and women.”</p>
+<p>—New York Times “Check out Frankel’s career-damaging mistakes to get yourself to the top of your professional game!”</p>
+<p>—Complete Woman “Girlfriends, follow the recommendations in this important book and you will be more admired, respected, and important in your career.</p>
+<p>This book will help you become appropriately assertive, responsible, courageous, adult, and proficient in important people skills.”</p>
+<p>—Dr. Laura Schlessinger “Whether you’re at entry-level or you already occupy the corner office, you need to know which ‘nice girl’ mistakes are affecting, or sabotaging, your career and your life. As you’re reading NICE GIRLS DON’T GET THE CORNER OFFICE you’ll instantly recognize some of your own errors, and Lois will give you common sense solutions on how to avoid them.”</p>
+<p>—Karen Finerman, CEO, Metropolitan Capital Advisors, Inc., CNBC’s “The Chairwoman,” and author of Finerman’s Rules “Every page of this book is filled with something you or one of your friends does every day… A simple, quick guide to presenting ourselves as the strong and bold women we are.”</p>
+<p>—Gail Evans, author of She Wins, You Win and Play Like a Man, Win Like a Woman “A frank career primer that can help us eliminate habits that hold us back in the workplace.”</p>
+<p>—Essence “A must-have book for any woman looking to get ahead. Follow Lois Frankel’s advice and you’ll be sure to avoid the pitfalls women often make in their careers.”</p>
+<p>—Barbara Stanny, author of Secrets of Six-Figure Women and Overcoming Underearning “Excellent… This is a superb learning tool, I can’t recommend it enough.”</p>
+<p>—Kingston Observer (Kingston, MA) “A very intelligent book… these tips can help you succeed in business without really trying.”</p>
+<p>—ShelfLife “Dr. Lois Frankel’s advice is critical for any woman who wants to keep her balance on ‘the thin pink line,’ the narrow band of acceptable behavior for women in the workplace. This new edition is out just in time for a new generation of women entering the radically changed post-recession employment environment. Even if you read the previous edition, you need this new one. If somehow you missed reading it, correct your mistake!”</p>
+<p>—Carol Frohlinger, principal, Negotiating Women, Inc., and coauthor of Her Place at the Table “A game changer. NICE GIRLS DON’T GET THE CORNER OFFICE is a blueprint for career success, and more importantly, career introspection.”</p>
+<p>—Jen Haley, coordinating producer, Bloomberg US Television “This is the book every woman (diva or otherwise) needs on her desk.</p>
+<p>Like a fine wine, the anniversary edition has only gotten better over time.”</p>
+<p>—Josh Berman, creator, Drop Dead Diva Appendix Personal Development Planning and Resources Until one is committed, there is hesitancy, the chance to draw back.</p>
+<p>Concerning all acts of initiative (and creation), there is one elementary truth that ignorance of which kills countless ideas and splendid plans: that the moment one definitely commits oneself, then Providence moves too.… Whatever you can do, or dream you can do, begin it. Boldness has genius, power, and magic in it. Begin it now.</p>
+<p>Goethe Now that you’ve spent time reading this book, it’s time to make a commitment and a plan for how you will achieve your goals. This is where the rubber meets the road. You can say you’re going to do things differently, but like the story of the pig and the chicken who were both asked to bring something to breakfast, commitment makes the difference.</p>
+<p>Go back through each of the chapters and take a look at the Action Items you’ve checked. Before completing the development plan provided, look for commonalities and categorize the items into three to five behaviors you believe will make the most difference for you. Then go ahead and write down what you commit to doing differently as a result of having invested your time and money in this book. You’ll find a sample line to use as a model to get you started.</p>
+<p>Resist the urge to get carried away with too many commitments. You really can’t work successfully on changing more than just a few things at a time. Besides, it’s not the number of things you change that’s important, but selecting those few behaviors that will make the biggest difference. I once had the opportunity to interview Wimbledon champ Julie Anthony, who now coaches several women players on the tennis pro tour. When I asked her about the secret of creating meaningful change, she told me if you focus on one thing, other change occurs naturally. For example, she would never tell a player to focus on changing her grip, her stance, and her forehand all at once. Anthony pointed out that by just changing the grip, the player will find her stance and forehand changing along with it.</p>
+<p>The same holds true for you. You don’t have to worry about being more concise, less apologetic, having a stronger handshake, and wearing the right clothes to work all at the same time. Do just one thing—and do that well— and you’ll find that over time there will be a subtle shift in many other behaviors. The point of coming up with three to five items for your personal development plan is so that as you master one, you can check it off and move on to the next.</p>
+<p>You’ll notice there’s also a column for “resources.” The remainder of this chapter provides you with suggestions in books, courses, articles, and other resources to help you develop the skills that will bring you closer to achieving your professional goals. You don’t have to reinvent the wheel; just go through the list and select those that seem most appealing to you and realistic in terms of your actually utilizing them. Don’t set yourself up to fail. This isn’t a diet. Stretch yourself, but don’t make it so difficult that you’ll want to abandon your plan after a week.</p>
+<p>Finally, remember that growth is a process of two steps forward, one step back. This is what clients report to me all the time. In the beginning it seems as if you’ll never quite get the hang of it. Before long, it’s second nature—unconscious competence. As the Chinese philosopher Lao-tzu said, “A journey of a thousand miles must begin with a single step.”</p>
+<p>This is where I leave you. It’s been a pleasure sharing my experiences and those of my clients and colleagues with you. I would be delighted to hear from you with your comments, success stories, and areas where you get stuck. I can be reached by e-mail at info@drloisfrankel.com. Every letter I get is answered (although it sometimes takes me a little while), so don’t hesitate to write. You deserve to have your questions answered, and I would value your feedback.</p>
+<p>PERSONAL DEVELOPMENT PLAN Action Item Commitment Start Date Resources Speak more concisely Ask for feedback from Roberta after each</p>
+<p>team meeting March 1 Read: You Are the Message Mentally plan what I’m going to say before speaking Ongoing Join Toastmasters April 1 Coaching Obviously, I’m a proponent of business coaching. I’ve seen firsthand how it helps good performers distinguish themselves as great performers in comparison to their peers. Prospective clients often ask for statistics related to the results of coaching. The data collected in my own firm indicates that about 60 percent of the people we coach are promoted within one year. An additional 10 percent choose to leave their current jobs and/or employers as a result of coaching and go on to more satisfying positions or companies that are a better match for them. Ten percent of those coached remain in their jobs doing better than before, but not enough so that they are considered high performers. And in about 10 percent of our clients, we see no change at all due to their lack of commitment to the process or other intervening factors.</p>
+<p>A variety of factors contribute to results. Is the client paying for the coaching or is the company? When it’s the latter, there may be less sense of urgency about getting the most possible from the process. Is the client in a position that’s well suited for him or her? If not, no amount of coaching will enable him or her to achieve maximum potential. What are the goals coming into the process? If the focus is on being promoted, the likelihood of promotion increases. If it’s to get better at a current position, then that’s what usually happens.</p>
+<p>Another factor is the coach himself or herself. During the past decade, the field of coaching has exploded. With so many people entering the field, it’s inevitable that some are great coaches, while others haven’t had the business experience needed to help clients understand the many nuances of business. Coaching, like any other field, consists of people with a wide variety of experiences, expertise, and credentials. My suggestion is that before investing money in any coach, you ask him or her these questions:</p>
+<p>How long have you been in practice?</p>
+<p>What did you do before you were a coach?</p>
+<p>Do you have any particular credentials or licenses to coach?</p>
+<p>What is your educational experience?</p>
+<p>Are you a member of any professional coaching associations?</p>
+<p>Before I decide to work with you, may I have the names and phone numbers of current or former clients whom I can call for a reference?</p>
+<p>What services are included in your fee?</p>
+<p>In what area do you consider yourself a coaching expert?</p>
+<p>Have you actually worked inside a corporation or have you been a consultant for your entire career?</p>
+<p>The answers to these questions will give you an idea of whether you’re dealing with a seasoned professional or someone new to the field with little business background. I personally find the business background critical— it’s what I look for when hiring coaches. There are many psychologists moving into the field as personal coaches, but they lack the practical experience needed to understand workplace dynamics. They may be well qualified to help you address issues related to stress or relationship issues, but if they haven’t experienced the realities of life inside a corporation, they may not be as qualified to assist you with the subtleties that contribute to success.</p>
+<p>Because it’s impossible for me to know all the reputable coaches currently in practice, I will provide you with a listing of only those with whom I am personally familiar. I’ve also included the website of a professional association that will enable you to locate other coaches in your area. As with any service—caveat emptor.</p>
+<p>Corporate Coaching International http://www.corporatecoachingintl.com</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">877-DOC-LOIS</h3>
+<p class="first-p">What kind of coach would I be if I told you to market yourself, then left out my own coaching firm? In 1987, after two decades spent working in the field of human resources both inside and outside corporations, I became a pioneer in the field of executive coaching and developed the concept of team-based coaching. This unique approach allows each client the opportunity to work simultaneously or sequentially with several coaches, each with a particular expertise. Our focus is on leadership development, team building, and one-on-one coaching. Although I no longer personally coach, Dr. Pam Erhardt, my handpicked successor, is an ICF-certified coach with expertise in mindful leadership, emotional intelligence, political savvy, and team development. You can learn more about Pam and our other coaches, take a coaching quiz, and find complementary resources on our website.</p>
+<p>International Coach Federation http://www.coachfederation.org In addition to general information about the coaching process, the website of this professional association of coaches allows you to sort potential matches using a variety of factors including discipline, location, price, and more. Once you’ve logged on to their site, go to the Coach Referral Service link.</p>
+<p>Liz Cornish First Hundred Days Consulting 707-433-5972 http://www.100days.com info@100days.com Liz, author of the book Hit the Ground Running, coaches women from middle management through executive levels to manage transitions, achieve their goals, and sustain top performance. She helps leaders who must leverage relationships, deliver results, inspire confidence, jump-start teams, and manage the push to action against the pull to make thoughtful, informed decisions.</p>
+<p>Mindy Danna Minds for Change, LLC 323-839-7335 mindy.danna@gmail.com Mindy works with people struggling to change their behavior in the face of escalating complexity and an unrelenting pace. Using an approach that reveals how we unintentionally obstruct the very changes we want to make, she helps people get “unstuck” and unleash their potential and achieve results.</p>
+<p>Tom Henschel Essential Communications 818-788-5357 http://www.essentialcomm.com thenschel@essentialcomm.com Tom is an internationally recognized expert in the field of workplace communications and self-presentation. He works with professionals at all levels to achieve “the look and sound of leadership.” Trained as a classical actor at the Juilliard School, Tom helps clients to learn proven techniques for becoming a valued actor on the corporate stage.</p>
+<p>Linda Novack Novack & Associates 310-454-2886 http://www.Novackandassociates.com Linda is a results-driven master certified coach. She coaches women leaders to achieve peak performance in their work, balance in all aspects of their lives, and successful navigation through life’s transitions. She has extensive experience working with women in senior management in a variety of industries. Her areas of expertise include: (1) leadership development; (2) communication and influencing skills; (3) public speaking skills; (4) executive presence; and (5) team development for a high-performance, collaborative workforce.</p>
+<p>Susan Picascia 818-752-1787 SPicascia@earthlink.net As a business coach, Susan helps individuals overcome obstacles to achieving peak performance, strong professional relationships, and worklife integration. She works with employees and management to minimize workplace conflict and also has a private practice in psychotherapy, where she focuses on work-related issues and career development.</p>
+<p>Christine Reiter Time Strategies 626-795-1800 chrisdr@pacbell.net Time Strategies coaches clients who are constantly challenged by paper flow and time management. Solutions are customized to meet each client’s needs to enable better management of paper, time, and technical resources.</p>
+<p>Out-of-the-box techniques are used for clients who are frustrated by traditional approaches to time and paper management.</p>
+<p>Workshops and Training Programs As with coaches, the quality of workshops and workshop leaders runs the gamut. If you’ve ever attended a training program, you’re probably already on the mailing lists of many firms who provide public workshops. Other consulting firms conduct only private workshops for the employees of companies that pay their fees. Given the choice, I would advise you to take company-sponsored classes simply because the facilitator should be familiar with your company and its unique requirements for success. There are a few firms, however, that I recommend based on the outstanding programs they offer in specialized areas. You’ll find these listed below.</p>
+<p>Before signing up for any program, remember that the purpose of training is to increase your skill in a particular area. Here are a few suggestions to maximize participation in training programs:</p>
+<p>•  Set specific goals or skills you want to take away as a result of attending the program.</p>
+<p>•  Sit in the front of the room. This will cause you not only to pay closer attention, but also to get more attention from the facilitator.</p>
+<p>•  Fully and actively participate. As a trainer, I know that those who participate the most get the most out of the program.</p>
+<p>•  Don’t be afraid to ask questions—especially ones that relate to you personally. Facilitators appreciate participants who seek practical ways to apply their classroom learning.</p>
+<p>•  Prepare a summary of the key themes to share at a future team meeting.</p>
+<p>If you know in advance you’re going to do this, you’ll participate in a different way than if you’re not expected to share the learning experience.</p>
+<p>•  After the program, thank your boss for the opportunity to attend and discuss with him or her what you learned. There’s no better way to assure you’ll be allowed to attend future programs.</p>
+<p>American Management Association http://www.amanet.org/seminars/index.htm 800-262-9699 AMA seminars are geared to every organizational level—from chief executive officers to administrative professionals, from senior executives to first-time managers. These small-group, team-learning experiences are dynamic and interactive. Seminar leaders are active business professionals with years of hands-on experience.</p>
+<p>Dale Carnegie Training http://www.dalecarnegietraining.com Although I’ve never attended a Dale Carnegie program myself, I’m told by people who have that they’re professionally done and can really make a difference in how you see yourself and interact with others. In addition to workshops related to increasing confidence, public speaking, and widening your personal horizons, they offer classes that can be used toward continuing education credits (CEUs) and college credits.</p>
+<p>Amy Franko Impact Instruction Group www.impactinstruction.com Amy Franko is a nationally recognized speaker, trainer, and moderator with a focus on developing emerging women leaders. She has worked with many professional organizations and Fortune 500 companies, and her training design has twice received the APEX Award for Publication Excellence. Her website offers a variety of free articles, e-books, and white papers ideal for the emerging woman leader.</p>
+<p>The Heim Group www.heimgroup.com 888-917-7797 Since establishing the Heim Group in 1985, Dr. Pat Heim, CEO and bestselling author, has become recognized internationally as the expert in the area of gender differences in the workplace. The Heim Group, a researchbased workplace communication consulting firm, is dedicated to helping organizations identify and solve communication issues, including genderrelated issues, and learn how to leverage differences into a competitive advantage. Dr. Heim also provides individual coaching.</p>
+<p>NTL http://www.ntl.org 800-777-5227</p>
+<p>I highly recommend NTL to clients who want to gain increased insight into their workplace behavior and how others perceive them. Founded in 1947, it is the premier provider of experiential programs for people at all levels of an organization. I encourage you to visit the NTL website and explore the spectrum of experiential programs it offers.</p>
+<p>Toastmasters International www.toastmasters.org 949-858-8255 Toastmasters is not really a training program, but organized groups of businesspeople who meet weekly for the purpose of improving their skills in conducting meetings, giving impromptu speeches, and preparing more formal presentations. There are more than eighty-five hundred chapters in seventy countries around the globe—and if there’s not one convenient for you, the website contains information about how you can start one. One woman I referred to Toastmasters told me it significantly increased her selfconfidence and platform skills.</p>
+<p>Negotiating Women 866-616-9804 http://www.negotiatingwomen.com Through live negotiation training, online e-learning courses, and consulting to organizations, this firm provides practical advice to help women at every stage of their careers to claim their value and create conditions for success in business.</p>
+<p>The Women’s Wilderness Institute 303-938-9191 http://www.womenswilderness.org The Women’s Wilderness Institute offers programs that help women develop their courage, confidence and leadership skills. Learn and practice self-awareness, communication, conflict resolution, and standing your ground in the face of peer pressure in a supportive group of women. Their courses also teach climbing, backpacking, and other wilderness skills.</p>
+<p>Recommended Reading Throughout this book I’ve mentioned books and articles that I believe will help you to gain greater skills in many of the areas we’ve touched upon. For your convenience, I’ve summarized these below as well as included several others that I’ve found valuable.</p>
+<p>Books Adams, Marilee. Change Your Questions, Change your Life: 10 Powerful Tools for Life and Work. San Francisco: Berrett-Koehler, 2009.</p>
+<p>Ailes, Roger. You Are the Message: Getting What You Want By Being Who You Are. New York: Crown Business, 1989.</p>
+<p>Bailey, Deborah. Think Like an Entrepreneur: Transforming Your Career and Taking Charge of Your Life. Bright Street Books, 2010.</p>
+<p>Bateson, Mary Catherine. Composing a Life. New York: Plume, 1990.</p>
+<p>Bradberry, Travis, and Jean Greaves. Emotional Intelligence 2.0. San Diego: TalentSmart, 2009.</p>
+<p>Brandon, Rick, and Marty Seldman. Survival of the Savvy: HighIntegrity Political Tactics for Career and Company Success. New York: Free Press, 2004.</p>
+<p>Brown, Brené. The Gifts of Imperfection: Let Go of Who You Think You’re Supposed to Be and Embrace Who You Are. Center City, MN:</p>
+<p>Hazelden, 2010.</p>
+<p>______. I Thought It Was Just Me (But It Isn’t): Making the Journey from “What Will People Think?” to “I Am Enough.” New York:</p>
+<p>Gotham, 2007.</p>
+<p>Bundles, A’Lelia. On Her Own Ground: The Life and Times of Madam C. J. Walker. New York: Scribner, 2002.</p>
+<p>Chamine, Shirzad. Positive Intelligence: Why Only 20% of Teams and Individuals Achieve Their True Potential and How You Can Achieve Yours. Austin, TX: Greenleaf, 2012.</p>
+<p>Cornish, Liz. Hit the Ground Running: A Woman’s Guide to Success for the First 100 Days on the Job. New York: McGraw-Hill, 2006.</p>
+<p>Edmondson, Ella L. J. Career GPS: Strategies for Women Navigating the New Corporate Landscape. New York: Amistad, 2010.</p>
+<p>Feldhahn, Shaunti. The Male Factor: The Unwritten Rules, Misperceptions, and Secret Beliefs of Men in the Workplace. New York: Broadway Business, 2009.</p>
+<p>Fisher, Roger, and Daniel Shapiro. Beyond Reason: Using Emotions as You Negotiate. New York: Penguin, 2005.</p>
+<p>Fisher, Roger, and William Ury. Getting to Yes: Negotiating Agreement Without Giving In. New York: Penguin, 2011.</p>
+<p>Frankel, Lois P. See Jane Lead: 99 Ways for Women to Take Charge at Work. New York: Warner Business, 2007.</p>
+<p>______. Stop Sabotaging Your Career: 8 Proven Strategies to Succeed —in Spite of Yourself. New York: Warner Business, 2007.</p>
+<p>______. Women, Anger, and Depression: Strategies for SelfEmpowerment. Deerfield Beach, FL: Health Communications, 1991.</p>
+<p>Frankel, Lois P., PhD and Carol Frohlinger, JD. Nice Girls Just Don’t Get It: 99 Ways to Win the Respect You Deserve, the Success You’ve Earned, and the Life You Want. New York: Harmony, 2011.</p>
+<p>Green, Charles H., and Andrea P. Howe. The Trusted Advisor Field Book: A Comprehensive Toolkit for Leading with Trust. Hoboken, NJ: Wiley, 2011.</p>
+<p>Heim, Pat, and Susan K. Golant. Hardball for Women: Winning at the Game of Business. Rev. ed. New York: Plume, 2005.</p>
+<p>Hollands, Jean. Same Game, Different Rules: How to Get Ahead Without Being a Bully Broad, Ice Queen, or “Ms. Understood.”</p>
+<p>New York: McGraw-Hill, 2001.</p>
+<p>Houston, Phillip, Michael Floyd, and Susan Carnicero. Spy the Lie:</p>
+<p>Former CIA Officers Teach You How to Detect Deception. New York: St. Martin’s Press, 2012.</p>
+<p>Kayser, Thomas A. Mining Group Gold: How to Cash in on the Collaborative Brain Power of a Team for Innovation and Results.</p>
+<p>3rd ed. New York: McGraw-Hill, 2010.</p>
+<p>Klaus, Peggy. Brag! The Art of Tooting Your Own Horn Without Blowing It. New York: Warner, 2003.</p>
+<p>Kolb, Deborah M., Judith Williams, and Carol Frohlinger. Her Place at the Table: A Woman’s Guide to Negotiating Five Key Challenges to Leadership Success. San Francisco: Jossey-Bass, 2010.</p>
+<p>Maister, David H., Charles H. Green, and Robert M. Galford. The Trusted Advisor. New York: Touchstone, 2001.</p>
+<p>Marshall, Lisa B. Smart Talk: The Public Speaker’s Guide to Success in Every Situation. New York: St. Martin’s Griffin, 2012.</p>
+<p>McGinty, Sarah Myers. Power Talk: Using Language to Build Authority and Influence. New York: Business Plus, 2002.</p>
+<p>Mitchell, Pamela. The 10 Laws of Career Reinvention: Essential Survival Skills for Any Economy. New York: Dutton, 2010.</p>
+<p>Patterson, Kerry, Joseph Grenny, Ron McMillan, and Al Switzler.</p>
+<p>Crucial Conversations: Tools for Talking When Stakes Are High.</p>
+<p>New York: McGraw-Hill, 2011.</p>
+<p>Reardon, Kathleen Kelley. The Secret Handshake: Mastering the Politics of the Business Inner Circle. New York: Crown Business, 2002.</p>
+<p>Sandberg, Sheryl. Lean In: Women, Work and the Will to Lead. New York: Knopf, 2013.</p>
+<p>Siegel, Daniel J. Mindsight: The New Science of Personal Transformation. New York: Bantam, 2011.</p>
+<p>Silver, Susan. Organized to Be Your Best!: Transforming How You Work. Los Angeles: Adams-Hall, 2006.</p>
+<p>Stone, Douglas, Bruce Patton, Sheila Heen, and Roger Fisher. Difficult Conversations: How to Discuss What Matters Most. New York:</p>
+<p>Penguin, 2000.</p>
+<p>Thaler, Linda Kaplan, and Robin Koval. The Power of Nice: How to Conquer the Business World with Kindness. New York: Crown Business, 2006.</p>
+<p>Ury, William. Getting Past No: Negotiating in Difficult Situations. New York: Bantam, 2002.</p>
+<p>Weston, Liz. The 10 Commandments of Money: Survive and Thrive in the New Economy. New York: Plume, 2011.</p>
+<p>Wilson Schaef, Anne. Women’s Reality: An Emerging Female System in a White Male Society. New York: HarperOne, 1992.</p>
+<p>Articles Barron, Lisa. “Ask and You Shall Receive? Gender Differences in Negotiators’ Beliefs About Requests for a Higher Salary.” Human Relations (June 2003).</p>
+<p>Hewlett, Sylvia Ann, Lauren Leader-Chivee, Laura Sherbin, Joanne Gordon, and Fabiola Dieudonne. “Executive Presence.” Center for Talent Innovation, 2012.</p>
+<p>Ibarra, Herminia, Nancy M. Carter, and Christine Silva. “Why Men Still Get More Promotions Than Women.” Harvard Business Review (September 2010).</p>
+<p>Kotter, John, “What Leaders Really Do.” Harvard Business Review (December 2001).</p>
+<p>Network of Executive Women. “Affinity Networks: Building Organizations Stronger Than Their Parts.” 2006.</p>
+<p>Slaughter, Anne-Marie. “Why Women Still Can’t Have It All.” Atlantic (July/August 2012).</p>
+<p>Book Club Guide Discussion Questions 1. What does the author mean when she refers to “nice girls”?</p>
+<p>2. What were some of the messages you heard in childhood about how girls were supposed to behave? How did those messages differ from those received by your brothers or male cousins?</p>
+<p>3. If you received the message that girls could do anything, how was that message reinforced or negated in school and the workplace?</p>
+<p>4. How does the media’s portrayal of women (in movies, advertising, television, etc.) impact how you see yourself and what others expect from you?</p>
+<p>5. How do you think the author uses the term corner office as a metaphor?</p>
+<p>6. The author talks about the workplace as a playing field with rules, boundaries, and strategies.</p>
+<p>What are the implications when the boundaries narrow for a particular person or group?</p>
+<p>How are the rules and boundaries different in your workplace for men and women? How are they the same?</p>
+<p>How are the rules and boundaries different in your workplace for Caucasians and for women of color? How are they the same?</p>
+<p>7. In what area on the self-assessment did you score the lowest? Highest?</p>
+<p>How do your experiences validate these scores?</p>
+<p>8. What three mistakes in the book do you most identify with and why?</p>
+<p>9. What would be the hardest coaching tip for you to implement and why? What would be the positive ramifications if you did implement it? What might be the negative ramifications?</p>
+<p>10. What are some of the greatest challenges for you personally in achieving your career goals? What can you do to meet the challenges?</p>
+<p>11. What can you do to facilitate change that will help make the workplace even more hospitable for the next generation of women?</p>
+<p>12. What mistakes do you make in the workplace or do you see others making that the author did not discuss? How would you coach someone to overcome these challenges?</p>
+<p>13. What goals will you set for yourself as a result of reading this book?</p>
+<p>How will you measure success?</p>
+<p>14. Whom in your life can you count on to help you achieve your goals?</p>
+<p>What “naysayers” do you need to sequester?</p>
+<p>15. The author believes in the maxim “Each one, teach one.” From what you have read, what can you teach others to help them achieve their goals?</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">BUSINESS</h3>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">PLUS</h3>
+<p class="first-p">Recognized as one of the world’s most prestigious business imprints, Business Plus specializes in publishing books that are on the cutting edge.</p>
+<p>Like you, to be successful we always strive to be ahead of the curve.</p>
+<p>Business Plus titles encompass a wide range of books and interests— including important business management works, state-of-the-art personal financial advice, noteworthy narrative accounts, the latest in sales and marketing advice, individualized career guidance, and autobiographies of the key business leaders of our time.</p>
+<p>Our philosophy is that business is truly global in every way, and that today’s business reader is looking for books that are both entertaining and educational. To find out more about what we’re publishing, please check out the Business Plus blog at:</p>
+<p>www.businessplusbooks.com Thank you for buying this ebook, published by Hachette Digital.</p>
+<p>To receive special offers, bonus content, and news about our latest ebooks and apps, sign up for our newsletters.</p>
+<p>Sign Up Or visit us at hachettebookgroup.com/newsletters For more about this book and author, visit Bookish.com.</p>
+    </div>
+  </div>
+</body>
+</html>

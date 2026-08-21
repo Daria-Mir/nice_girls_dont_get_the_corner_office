@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: How You Act - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 3: How You Act</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 3 How You Act In the play As You Like It, William Shakespeare reminds us:</p>
+<p>All the world’s a stage and all the men and women are merely players. They have their exits and their entrances and one man in his time plays many parts.</p>
+<p>Success in the world of business depends on your ability to know your part and how to play it. It may sound as if I’m suggesting that you be phony or false, but that’s not it at all. Just as actors and actresses are judged by how well they play their roles, we are judged by whether we understand the nuances of what it means to act professionally.</p>
+<p>It could be argued that the behaviors described in every chapter constitute how you act. This chapter is somewhat different in that it focuses on the subtle, stereotypical ways in which women behave that contribute to an overall impression of their being less competent than they really are.</p>
+<p>People do not know and judge us by our intentions; they know and judge us by our actions.</p>
+<p>Too many women mistakenly assume that they have to act like men to get ahead. These are often the same ones who fail to understand the rules of the playing and that there are different rules for men and women. As I’ll discuss shortly, the goal isn’t to strive to be a poor imitation of a man, but rather to act as an adult woman and not the nice little girl you were taught to be in childhood.</p>
+<p>Let me remind you that any one of the behaviors described in this book taken alone would not be a deal buster—but put several of them together and they can divulge a woman’s underlying naïveté, need for approval, and lack of self-confidence. And the truth is, most of us engage in more than just one of these mistakes.</p>
+<h2 class="mistake-heading">Mistake 19: Difficulty Transitioning from Nice Girl to Winning Woman</h2>
+<p class="first-p">When Carol Frohlinger and I wrote Nice Girls Just Don’t Get It, we wanted to make it clear that the opposite of a nice girl isn’t a bitch—it’s a winning woman. The difference is that a nice girl acts in ways that are designed to make others like her, and a winning woman acts in ways that ensure her goals are met by knowing what she wants, having clarity about where she’s headed, and achieving both through high likability and emotional intelligence. The following chart illuminates the behaviors in which you must engage to make it a reality.</p>
+<p>The difficulty comes when you make a conscious decision to make the transition from being that nice little girl you were taught to be in childhood to being the adult woman you are now. You begin with the best of intentions but are waylaid when you get resistance from those around you. Carol and I wrote:</p>
+<p>Nice girls find that others will try to make them feel guilty, selfish, or uncaring when they try to change things up and put their needs first. Whereas the nice girl wants to change, other people want to maintain status quo because it works for them.</p>
+<p>Winning women look at resistance as a necessary part of building relationships.</p>
+<p>The problem for many women is in choosing to take the path of least resistance, thereby avoiding the kinds of intense discussions that can accompany change. Most forms of resistance can be overcome. That’s the good news. It simply requires tenacity, regrouping, and employing a tactical approach to countering what at first seem like insurmountable obstacles.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">WINNING WOMAN WHEEL</h3>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  If you get resistance, you’re on the right track. It means you are asserting yourself and advocating for your needs. Depending on the situation, some measure of resistance is inevitable. Don’t be discouraged by it, but rather use it to further your goals.</p>
+<p>•  Practice countering resistance in low-risk situations. Select situations that won’t make a huge difference in your life as a place to begin to advocate for yourself. Transactional situations such as insisting on returning an item you purchased or returning a restaurant meal that wasn’t prepared properly are ideal. You can then apply what you’ve learned when the stakes are higher.</p>
+<p>•  Use questions to get at the real reason for the resistance. It’s not enough to know that people don’t want you to change; you need to know why. When you encounter resistance, don’t just take it at face value, but ask questions to clarify. From there, you can often move into negotiating a winwin outcome.</p>
+<h2 class="mistake-heading">Mistake 20: Failure to Prepare for Social Interactions</h2>
+<p class="first-p">The best piece of advice I ever got in school was from a seventh-grade science teacher who preached, “Chance favors the prepared mind.” This, of course, requires forethought—which nice girls are capable of, but often overlook due to a focus on getting as many things done in the present as possible. This, then, renders them at a disadvantage when it comes to being able to think on their feet, lobby for support for projects or ideas, and make the most of social situations.</p>
+<p>This is precisely what happened to Deeana when she was at a holiday party for her company. She had a good relationship with the department vice president, so it was natural for her to go up and speak with him at the event. He welcomed her with a big smile and immediately started talking about his son, who was about to go off to the same college that Deeana’s daughter attended. They exchanged pleasantries, with Deeana all the while wishing she could transition the discussion to a big project she was working on and for which she needed his blessing.</p>
+<p>Before she could turn it around, a male peer of hers walked up and joined them. He began the conversation talking about some of the company’s challenges and achievements over the past year. The vice president, having said about all he could on the subject of his son, turned his attention to the man and they continued chatting about business issues. As Deeana said, “I’m glad I have good relationships with these executives, but I want them to see me as more than just a mother or a woman who will listen to them.”</p>
+<p>This is one of the pitfalls of high emotional intelligence for nice girls.</p>
+<p>We make others feel comfortable with us, but, as was already discussed, we don’t always capitalize on that comfort by preparing for perfect opportunities to discuss business during social interactions or casual conversations.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Prepare for every social event that you attend. Assume that opportunities will present themselves to discuss business matters of importance to you—or to others. Knowing in advance who is attending will help you to identify key issues, challenges, or projects for which you want support or have support to offer.</p>
+<p>•  Preparation will help you to guide discussions in the direction you want them to go. In Deeana’s case, had she gone to the party with at least one hot topic in mind, she could have easily segued the conversation toward it with a simple statement, such as “I’m delighted that your son is going to be attending what I consider to be one of the top engineering schools in the country, and I would be happy to help by providing whatever information I can. I’m also delighted to have a few minutes of your time to talk about how the sales training program is progressing.”</p>
+<p>•  Get the agenda for both formal and informal meetings in advance.</p>
+<p>Each meeting provides you with an opportunity to build your brand by letting others know you show up for every game suited up. Do your homework around the agenda items and come prepared to add value rather than just be a seat warmer.</p>
+<p>•  Attend the Dale Carnegie Course on Effective Communications and Human Relations/Skills for Success. This course focuses on strengthening your interpersonal relationships, being a persuasive communicator, and developing a take-charge attitude initiated with confidence and enthusiasm.</p>
+<h2 class="mistake-heading">Mistake 21: Multitasking</h2>
+<p class="first-p">It’s a proven fact of biology that women are better multitaskers than men.</p>
+<p>Without getting too technical, we know that the corpus callosum (the nerve connections between the right and left hemispheres of the brain) is 30 percent more highly developed in the female brain than in the male brain.</p>
+<p>This allows information to flow more easily from one side of the brain to the other, allowing a woman to focus on more than one thing at a time. Oh, joy. Now we’re expected to not only do more than men, we’re expected to do more at the same time than men.</p>
+<p>As a psychiatrist friend once said to me, “Just because you can do something, doesn’t mean you should do it.” This is certainly true in the case of multitasking. Dr. Jeremy Hunter, an expert in workplace productivity and professor at the prestigious Drucker School of Management, has found that multitasking not only makes you less efficient and less effective, but, over time, stresses and even damages the brain. Splitting attention between two tasks decreases the limited amount of brainpower a person can devote to each task. The result? Neither task is done particularly well.</p>
+<p>Additionally, says, Hunter, the short-term costs of inefficiency and ineffectiveness are compounded by long-term costs of chronically stressing the brain. This leads to a neurochemical cascade that inhibits memory, reduces concentration, and impairs decision making and learning. Chronic stress can lead to depression, anxiety disorders, heart disease, infertility, and suppressed immune response. All of which could be avoided if you’d just learn to focus on one thing at a time.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Ask for help. We often multitask because we simply have too much on our plates. Whether at work or at home, ask for help with routine tasks that don’t necessarily have to be done by only you.</p>
+<p>•  Identify three to five times during the day when you commit to not multitasking. These might include when you’re getting ready for work in the morning, driving to work, having a meal with family or friends, exercising, playing with the kids, attending a concert or play, or sitting in a meeting. By being more conscious of when you are multitasking, you can take proactive measures to reduce it.</p>
+<p>•  Turn the e-mail alert off on your computer so that you’re not distracted each time new mail arrives.</p>
+<p>•  Turn your cell phone off when working on a project.</p>
+<p>•  Most important, focus on whatever you’re doing or whom you’re with in the moment. Remember, we are human beings, not human doings.</p>
+<h2 class="mistake-heading">Mistake 22: Ragging on Other Women</h2>
+<p class="first-p">One of the questions I’m asked in about half of the presentations I make isn’t really a question at all. When someone asks, “What do you think about the fact that women don’t support one another and are always trying to cut down other women?,” I know that they’re really expressing their own perceptions of the sometimes difficult relationships between women in the workplace. My own personal experience is quite different. Sure, there have been women who would stab me in the back in a nanosecond, but there have been equal numbers of men who would do the same. Backstabbing is gender-blind.</p>
+<p>I believe there are a number of reasons why women react so strongly to the insensitivity of other women but overlook it in men:</p>
+<p>•  We expect women to treat us better than men treat us, and when this doesn’t happen it creates “cognitive dissonance” or discomfort with the expectation versus the reality.</p>
+<p>•  It’s more socially acceptable to point out the foibles of women than to do the same with men. Men do it to women all the time, so the less enlightened woman follows suit.</p>
+<p>•  There is increased competition among women for opportunities for upward mobility given that these opportunities are fewer and farther between than for men. Therefore, women on upwardly mobile paths may mistakenly view other women as the real competition.</p>
+<p>Regardless of the rationale for either treating other women less respectfully than you would a man or perpetuating the myth that we are one another’s worst enemies, it’s a huge mistake. Not only because it’s wrong to treat anyone disrespectfully, but also because it’s just plain stupid. What happens when that woman who heard you dissing her in the ladies’ room is promoted to the head of your division? Or when you leave the company to start your own business and that same woman is the one who makes decisions about bringing in outside vendors. Do you really think she’s not going to remember?</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Replace ragging with raving. Look for opportunities to build up the reputations of your female colleagues. Compliment them publicly. When necessary, provide constructive feedback only in private.</p>
+<p>•  Recommend women for promotions or high-profile assignments without fear that you’ll be accused of doing so only because it’s a woman.</p>
+<p>That kind of remark is a ploy used by men to get you to stop doing it!</p>
+<p>•  If you don’t already have one, start a women’s affinity group in your company. To learn more about these groups, google and read the article “Affinity Networks: Building Organizations Stronger Than Their Parts,”</p>
+<p>published by the Network of Executive Women (NEW).</p>
+<p>•  Disengage from conversations where women are gossiping about other women. You can simply walk away, or you can show even more courage by saying you think you all should be supporting, not ragging on, women in the office.</p>
+<h2 class="mistake-heading">Mistake 23: Being Too Thin-Skinned</h2>
+<p class="first-p">Remember this scene from the movie A League of Their Own where Jimmy Dugan (played by Tom Hanks), coach of the women’s baseball team the Rockford Peaches, gives his player some tough-love feedback (and if you haven’t seen the movie you must rent it because the support these women show for one another is really inspiring)?</p>
+<p>Jimmy Dugan: Evelyn, could you come here for a second? Which team do you play for?</p>
+<p>Evelyn Gardner: Well, I’m a Peach.</p>
+<p>Jimmy Dugan: Well I was just wonderin’ why you would throw home when we got a two-run lead. You let the tying run get on second base and we lost the lead because of you. Start using your head. That’s the lump that’s three feet above your ass.</p>
+<p>[Evelyn starts to cry.] Jimmy Dugan: Are you crying? Are you crying? ARE YOU CRYING? There’s no crying! THERE’S NO</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">CRYING IN BASEBALL!</h3>
+<p class="first-p">Crying is just one way women show that they’re thin-skinned, and I’ll address this specific mistake a little later. Withholding information, the silent treatment, and passive aggressiveness are but a few other ways women reveal their thin skin. I’m sure you’ve noticed that men can argue and fight with one another and then go out for a beer afterward as if nothing happened. That’s because to them, nothing did happen other than an open and honest disagreement. We women, on the other hand, can hang on to a grudge like nobody’s business. One small slight, and a relationship of even years can be irreparably damaged.</p>
+<p>If you fall into the category of being overly sensitive, I have only three words for you: Get over it. In her book The Male Factor: The Unwritten Rules, Misperceptions, and Secret Beliefs of Men in the Workplace, Shaunti Feldhahn cites this as one of the top pet peeves men have about women.</p>
+<p>Men are simply not wired to take things as personally as do women. To them, work is just business; it’s not personal. If women want to be seen as having the stamina to play in the big leagues, then they need to take personal out of the equation—especially when it comes to receiving feedback.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Assume the best of intentions rather than the worst. Most people don’t start off the day with a fervent desire to hurt your feelings. Shit happens.</p>
+<p>Before stewing on a comment or action that offended you to the point where it has you boiling over, consider the other person’s intent. Yes, an offhanded comment made in a hurry or in the heat of the moment can be hurtful, but you don’t have to let it become a festering wound.</p>
+<p>•  Use your words. Rather than act out your feelings, put words to them and engage in a dialogue with the offender. Usually, having this kind of discussion releases some of the intense feelings around the issue.</p>
+<p>•  When given feedback, resist the tendency to become defensive.</p>
+<p>Instead, ask questions that will help you to understand it, thank the person for taking the time to give the feedback to you, and think about whether or not it has some validity. If so, take action. If not, let it go.</p>
+<h2 class="mistake-heading">Mistake 24: Polling Before Making a Decision</h2>
+<p class="first-p">Jennifer is a lead auditor with a Wharton MBA and just over five years’ experience working for a Fortune 500 company. Her performance is acknowledged as superb. When a promotional opportunity became available, her name was one of those considered on a short list of candidates. The word on the street about her, however, was that she was unwilling or unable to make a move without first getting input from everyone around her. As a result, she wasn’t viewed as someone who could take quick and decisive action. Making her a manager was out of the question. In other words, Jennifer was one of those women who had to conduct a poll before she would take action.</p>
+<p>Participative decision making is a good thing. The inability to act without knowing what everyone thinks and if they approve isn’t. It’s a technique nice girls use to avoid later confrontation. If they can get approval on the front end, no one can criticize them on the back end. The fine line you walk is between being seen as a lone ranger who acts independently, without regard for the opinions of others, and someone who can’t make her own decisions or isn’t confident enough to act without external input. The ideal is to act interdependently, recognizing the value of alternative input.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Take more risks by acting without first getting input from your supervisor. Begin with small, low-profile decisions. It helps to factor in the combination of data and feelings when taking a risk. If you have all the data you need and you feel really good about it, it isn’t really a risk at all. On the other hand, if you have little data and you’re not feeling so hot about it, then it’s a foolish risk. You’ve got to have some of both (data and good feelings) to take a good risk.</p>
+<p>•  Ask yourself what you have to lose by acting in an independent manner. Try to explore the internal mechanism that keeps you tied into approval. Once you know, you can tape over the old message.</p>
+<p>•  Don’t let the pendulum swing entirely in the other direction. There are times when it’s appropriate to seek extensive input and/or approval. These tend to center on high-profile decisions where significant cost or potential loss is involved.</p>
+<h2 class="mistake-heading">Mistake 25: Needing to Be Liked</h2>
+<p class="first-p">I can’t deny the fact you like me! Right now, you like me!” There is no better example of how the need to be liked can impede success than this exclamation from Sally Field upon winning the 1984 Best Actress Oscar for her work in Places in the Heart. Up until that time, Ms. Field’s body of work included the likes of Gidget, The Flying Nun, and Burt Reynolds’s sidekick in Smokey and the Bandit. This acceptance-speech gaffe marked a turning point for her. From that point on she assumed more serious roles, moved into film directing and production, and changed how she communicated with the public.</p>
+<p>Your LQ (likeability quotient) is a critical factor in your success. People get promoted, demoted, hired, and fired based on how likable they are. In our office we have a very scientific test we use to determine likability. It’s called the Beer Test. When we meet a client for the first time we ask ourselves, Is this someone I would like to go out and have a beer or a cup of coffee with? If the answer is no, we know we have our work cut out for us.</p>
+<p>The desire to be liked is so strongly ingrained in some nice girls that it becomes nearly impossible for them to act in any alternative manner. They become immobilized at the thought of disappointing someone. It’s critical to understand the difference between being liked and being respected. If you’re concerned only with being liked, you will most likely miss the opportunity to be respected. Your need to be liked will preclude you from taking the kinds of risks taken by those who are respected. Conversely, if you’re concerned only with being respected and not liked, you lose the support of people you may need in your camp. Paradoxically, it’s the people who are liked and respected who are most successful in the workplace.</p>
+<p>Carol Frohlinger, JD, an expert in how women negotiate, taught me a valuable distinction when we were working on our book Nice Girls Just Don’t Get It. Not all relationships are created equal. There are transactional relationships, those with people I am doing business with or encountering only once; and personal relationships, those that are ongoing. Women tend to treat both relationships the same, and wind up wasting time and energy (not to mention feeling used or taken advantage of) by not differentiating the two.</p>
+<p>Let’s take for example the person sitting next to you on the airplane who wants to chat it up with you. You’ve had a long week of meetings, and all you want to do on the flight is relax and listen to music. Acting like a nice girl, you talk to the person because he or she wants you to. Acting like an adult woman, you politely tell the person that you enjoyed speaking with them, and are going to put your earphones on now so that you can relax.</p>
+<p>This is a transactional relationship—you most likely will never again see that person. It doesn’t give you permission to be rude, but it does give you permission to not put as much energy into the relationship as you might with one that is more important to you. It doesn’t really matter if this person likes you or not.</p>
+<p>If, in the same scenario, you’re sitting next to a colleague with whom you’ve been working all week and who wants to talk about a personal issue that arose on the trip, you have a harder decision to make. This is not a transactional but rather a personal relationship—one that you anticipate will continue for some period of time. It’s not about wanting the colleague to like you; it’s about wanting to maintain a good working relationship.</p>
+<p>There’s a little girl in most of us who wants to be liked—and there’s nothing wrong with that. It’s when the needs of the little girl overshadow the rational, adult woman that we get into trouble. Nice is necessary for success for both men and women. It’s simply not sufficient.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read Nice Girls Just Don’t Get It: 99 Ways to Win the Respect You Deserve, the Success You’ve Earned, and the Life You Want, by yours truly and Carol Frohlinger, JD. Carol, an attorney with expertise in negotiation, and I teamed up to write this book to help readers learn how to establish boundaries and negotiate for what’s important to them in all aspects of their lives, not just work.</p>
+<p>•  Use self-talk to counter the need to have everyone like you all the time. That’s an impossibility. Replace the thought But people won’t like me if… with People might get upset with me, but at least I will be acting in accordance with my values.</p>
+<p>•  Ask yourself where the inordinate need to be liked comes from.</p>
+<p>Questions such as What am I afraid of happening if I’m just myself? or What was I taught in childhood about the importance of being liked? can help you pinpoint what purpose the need to be liked serves in your life. If you can find the answer to these and similar questions, you’re more likely to be able to overcome this need.</p>
+<p>•  Balance your inclination to serve others’ needs with serving your own.</p>
+<p>Before agreeing to something you may not want to, ask yourself how much it will matter if the other person is a little annoyed. When people get angry or annoyed with us, it’s often for the purpose of getting us to do what they want. Don’t fall for the ploy.</p>
+<p>•  Differentiate transactional relationships from personal ones and act accordingly.</p>
+<h2 class="mistake-heading">Mistake 26: Not Needing to Be Liked</h2>
+<p class="first-p">No, your eyes aren’t playing tricks on you. For many women, this mistake is the inverse to the need to be liked. Fear of being perceived as a pushover causes some women to adopt the attitude of I’m not here to win a popularity contest. Well—I’m here to tell you that yes, you are. Look at what happened to Hillary Clinton in the 2008 election. I don’t think she lost the nomination because the United States wasn’t ready for a woman president, I believe her likeability quotient wasn’t as high as Barack Obama’s (and it’s certainly nowhere near Bill Clinton’s LQ). If she is to make a bid for the presidency in 2016, I’d coach her to work on her LQ.</p>
+<p>Dr. Sharon Mass, director of social services at Cedars-Sinai Medical Center, is another example of someone who didn’t care whether or not people liked her. She has graciously allowed me to use her name and situation as an example of how this phenomenon can get in your way of achieving your career goals.</p>
+<p>Sharon has a heart of gold. She genuinely cares about people. She also happens to be brilliant and the best at what she does. Her problem when we first met was that people didn’t know any of this. They viewed her as a perfectionistic taskmaster, focused on getting the job done rather than on the needs of her staff. An underlying fear was that if anyone saw how warm and empathic she really was, they might take advantage of those traits. As a result, she compensated by going in the opposite direction. Like many women, Sharon had to learn how to allow her human, more stereotypically feminine side to emerge while at the same time capitalizing on the best of her more stereotypically masculine style of management.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read The Power of Nice: How to Conquer the Business World with Kindness, by Linda Kaplan Thaler and Robin Koval. When their book first came out we were often pitted against one another in interviews, but the fact is we’re very much in agreement. Nasty will never get you as far as nice— as long as you don’t act like the little girl you were taught to be in childhood.</p>
+<p>•  Disabuse yourself of the notion that familiarity breeds contempt. By learning to set boundaries, you need never worry about someone taking advantage of you.</p>
+<p>•  Every single day, take time to build or strengthen a relationship. When you need a relationship, it’s too late to build it. Listen to someone who needs an ear, learn what’s important to your colleagues or customers, and don’t follow the Golden Rule (treat others as you want them to treat you); rather, follow the Platinum Rule: Treat others as they want to be treated.</p>
+<p>•  Follow Mary Kay Ash’s motto for success: “Treat everyone as if they are wearing a sign that reads ‘Make me feel important.’ ”</p>
+<h2 class="mistake-heading">Mistake 27: Not Asking Questions for Fear of Sounding Stupid</h2>
+<p class="first-p">How many times do we have to be told, “There are no stupid questions,”</p>
+<p>before we believe it? The problem is that we’ve come to rely on the old adage “It’s better to keep your mouth shut and look like a fool than to open it and confirm it.” Well, I disagree. There are so many ways in which women remain silent that we don’t need to find any more. Asking a legitimate question (as opposed to making a statement couched as a question, which I’ll talk about later) to ensure understanding is a sign more of confidence than of ignorance. If nearly three decades of working inside corporations has taught me anything, it’s that if I don’t understand something, most likely no one else does, either.</p>
+<p>Nice girls sometimes don’t ask questions because they don’t want to waste the group’s time. Asking yourself the simple question Will the answer apply to only me? should help you decide whether you should ask it. If the answer is yes, and you know you will have the chance to ask it following the meeting, then wait to ask your question off-line. If the answer is no, or you know you won’t have the opportunity to ask again (the participants won’t get together again or the speaker won’t be available), then ask away.</p>
+<p>Do, however, be sensitive to the needs of the other participants in the meeting. If you’ve already asked several questions and you notice people are getting fidgety or the meeting is running late, consider how critical it is that you get the answer just then.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  If you don’t understand, ask. It’s far better than going off in the wrong direction.</p>
+<p>•  Observe people in meetings and you’ll notice when others are confused or not understanding the message. Use this as an opportunity to help the group by saying something like “I can tell by the looks on people’s faces that this is not quite clear. Can you give us some examples or state it in other words?”</p>
+<p>•  Trust your instincts. If it doesn’t seem clear, it’s probably not.</p>
+<p>•  Use simple paraphrases as a way of gaining clarification. For example, “Do I understand you correctly that we’re being given six months to complete phase one of the project, three months to complete phase two, and six months to complete phase three?” If you’re wrong, you’ll be told so; if not, you’ve gotten the information you need.</p>
+<p>•  If people make you feel stupid over a question you’ve asked, you can assume it’s their problem, not yours. If they do it consistently, ask them point-blank why they feel the need to put you down just because you’ve asked a question.</p>
+<h2 class="mistake-heading">Mistake 28: Acting Like a Man</h2>
+<p class="first-p">The emphasis in this mistake is on acting. Many women possess stereotypically male characteristics and behave accordingly. These women aren’t acting; they’re just being themselves. It can work for them, especially when it’s authentic. If you’re not one of these people, don’t start now. You’ll never play the role of a man as well as you will a woman who plays her role well. At this point I hope you’ve gotten the idea that this book is about having a full arsenal of tactics and techniques at your disposal that are consistent with being a woman, not acting like a man.</p>
+<p>Acting like a man in the workplace will inevitably get you into trouble.</p>
+<p>Just as we expect men to act in certain ways, we expect the same of women.</p>
+<p>When they don’t, it creates a kind of dissonance. If behaviors don’t match expectations, we tend to mistrust people or think they’re not playing their roles appropriately. Instead, you must play the role that’s expected—while also widening the boundaries of the stage.</p>
+<p>Being different from men isn’t something to change or hide. We may be made to feel there’s something wrong with how we act, but that’s simply another ploy that’s used to keep us in our places. Don’t buy into it. Women bring a unique set of behaviors to the workplace that are needed, especially in today’s climate. Our tendencies to collaborate rather than compete, listen more than talk, and use relationships rather than muscle to influence are the very same behaviors I coach men to acquire. But it’s all about balance. Just as men can overuse their stereotypical characteristics, so can women.</p>
+<p>A caveat of which to be aware is that behavioral norms for men and women vary among corporate cultures. One company I consult with has a strong norm that women and men must always act like ladies and gentlemen. I discovered this when I gave feedback to a woman that, if she wanted to be taken seriously, she needed to speak more loudly and be a bit more assertive when expressing her ideas. She responded—and other women in the meeting affirmed—that the company president didn’t like aggressive women and she would be out of a job if she acted any differently. This particular woman had no problem conforming to the expectation because it was consistent with her character.</p>
+<p>If by magic we plucked this woman up and set her down in another company—say, one where the norm is that everyone has to be aggressive to be heard—her behavior would not conform, and she would likely not experience the same success she currently enjoys. She would then have to decide whether she wanted to expand her behavioral skill set or find a culture more consistent with her natural tendencies where no changes would be needed. In most companies, however, the norm is a little less rigidly defined, and women have to find ways to expand the boundaries without being called out.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Continue to learn about your style, what works, where you get stuck, and ways you can complement your natural strengths with new behaviors.</p>
+<p>You can do this by asking for feedback, videotaping yourself in a meeting or giving a presentation, or taking a workshop on personal development.</p>
+<p>The appendix includes several resources for workshops that I recommend.</p>
+<p>•  If you tend to be more aggressive and it’s not working for you, read Jean Hollands’s book Same Game, Different Rules: How to Get Ahead Without Being a Bully Broad, Ice Queen, or “Ms. Understood.” It can be difficult to find the book, but try online booksellers that may have a used one in stock. The book points out that women often can’t get away with the same behavior as men—and pretending that you can could ruin your career.</p>
+<p>You may have to decide whether it’s more important to you to further your career or take on the system. I often hear women lament over this double standard, but it does exist and it is real.</p>
+<p>•  Modify the rules to meet your needs and others’ expectations.</p>
+<p>Pounding the table and speaking loudly may not be acceptable, but being a broken record (saying the same thing again and again in different ways) can accomplish the same end.</p>
+<p>•  Be conscious of the fact that behavioral expectations vary among corporate cultures. What works in one company may not work in another.</p>
+<p>Be sure to observe the cultural norms and modify your style accordingly. If you can’t bring yourself to act in a way that is acceptable, your best bet is to find a work environment that complements your natural style.</p>
+<h2 class="mistake-heading">Mistake 29: Trying to Be One of the Guys</h2>
+<p class="first-p">This is a variation on the theme of acting like a man. It’s a situation I’m often asked about by women who work in predominantly male fields such as construction, paramilitary operations like the fire or police departments, and certain kinds of engineering. The problem is exacerbated when you’re a young woman working with older guys who tend to want to treat you like a daughter rather than as a coworker.</p>
+<p>A woman in these situations might frequently find herself the only woman in a meeting or at an event. Too often, women revert to trying to be just like one of the guys by swearing like a sailor, laughing at (or telling) off-color jokes, or closing the bar down with the guys. It might work in the short term to alleviate some of the tension around being the only woman in the room, but it’s not a good long-term strategy. As I said in the previous mistake, unless you truly are one of those women who can pull off being one of the guys with authenticity, men ultimately aren’t going to trust you.</p>
+<p>Does this mean you should go to the other extreme and be a femme fatale or damsel in distress who bats her eyelashes to get men to accept her?</p>
+<p>Absolutely not! That’s not authentic either. The real secret to successfully maneuvering these scenarios is to be yourself and emphasize your professionalism, the value that you add, and your ability to handle the guys with grace, aplomb, and a little bit of humor.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Allow boys to be boys—up to a point. For some reason that I have yet to figure out, when you get a bunch of guys together in one place they revert to behavior usually saved for frat houses. It’s not your responsibility to clean up their acts, but neither is it your responsibility to tolerate abuse. If a guy swears then looks at you and apologizes, make light of it by saying something like “I’ve heard it before. No problem.” On the other hand, if you find feces in your hard hat (which actually happened to one woman working in a refinery), you have to let the guys know you’ll let it go this one time, but twice will be too many and you’ll do whatever is necessary to make it stop.</p>
+<p>•  Don’t confuse the men at work with your brothers, father, grandfathers, or husband. Women often project onto men characteristics associated with the men in their families. The norms for interacting with family members are not likely the same ones that should be used with coworkers. Assume equality with your male coworkers regardless of their age or status. It puts you in a better position to go toe-to-toe with them when needed.</p>
+<p>•  Lighten up. You’ve got to have a sense of humor about being the only woman in the group. Develop some one-liners that you can deliver at just the right moment. If someone makes a joke about your being the only woman in the group, respond with something like “If you think it’s strange for you—try being in these heels!”</p>
+<p>•  Wow them with your professionalism. Consistently lead with your expertise and ability. Do this, and over time gender will no longer be an issue. There’s no arguing with talent.</p>
+<h2 class="mistake-heading">Mistake 30: Telling the Whole Truth and Nothing but the Truth (So Help You God)</h2>
+<p class="first-p">Why is it that women, more so than men, feel the need to blurt out the truth about themselves, even if it’s self-disparaging or damaging to them? A study was once done in which men and women were asked to describe themselves. The men, regardless of appearance, described themselves in factual and positive (or at least neutral) terms. “I’m six feet tall, brown hair, 195 pounds, and have a mustache,” said one portly, aging man. Right. And I’m Julia Roberts. Women were more likely to use more pejorative phrases, such as “My hair is graying, I could stand to lose a few pounds, I’m not too bad-looking…”</p>
+<p>The same holds true when a woman is asked to debrief a particular project where something has gone askew. She’ll blame herself and identify all the things she could have done differently. What do men do? Again, they’re objective and Teflon-like in their descriptions. One man, when accused of designing an ill-conceived methodology, said, “The problem wasn’t the methodology, it was that the methodology didn’t reflect realistic measures of the process.” And who designed the methodology to begin with?</p>
+<p>Anne Mulcahy, former chairperson and CEO of Xerox, found out the hard way that telling the unadulterated truth can get you into trouble. At an investors conference early in her tenure, she told the world that the company had “an unsustainable business model.” The next day, Xerox stock lost 26 percent of its value. Mulcahy originally thought that since it was no secret the company was losing money, it naturally followed that there was a problem with the business model. “Looking back,” said Mulcahy later, “I should have said, ‘The company recognizes changes have to take place in the business model.’ ” She advises people to continue being straightforward, but also to make sure “you don’t provide sound bites that can be used out of context.…”</p>
+<p>It seems Mulcahy hadn’t yet learned the art of putting a “positive spin”</p>
+<p>on a situation. Telling the truth doesn’t require you to cast yourself in a negative light. It requires an honest, objective description of facts without blame or self-flagellation.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Listen carefully to the question you’re asked and answer it simply and objectively. The question “Why wasn’t the project done on time?” isn’t an indication that the person expects you to point the finger at yourself. More than likely, there are good reasons why the project wasn’t completed on time, and those reasons are what you should offer in response. An appropriately honest answer would be, “There are two primary reasons.</p>
+<p>First, we didn’t have the staff required to meet the unrealistic deadline; and second, the information required to complete the data wasn’t made available to us until two days before the deadline.”</p>
+<p>•  Even when you legitimately bear responsibility for a blunder, don’t make it worse by embellishing it. Avoid the tendency to agree or explain, and, whatever you do, don’t allow yourself to feel bad about it. We all make mistakes. Replace apologetic, explanatory, or defensive responses with more neutral ones. Practice saying, “I understand what you’re saying, and I’ll keep that in mind in the future.” You are neither agreeing nor disagreeing—simply acknowledging.</p>
+<p>•  Counter or pair every negative with a positive. This is what positive spin is all about.</p>
+<p>Change This:</p>
+<p>•  “I have to admit, I could have done a better job of making sure we remained under budget.”</p>
+<p>•  “I wish I had done a little more inquiry before making the final decision about that candidate.”</p>
+<p>•  “I don’t think I’d be the right person for the job—I don’t possess all the qualifications listed in the job description.”</p>
+<p>To This:</p>
+<p>•  “Although we didn’t come in under budget, we did complete the project ahead of schedule.”</p>
+<p>•  “Although the employee proved to be a bad match for the job, we learned a good lesson in what we really want.”</p>
+<p>•  “It’s true that I don’t have all the qualifications listed, but what makes me a viable candidate is my depth of hands-on experience.”</p>
+<h2 class="mistake-heading">Mistake 31: TMI (Too Much Information)</h2>
+<p class="first-p">This mistake has taken on entirely new proportions since the first edition of this book was written more than a decade ago. Back then, there was no Twitter, Facebook, Myspace, LinkedIn, or the numerous other sites available for staying connected and sharing information. Now, people announce their every move and most intimate thoughts electronically. And it should come as no surprise, given women’s propensity toward affiliation, that according to a study conducted by the research giant Nielsen:</p>
+<p>•  Women are 8 percent more likely than the average adult to build or update a blog / men are 9 percent less likely to do so.</p>
+<p>•  Women are 6 percent more likely to have created at least one social networking profile / men are 7 percent less likely to do so.</p>
+<p>•  A total of 68 percent of women use the Internet to stay in touch with friends and family / only 54 percent of men use it in the same fashion.</p>
+<p>So what does this mean for you? It means you are a lot more likely than the guy in the cubicle next to you to be sharing too much information electronically! No one except your spouse, child, or maybe your mother really needs to know where you are at any given moment. I don’t need to receive your e-mails with your opinions about an upcoming election, gay marriage, war, peace, or anything else. If I want your opinion, I’ll ask for it.</p>
+<p>For heaven’s sake, why in the world would you give your employer, or a prospective employer, ammunition to make a judgment about you?</p>
+<p>And that’s just electronically. How about face-to-face? The woman who shared this thought with me was a manager who noticed that the women in her department were much more likely than men to reveal complicated personal situations that could later be used against them. The example she gave was of a woman in her department who was experiencing performance problems on the job. At a one-on-one meeting, the employee broke down crying and told a long, involved story about how her mother was dying, her sisters wouldn’t assume any responsibility, the burden fell on her to make all the health-care decisions, her husband was out of a job… Relevant? Yes, but more than her boss needed to know. It gave the boss the impression she couldn’t handle stress well. When a project came up that the boss knew would be stressful, she didn’t want to take the risk of giving it to this employee. Sharing personal information isn’t in and of itself a mistake—it’s sharing too much of it that can come back to bite you.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Be selective about the personal information you share, how you share it, where you share it, and with whom you choose to share it. Remember, once in the ethers, always in the ethers.</p>
+<p>•  Less is more when it comes to divulging personal information. A little goes a long way.</p>
+<p>•  If you’re a manager or supervisor, be even more careful. The rule of thumb I recommend is “Be the best friend you can be to your employees, but don’t think for a minute they’re your best friends.” Your peers, the ones you may choose to confide in, are other managers and people at your level.</p>
+<p>•  Whether you’re a manager or not, don’t entirely withhold personal information. I’ve seen women do this, and it backfires. It makes you look secretive or dishonest. Sharing appropriate amounts of personal information enables others to see the human side of you and, in turn, builds relationships.</p>
+<p>•  When a personal situation is impacting your ability to perform your job, be honest, but be brief. It’s enough to say, “I’m going through a rough time right now, but my job is important to me. I’ll work on paying closer attention to the details.”</p>
+<h2 class="mistake-heading">Mistake 32: Being Overly Concerned with Offending Others</h2>
+<p class="first-p">An interesting phenomenon I’ve observed is that when a man is controversial or offers a different viewpoint, neither men nor women respond as if they’ve been offended. They may be angry or hurt, but the man is rarely accused of acting inappropriately. Because women are more likely to encounter resistance by being told they’re out of line, they tend to agree (even when they don’t really agree) and fail to confront tough issues.</p>
+<p>This is just another one of those ploys people use against us—and we unwittingly buy into it. If someone acts offended by a legitimate request or concern of yours, the implied message is that you’ve acted inappropriately or done something wrong. As a result, they know you’re more likely to back down. When you back down often enough, you’ve trained others to feign offense as a defensive posture. It becomes a self-defeating catch-22.</p>
+<p>Karl Marx used the term mystification to refer to the process whereby those with power and affluence denied the fact that there was a problem between the social classes, then denied they were denying. Here’s how it sounds at work:</p>
+<p>Employee: It’s been two years since I’ve had a raise, and I’d like to talk to you about why I think I deserve one.</p>
+<p>HR manager: Are you accusing me of overlooking your well-being?</p>
+<p>Employee: No, I’m not accusing you of anything, I just want to talk about getting a raise.</p>
+<p>HR manager: Well, you obviously think there’s a problem.</p>
+<p>Employee: In fact, I do think there’s a problem with not getting a raise in two years, but I’m not blaming you.</p>
+<p>HR manager: We have a system in place that ensures our staff is fairly treated.</p>
+<p>Employee: But if I haven’t gotten a raise, then the system isn’t working. I don’t think you see that from your perspective.</p>
+<p>HR manager: Now you’re saying I don’t see the problem.</p>
+<p>Get the picture? This is a convoluted and circuitous method that never quite solves the problem and causes women to back down or not even try to bring up sensitive topics for fear of offending someone.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Use the DESCript method (see Mistake 91) to prepare for difficult conversations.</p>
+<p>•  Read Crucial Conversations: Tools for Talking When Stakes Are High, by Kenny Patterson, Joseph Grenny, Ron McMillan, and Al Switzler. If you’re one of those people who avoid confrontations because you’re afraid of hurting someone’s feelings, you’ll find terrific guidance in this book for how to say what must be said and in a way that won’t damage the relationship.</p>
+<p>•  When expressing a controversial or different viewpoint, use the technique of contrasting what you do want and what you don’t want: “I don’t want to make it appear that I haven’t heard what you said, because I have. I do want to express a different way to look at the situation.”</p>
+<p>•  Let the other person know when what you’re about to say is difficult for you by beginning your sentence with “This is a bit difficult for me to say, but I do want to let you know how I see the situation.” This cues most people to be more patient with you.</p>
+<p>•  If you know you’ve expressed yourself inoffensively, and the other person is still offended, don’t acquiesce. Instead, respond with a simple acknowledgment of his or her feelings—“I can see you feel offended by this”—and revert to listening. Avoid the inclination to backpedal and negate your true sentiments.</p>
+<h2 class="mistake-heading">Mistake 33: Denying the Importance of Money</h2>
+<p class="first-p">I know all the statistics about gender disparity in pay and benefits. You probably do too. I don’t want to downplay the significance of these factors —they’re real and they’re relevant. But unless you’re an equal-pay activist, you have no control over those factors. The real question then becomes, What are you going to do about it?</p>
+<p>A year after Nice Girls Don’t Get the Corner Office was released, the second book in the series, Nice Girls Don’t Get Rich, was published. In that book I talked about the many mistakes women make with money because of their complex relationship with it. I spoke with women and asked what kept them from being rich. Almost to a woman, they responded they didn’t have the need to be rich; they only wanted to be comfortable. For crying out loud! I’ve been comfortable, and I’ve been rich, and believe me, I’d rather be rich—and you should too. You can think of rich as having all the money you need to live your life the way that you want, free from concerns about money.</p>
+<p>Money is power, and power is something women misinterpret and avoid.</p>
+<p>Ask a woman if she’s powerful, and she’ll give you five reasons why she’s not. This translates into feeling uncomfortable with the subject of money and thinking she actually deserves less than she’s due. Or worse yet, she doesn’t give money a second thought except in terms of needing enough to pay the bills.</p>
+<p>What you focus on is what you get. If you’re not earning a fair salary or not being given the raises you deserve, it’s time to focus on money. It won’t mean you’re any less committed to your work—only that you’re equally committed to your well-being and that of your family.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  If you think you’re underpaid, do research into the pay ranges typical for your job or industry. You can do this online, through a professional association, or by asking trusted friends at other companies what their ranges are (don’t ask what they earn). Because salaries differ from city to city and field to field, I can’t give you a website that is comprehensive, but from your browser type in “salary surveys” and you’ll be given a host of choices.</p>
+<p>•  If it turns out that you are underpaid, use logic and facts to make a case for why you should get a raise. Include ways in which you’ve helped the company to make money, save money, or improve efficiencies. And whenever possible, use numbers. For example, “Since I took over this role, we’ve increased sales by 23 percent and reduced customer complaints by 39 percent.” Ask a friend to help you practice delivering the message.</p>
+<p>•  Subscribe to (and make a point of reading) a magazine that focuses on money and career issues. Several to consider are Fortune, Money, and Smart Money.</p>
+<p>•  Overcome the notion that talking about money is crass or impolite.</p>
+<p>•  Join, or start, a women’s investment club.</p>
+<h2 class="mistake-heading">Mistake 34: Flirting</h2>
+<p class="first-p">How many thousands of women have met the person of their dreams at work, fallen in love, and gotten married? It happens all the time and it’s not such a bad thing, but it is a potentially dangerous one. Just ask Monica Lewinsky or Paula Broadwell. As I told a reporter who asked me if an attractive woman should use her looks to her advantage to get the job she wants, “Sex sells, but not in the long term.” It’s more likely than not to backfire.</p>
+<p>I once coached a woman whom everyone assumed was having an affair with the department manager. Whether she was could never be determined, but that wasn’t the point. Her behavior toward him led others to believe she was having an affair with him—and perception is reality. Her flirting, which caused others to be suspicious of their relationship, took the form of laughing a little too loud at his bad jokes, offering to run errands for him, siding with him in meetings when others expressed a different viewpoint, and inviting him to lunch at least once a week (when most others—both men and women—worked through their lunch hours).</p>
+<p>What’s a little harmless flirting? you ask. We know people find partners at work all the time. The harm is that it’s the women who flirt—not the men —who most often become the butt of office jokes and who are more likely to suffer the consequences. In the case above, people excluded her from the grapevine (an important source of information), and from other discussions to which she should have been privy, for fear she would share the information with the boss. It reduced their trust in her and diminished her ability to perform effectively.</p>
+<p>Another woman learned from her 360-degree feedback report that her peers thought she flirted too much. The feedback floored her because she had no inkling how others could perceive that. Then one day I happened to see her at lunch with her boss and understood perfectly. As he chatted away confidently, she smiled and listened with her head slightly tilted. I could see how it might be perceived as flirting, but what it really came down to was that the woman came from a traditional Irish family where she’d learned to acquiesce to men. Her way of showing respect to men, whether in one-onone situations or in meetings, was to “dumb down” her actions and words.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Don’t overtly flirt with coworkers. Knowing glances, whispered conversations, and laughing at stupid jokes don’t belong in the workplace.</p>
+<p>•  If you are dating or having an intimate relationship with a coworker, be discreet. Conduct your personal business outside work and work-related activities.</p>
+<p>•  Don’t be so naive as to think you can keep these things secret for long.</p>
+<p>There’s nothing wrong with dating a coworker—just be up front about it.</p>
+<p>•  When you become personally involved with the boss (or—if you are the boss—with an employee who directly reports to you), you’re playing with fire. Seriously consider the personal and professional risks and don’t hesitate to get outside counseling if needed.</p>
+<h2 class="mistake-heading">Mistake 35: Acquiescing to Bullies</h2>
+<p class="first-p">It’s not often I run into bullies. Most people in corporations know how to express themselves tactfully and diplomatically, seeking to solve problems, not create new ones. Such was not the case in a recent meeting with a vice president, however, who was clearly angry that he had been inadvertently double-billed for a particular service. None of the usual techniques for defusing difficult situations worked. I listened, paraphrased, reflected his feelings… and none of it made a difference. Finally, I said, “I’m not accustomed to being personally attacked.” A third person in the meeting tried to intervene by saying, “I think you’re getting defensive, Lois.” To which I calmly replied, “When I’m personally attacked, I get defensive.”</p>
+<p>After the meeting, the person who intervened said he thought I could have handled it differently. My response was “The guy is a bully and I wanted him to know I wouldn’t be intimidated.”</p>
+<p>When we’re bullied, we do one of two things: counterattack or acquiesce. Neither serves to shift the dynamic. By simply letting someone know how you feel, you stand a better chance of eliminating the offensive behavior—something that will never happen if you acquiesce. Even if the behavior doesn’t change, you’ve put the person on notice that you won’t tolerate it, and, as such, you’ve maintained your self-respect. By the way, the dynamic did change after my remark to this bully, and we were ultimately able to find a solution that met his needs.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Use the techniques I mentioned—listening, paraphrasing, reflecting feelings—as a place to begin defusing a bully. More often than not, they work.</p>
+<p>•  Don’t roll over and play dead when someone tries to intimidate you.</p>
+<p>It’s a tactic some people regularly use to make their point or get their way.</p>
+<p>Ask yourself what you’re feeling in that moment and express it as an I message. Rather than “You’re not listening to me,” say, “I feel I’m not being heard.” It’s less accusatory, and no one can argue with your feelings.</p>
+<p>•  Turn the discussion to problem solving by acknowledging what you’ve heard and asking what the person would like to do: “I understand that you’re frustrated with the fact that the shipment has not yet gone out.</p>
+<p>Let’s talk about what we can do to get it to you as soon as possible.”</p>
+<p>•  Avoid the inclination to apologize. If apologies are appropriate, you can always do so later. Apologizing to a bully only fuels the fire and reinforces the notion that you are a victim.</p>
+<h2 class="mistake-heading">Mistake 36: Decorating Your Office Like Your Living Room</h2>
+<p class="first-p">Offices are often an extension of personal homes. In many cases, women spend more time there than they do in their own living rooms. Nevertheless, this doesn’t mean that your office should look like your living room. More so than men, women love the aesthetics involved with decor and frequently want to create a warm and comfortable setting, not only for themselves but for those who enter their work space as well.</p>
+<p>I’ve been in the offices of women who’ve replaced overhead lighting with table and floor lamps (creating a more ambient environment) and scattered overstuffed couches, throw pillows, and personal memorabilia throughout their space. Depending on the message you want to convey, this can work for or against you. I don’t recommend it for most women. It’s more appropriate for people responsible for counseling employees than it is for those in other positions.</p>
+<p>At the other extreme is someone like Christine, a physician at a metropolitan hospital, who had nothing on her walls. At our first coaching session I was struck by how austere and cold her work space was. As we worked together and I received feedback from her staff, I realized that this was simply a reflection of her personality. One of my coaching tips to her was to warm up her office with family pictures and artwork that would humanize her space.</p>
+<p>A little later we’ll be talking about personal branding. Your office also represents your brand. Think of it as a marketing tool. Ask yourself how others might describe your office. Would they say it’s cluttered? Stark?</p>
+<p>Warm? Chances are, whatever they would say about your office is what people will be saying about you. Yes, your office or work space can be a reflection of who you are and what’s important to you. But unless you’re an interior decorator by profession, play it safe. Use your office space to emphasize your organization, good taste, and professionalism.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  The decor of your office should be consistent with the kind of firm in which you work. In a more conservative culture you should select artwork, colors, and furniture that are tasteful and understated. More creative fields can tolerate a bolder approach.</p>
+<p>•  Given that your office or work space makes a statement about you, do pay attention to decor. In most offices you’re assigned furniture, but how you accessorize it is up to you. Choose accessories that reflect your personality without overly emphasizing the feminine side of you.</p>
+<p>•  If you lean toward minimalism, then minimally have family pictures or other photographs displayed where people can see them. They serve to humanize you and act as conversation starters. One single woman I know has a framed picture of her dog on her desk.</p>
+<p>•  Look at your office with fresh eyes. If someone very special were coming to visit you at work, what would you change? Why? What adjectives would you attach to your work space if you didn’t know who worked there? Are those the adjectives you want to be used about you?</p>
+<p>•  Keep your visible work space neat and clean. It conveys the impression of being organized and on top of things.</p>
+<h2 class="mistake-heading">Mistake 37: Feeding Others</h2>
+<p class="first-p">Unless you’re Betty Crocker, there shouldn’t be home-baked cookies, M&Ms, jelly beans, or other food on your desk. Hillary Rodham Clinton may have been lambasted for her comment about not staying home and baking cookies while her husband was running for president, but her point was well taken. We don’t ascribe a sense of impact or import to people who feed others. It may seem like a small or inconsequential thing, but the fact is, you rarely see food on men’s desks. Similarly, men don’t bring in leftovers from dinner the night before to share with coworkers.</p>
+<p>The act of feeding is equated with nourishing, and nourishing is definitely a stereotypically female attribute. Additionally, food on the desk is often an invitation to stop and chat a moment (people can’t just “eat and run”). Combined, the aspects of feeding and encouraging conversation emphasize stereotypically feminine qualities, often in the very women who don’t need to emphasize them quite so much!</p>
+<p>There are, of course, exceptions to every rule, and this is one of them.</p>
+<p>Lise Dewey, formerly manager of training and development at Universal Entertainment, told me she often coaches her own employees (especially men) who are perceived by others to be a bit too brusque, domineering, or downright abrasive (emphasis on the word too) to put a candy dish on their desks. The reason is obvious—she wants them to “warm up” their image and balance their more aggressive behaviors. In this regard, the food is used as a strategy to create balance in a personality that might not be perceived as warm.</p>
+<p>Similarly, Lise has a huge candy bowl on her own desk—in part because she wants to eat it (although you could never tell by looking at her), and in part because she is in a role where people often come to her office to discuss personal and confidential matters. The candy is designed to make people feel comfortable with her. Again, she’s using it strategically.</p>
+<p>If you don’t want to be perceived as stereotypical, think twice before putting food on your desk or in other ways feeding people at work. This is especially true if you’re a woman who makes many of the other mistakes contained in this book. As with many of the tips in this book, it isn’t the food alone that’s lethal—it’s the combination of mistakes that diminishes your credibility.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Unless feeding people is a conscious strategy, just say no to feeding people at work.</p>
+<p>•  If you’re worried about them going to waste, take the leftovers from a weekend party to a homeless shelter rather than the office.</p>
+<p>•  Don’t volunteer to organize the company potluck lunch. There are much better things you want to be known for being good at.</p>
+<h2 class="mistake-heading">Mistake 38: Minimizing Your Emotional Intelligence</h2>
+<p class="first-p">The intelligence quotient, or IQ, that you’re born with doesn’t change much over the course of your lifetime. And new research shows that it isn’t even the most important factor contributing to success. As I mentioned earlier, your emotional quotient, or EQ, plays a far greater role in determining how successful you will be in a variety of arenas. For example, Nobel Prize–winning psychologist Daniel Kahneman found that people would rather do business with someone they like and trust than with someone they don’t, even if the likable person is offering a lower quality product or service at a higher price. A study of hiring practices by L’Oreal showed that salespeople who were hired based on their emotional intelligence earned $90,000 more annually than those hired through traditional methods.</p>
+<p>In the past, we called these the “soft skills”—most likely because women exhibited them to a greater degree than men. As I frequently chided my male clients who disparagingly used this term to refer to the work we were doing together, “If they’re so soft, what makes them so hard for you?”</p>
+<p>The good news for women is that we surpass men on four of five measures of emotional intelligence: self-awareness, self-regulations, empathy, and social skills. (Men and women are equal on the fifth measure, motivation.) Yet, despite the fact that we possess these critical skills, we often don’t value them, nor do we consciously use them to our advantage. Instead, we focus on working harder and longer—neither of which will ensure success absent high EQ.</p>
+<p>Earlier I cited research that shows having more women in leadership roles correlates to greater financial returns for a company or firm. Why do you think that is? Robin Cohen and Linda Kornfeld, managing partners at the law firm Dickstein Shapiro, claim that it’s because women exhibit the following behaviors to a greater degree than men:</p>
+<p>•  working to form connections with others in order to develop relationships; •  focusing on team building and working collaboratively toward a common goal, rather than individual success; •  developing and motivating others through positive reinforcement; and •  talking through business approaches and incorporating the ideas of others before making final decisions.</p>
+<p>In short, using your EQ not only helps to further your career, it adds to your company’s bottom line as well.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read Emotional Intelligence 2.0, by Travis Bradberry and Jean Greaves. This book contains the opportunity to assess your EQ and provides insights into how you can develop and use yours to your fullest advantage.</p>
+<p>•  Put words to the emotions that are often present but rarely expressed in meetings. For example, when tension is running high, say something like “It’s clear we all have strong feelings about this subject. How about if we take a breather and come back to the table to discuss it further?” Doing so will cause you to be seen as someone who can read a room—an invaluable asset to any group.</p>
+<p>•  Begin meetings with casual conversation that expresses an interest in the other person. Although most people will welcome the opportunity to talk about themselves or matters that are important to them, some won’t, in which case you can shift to the business at hand sooner rather than later.</p>
+<p>•  At social events, use your EQ to make introductions between people with common interests or backgrounds. Others will appreciate your efforts to make them feel comfortable and welcome in a group.</p>
+<p>•  Don’t hesitate to comment on someone’s unspoken mood. If it looks like a coworker seems a little down, an overture such as “Is everything okay? You don’t seem like yourself,” will let them know you see them as a human being, not just a human doing. If they don’t want to discuss it, they won’t, but they will remember that you showed concern.</p>
+<h2 class="mistake-heading">Mistake 39: Being a Doormat</h2>
+<p class="first-p">Artist Pablo Picasso once said, “There are only two types of women— goddesses and doormats.” And since you’re reading this book, I have a hunch you don’t quite see yourself as a goddess—yet. What’s the difference? Let’s take a look.</p>
+<p>Doormats Goddesses Do whatever is asked of them. Get others to do what they ask.</p>
+<p>Tolerate mental and physical abuse. Banish abusers from their presence.</p>
+<p>Believe it is their responsibility to care for others.</p>
+<p>Believe it is the responsibility of others to care for them.</p>
+<p>Are disrespected. Are worshipped.</p>
+<p>Never ask for anything for themselves. Feel entitled to get what they want.</p>
+<p>Can’t say no. Won’t take no for an answer.</p>
+<p>Give others permission to walk on them. Walk away from people who walk on them.</p>
+<p>Would you rather be the pigeon or the statue? Being a doormat might make you feel superior in a Mother Teresa sort of way in the short term, but it won’t get you where you want to be in the long term.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Learn to manage expectations by clearly stating what you are willing to do and what you’re not willing to do. Without ever having to say “no,”</p>
+<p>you can let others know the boundaries of your flexibility. For example, if you’re asked to deliver a report in an unreasonably short period of time, you can say, “I am happy to do the report. In the amount of time you’ve given me, however, it won’t be thorough, so if you want a better end product, my recommendation is to extend the deadline by two days.”</p>
+<p>•  Trust your feelings. If you feel as if you’re being abused or taken advantage of, you probably are. In such instances, let the other person know how you’re feeling and what you would like to change. Although you can’t control the actions of others, you can remove yourself from unhealthy situations.</p>
+<p>•  Don’t wait to be given what you want—ask for it. Too often women expect others to be mind readers and are disappointed when people prove they’re not particularly adept at that particular skill. If you don’t ask, you don’t usually get.</p>
+<h2 class="mistake-heading">Mistake 40: Offering a Limp Handshake</h2>
+<p class="first-p">Women may not have the exclusive rights on this one, but we are more likely to hold back when offering a hand in greeting. For fear of appearing too masculine, we let the pendulum swing the other way. A handshake is how you make your first impression upon initially meeting someone. It says something about you before you ever open your mouth. Although you don’t want to develop a bone-crushing grasp, you do want to be certain your handshake conveys the message I’m someone to be taken seriously. One good pump and a concise greeting (such as “I’m delighted to finally meet you”), combined with solid eye contact, will do the trick.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Practice your handshake with both male and female friends or colleagues. Get their feedback about whether yours is too limp or too strong. You may have a different handshake for men than for women.</p>
+<p>Continue practicing until you find a place where both men and women tell you your handshake conveys the message you want it to.</p>
+<p>•  Here’s a tip a colleague’s father taught him when he was a young boy:</p>
+<p>Keep extending your hand until you hook thumbs (try it and you’ll see how it works). Don’t stop with just grabbing the fingers. (And by the way—how many fathers taught their daughters how to shake hands?) •  When meeting someone for the first time, if he or she doesn’t offer a hand first, offer yours. It’s a sign of confidence.</p>
+<p>•  Depending on the situation, you may want to convey a sense of sincerity or warmth. This may be the case when meeting someone in person for the first time after speaking by phone for some extended period. To do this, loosen the grip just a bit and briefly place your left hand on top of the person’s right hand as it shakes yours. Again, practice this until it comes naturally.</p>
+<p>•  While I’m on the subject of greetings, the question often comes up as to whether it’s appropriate to greet an associate with a hug. This one is tricky. My advice is to never hug someone unless he or she does so first.</p>
+<p>Not only is it a matter of invading another person’s space, but it also softens the greeting.</p>
+<h2 class="mistake-heading">Mistake 41: Being Financially Insecure</h2>
+<p class="first-p">Virginia Woolf said every woman must have a room of her own. There are other women who will tell you a bank account of your own is even more important. Whether you’re dependent on a husband, a domestic partner, or an employer, financial dependence translates into a loss of career choices and power. Having no money of your own, having your financial affairs in disarray, or not adequately preparing for your financial future equates to having no freedom.</p>
+<p>But why is this a potentially career-busting mistake? Because if you don’t have financial security, you wind up acting in ways and making decisions counter to your best career interests. Women are more likely to remain in dead-end jobs and be forced to work beyond the normal point of retirement because they can’t afford to leave. Women are less likely to make tough but necessary decisions because they’re afraid to rock the boat and lose their jobs. And women are often less able to understand the financial implications of business decisions because they don’t pay close enough attention to their own financial affairs—the place where they should be learning about financial matters and extrapolating the lessons to business.</p>
+<p>Women are also often forced to reenter the workforce ill prepared for success because they were dependent on someone who decided to discontinue financial support. I fully understand that being a homemaker teaches a woman many skills that are directly applicable to a job, but try telling this to the hiring source. As a result, late entries to the workforce are at a career disadvantage and wind up in low-paying entry-level positions.</p>
+<p>In another scenario, Carrie worked her entire life for one employer, and worked hard. She was single with no children, and, although she owned her own home and created somewhat of a nest egg, by the age of sixty-two she still hadn’t accumulated enough to retire. When the company was sold, the old managers who knew her and respected her work were all given golden parachutes to leave. Because she wasn’t high enough up in the company, she was not one of the people offered this benefit.</p>
+<p>As new managers took their place, she discovered the skills she had honed over the years weren’t the same as those the new owners wanted in staff earning as much as she did. It wasn’t so much that they could hire a younger person more cheaply; it was more a matter of hiring someone who more closely met their expectations. At her age and salary, Carrie didn’t have many choices. She was forced to remain in a company where she was no longer respected and do menial tasks for which she was overqualified because she hadn’t planned properly for her financial future. As personal finance columnist Liz Weston, my friend and fellow author, says, you need to have F.U. money—a “forget about you” stash of cash.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read The 10 Commandments of Money: Survive and Thrive in the New Economy, by Liz Weston. Liz writes in a way that enables you to totally understand key concepts related to money and provides great tips for how to gain financial literacy.</p>
+<p>•  Have a financial goal. Every woman I know has a number in mind for what she wants the scale to read when she steps on it. Now you need a number in mind for how you’ll know when you’ve become rich.</p>
+<p>•  Select a good financial planner, and with his or her help develop a solid personal financial plan.</p>
+<p>•  If you don’t already have one, go out today and open an IRA or other retirement account for yourself. Deposit into it the maximum allowed yearly. If you’re over forty, create a budget that allows you to contribute even more. It doesn’t matter if you start it with fifty dollars or five hundred, do it. Hopefully, you’re going to grow to be an old woman and you want to be a rich old woman, not a poor one.</p>
+<p>•  When you go to the store to purchase only a few items, pay with a twenty-dollar bill and put the change in a jar at home. When the jar is full, transfer the coins and dollar bills to your savings account.</p>
+<h2 class="mistake-heading">Mistake 42: Helping</h2>
+<p class="first-p">Kristen is a new manager. She prides herself on not asking anyone on her team to do anything she herself wouldn’t. At a recent off-site where her team was working in small groups and she was shuttling among them to offer assistance, one group asked her to bring them coffee. Thinking this wasn’t a big thing, she brought it. Then they asked her to make some copies of their work product, which she did. The final request was for fresh Magic Markers.</p>
+<p>At first blush it doesn’t seem like anything was wrong, but closer scrutiny reveals the reason why certain members of Kristen’s team often missed deadlines and ignored her requests for information. In her desire to help her team, they had begun to view her as a functionary. While she was getting coffee, fetching Magic Markers, and making copies, several of the men on the team were providing the real leadership the group needed.</p>
+<p>A study conducted in the early 1980s interviewed 135 women to determine, among other things, how women gain knowledge. The researchers found that many of the people with whom they spoke said helping others, through either providing assistance, listening, or teaching, actually gave them more insight into themselves and greater selfconfidence. Why? Because women are taught early in their lives that others know more than they do, so knowledge and self-confidence must be attained externally. Helping others is one way capable women gain external validation for their self-worth. This certainly accounts for why so many women go into helping fields.</p>
+<p>Although I’m a staunch believer in the servant leadership philosophy espoused by Robert Greenleaf, many women take this to the extreme and encounter the same problems as Kristen when they’re promoted to the management ranks or asked to lead a project team. They fail to transition from doer to leader. If you’re busy doing, you don’t have time to provide the vision, guidance, technical support, and oversight required of a leader.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read the Harvard Business Review article “What Leaders Really Do,”</p>
+<p>by John Kotter. The article helps you to take a look at higher-order behaviors expected at the more senior levels of any organization. Even if you aren’t there yet, reading this will help you to get there.</p>
+<p>•  Differentiate helping and being used. If you’re truly helping, you’re providing the resources and support needed to allow others to get the job done efficiently and effectively. If you’re working harder than everyone else on your team or task force, you’re being used.</p>
+<p>•  Rather than offering to do the work of another, offer to teach him or her how to do it. Even though it may take longer in the short term, it will pay dividends in the long term.</p>
+<p>•  Ask yourself if you’re helping because you think you’ll be liked for it or because it’s something you really want to do.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2: How You Play the Game - Reading Version</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+    :root {
+      --paper-bg: #fdfaf6;
+      --paper-blush: #fbf5f5;
+      --paper-edge: #ebdcd5;
+      --ink-dark: #2e2426;
+      --ink-rose: #945069;
+      --ink-berry: #6e3247;
+      --pencil-grey: #6b6062;
+      --serif-heading: 'Playfair Display', Georgia, serif;
+      --serif-body: 'Lora', 'Merriweather', Georgia, serif;
+      --handwriting: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: var(--serif-body);
+      line-height: 1.8;
+      font-size: 18px;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid var(--paper-edge);
+      border-radius: 12px;
+      padding: 4rem 3.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    /* Binder rings line */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      bottom: 0;
+      width: 2px;
+      border-left: 1px dashed var(--paper-edge);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-edge);
+      padding-bottom: 1.5rem;
+    }
+
+    .back-link {
+      color: var(--ink-rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-berry);
+    }
+
+    .btn-print {
+      background-color: var(--ink-rose);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      font-family: var(--serif-heading);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(148,80,105,0.15);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background-color: var(--ink-berry);
+    }
+
+    .book-meta {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .book-eyebrow {
+      font-family: var(--handwriting);
+      font-size: 1.5rem;
+      color: var(--ink-rose);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: var(--serif-heading);
+      font-size: 2.5rem;
+      color: var(--ink-berry);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .reading-content {
+      text-align: justify;
+      color: #332b2c;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5rem;
+    }
+
+    p.first-p {
+      text-indent: 0;
+    }
+    
+    p.first-p::first-letter {
+      font-family: var(--serif-heading);
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 8px;
+      margin-top: 4px;
+      color: var(--ink-berry);
+      font-weight: bold;
+    }
+
+    .mistake-heading {
+      font-family: var(--serif-heading);
+      font-size: 1.8rem;
+      color: var(--ink-berry);
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--paper-edge);
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      page-break-before: always; /* Force start on a new page */
+    }
+
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        font-size: 12pt;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .container::before, header {
+        display: none !important;
+      }
+      .mistake-heading {
+        page-break-before: always;
+        margin-top: 2in;
+      }
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Back to Interactive Workbook</a>
+      <button class="btn-print" onclick="window.print()">🖨️ Save as PDF / Print</button>
+    </header>
+
+    <div class="book-meta">
+      <div class="book-eyebrow">Nice Girls Don't Get the Corner Office</div>
+      <h1 class="chapter-title">Chapter 2: How You Play the Game</h1>
+    </div>
+
+    <div class="reading-content">
+      <p class="first-p">Chapter 2 How You Play the Game A friend and I were discussing the Olympics soon after the closing ceremony. I remarked that I loved seeing people achieving the goals they had strived for their entire lives and performing at the top of their games.</p>
+<p>She, on the other hand, said she didn’t like how competitive it was, with constant reminders of how many medals each country had won. “It’s the Olympics!” I blurted out in disbelief. “They’re supposed to be competitive.”</p>
+<p>A few days later I was playing online Scrabble and my opponent got two bingos in a row (a bingo is when you use all your letters to get bonus points), which is somewhat unusual at my level of play. The person typed, “I’m sorry.” I immediately typed back, “May I ask if you’re a man or a woman?” The reply didn’t surprise me; of course it was a woman. I’ve never had a man apologize for legitimately gaining an advantage.</p>
+<p>Many women—especially those who grew up in the 1960s and 1970s— never had the opportunity to participate in competitive sports. Until relatively recently, few of us served in the armed forces, attended military academies, or participated in other activities that required us to play to win.</p>
+<p>As a result, we don’t know how to play the game, let alone play within bounds but at the edge (which will be explored further a little later in this chapter), and play to win without feeling apologetic or guilty. Worse yet, many women view the whole idea of the game of business as something unpleasant, dirty, and to be avoided at all costs.</p>
+<p>Let’s start with the most important lesson: Business is a game, and you can win it. As a matter of fact, women are born to win this game. I spend half of my time working with men, teaching them to be more like women.</p>
+<p>Of course, I don’t put it quite that way, or I would be out of business. I coined the term feminization of leadership to describe the ways in which today’s workforce responds more positively to stereotypically feminine behaviors than to masculine ones. I talk to men about the importance of things like listening, collaborating, motivating, and seeing the human side of their staff. These factors contribute to what’s known as EQ (emotional quotient), and EQ is the sine qua non for workplace success. On top of that, it’s been shown that women exceed men in four out of five EQ factors, including self-awareness, self-regulation, empathy, and social skills.</p>
+<p>Women and men are equal on the fifth factor, self-motivation. Whether women do these things because they’ve been taught the behaviors and have had a lot of practice at them or because they come naturally really doesn’t matter. To win the game of business, you need to capitalize on your high</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">EQ.</h3>
+<p class="first-p">The areas in which women often aren’t quite as skilled as men include knowing where the imaginary boundaries of the workplace playing field are, getting into the game, and understanding the unspoken rules for winning the game. Of all the coaching tips in this book, the following are the most difficult for women to incorporate into their corporate skill set.</p>
+<p>Many of the suggestions are counter to everything we learned growing up.</p>
+<p>Resist the urge to skip the hard stuff. If you don’t play, you can’t win.</p>
+<h2 class="mistake-heading">Mistake 1: Pretending It Isn’t a Game</h2>
+<p class="first-p">The workplace is exactly that—a game. It has rules, boundaries, strategies, winners, and losers. Women tend to approach work more like an event (picnic, concert, fund-raiser), where everyone comes together for the day to play together nicely. In our desire to create win-win situations, we unknowingly create win-lose ones—where we’re the losers. Playing the game of business doesn’t mean you’re out to cause others to fail, but it is competitive. It means you are aware of the rules and develop strategies for making them work to your advantage.</p>
+<p>An interesting scenario played out that underscores this uniquely feminine phenomenon. The women’s softball teams of Western Oregon University and Central Washington University were competing toward the end of the season, when a senior who had never hit a home run during her college career came up to bat and smacked it over the fence. As she was running toward first base, she tore a ligament in her leg and could no longer run. Knowing her situation, and not wanting to deprive her of one last chance for a homer, players from the opposing team carried her around the field to touch each base, allowing her to have officially hit a home run.</p>
+<p>When was the last time you heard this happen in any sport where men were playing? To the contrary. As a male Nestlé executive said to me, “When a man’s friend wins, a little piece of him dies.”</p>
+<p>Although I think it was a nice thing to do—and maybe even the right thing to do under the circumstances—women also need to understand when playing to win is more important than being nice and putting the needs of others first. The ability to differentiate when collaboration that will yield maximum results is needed from when going flat out to win should be employed moves you from nice girl to winning woman.</p>
+<p>Barbara is a workplace example of someone who didn’t understand the game. She worked as a director of marketing in the banking industry for many years. She reached the point in her career where she was so successful that she was sought after for senior positions by a number of companies.</p>
+<p>She selected one, in the specialty chemicals business, where she entered as a vice president. When she was referred to me for coaching, she could not understand why she was foundering. Everything that had worked for her in banking failed her in her new position. Her polite, laid-back way of managing and interacting with others was now seen as weak and indecisive.</p>
+<p>Not understanding that this was a new ball game, Barbara played the new game by the old rules—and found herself facing the possibility of failure for the first time in her career. In a more competitive business, or when working for someone who values competition, you’ve got to play to win, or you’ll soon find yourself on the bench.</p>
+<p>Not only is business a game, but the rules of the game change from organization to organization and from department to department within an organization. What works with one boss may not work with the next one.</p>
+<p>Keeping your eye on the ball is essential when it comes to winning the game of business.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Learn to play chess. It will help you develop a more strategic mind when it comes to winning games.</p>
+<p>•  Make a list of the rules of the game at your workplace. Remember, these are usually unspoken expectations for how fast-trackers should behave. Rather than completing it in one sitting, you may have to compile the list gradually as you observe interactions, memos, and meetings in a different way than you have in the past. Examples of rules in some workplaces include “Don’t disagree with the boss”; “Everyone works at least ten hours of overtime”; “Being polite is more important than being right”; “Deadlines must be met no matter what the circumstance”; “Budgets are strictly adhered to”; “The customer always comes first,” and so on. As you make your list, begin thinking about how your behavior compares with the expectations.</p>
+<p>•  Read Hardball for Women: Winning at the Game of Business (revised edition), by Pat Heim, PhD, and Susan Golant. It will help you better understand the male business culture and how to use it to your advantage.</p>
+<p>Among the tips provided are ways to be assertive without being obnoxious, how to engage in smart self-promotion, and methods to display confidence even when you may feel powerless.</p>
+<p>•  Identify a mentor—someone who is successful at playing the game and with whom you can openly discuss the rules in your organization. It’s often helpful to have both a man and a woman as mentors, as each will have invaluable guidance for success.</p>
+<p>•  If you don’t currently play a sport—start. It doesn’t matter whether it’s tennis, kickboxing, softball, or golf. Playing sports helps you learn the language of the game.</p>
+<h2 class="mistake-heading">Mistake 2: Playing the Game Safely and Within Bounds</h2>
+<p class="first-p">As an avid but quite average tennis player, I used to hit the ball squarely within bounds for fear of going out and losing the point. In an effort to play safely, I artificially narrowed my playing field. After a while, it occurred to me that I would never win the game playing that way. I had to learn to hit the ball toward the edges of, yet within, bounds if I ever hoped to win. So I started going outside my comfort zone and found that I actually won more games.</p>
+<p>In any game, points aren’t won in the middle of the field, they’re won at the edge. Taking calculated risks might sometimes cause you to go out-ofbounds, but as long as you win the majority of points, you won’t lose the game. It’s important to get yourself out of the women’s safe zone and toward the edge of the field where the winners are playing.</p>
+<p>I had the opportunity to use this analogy with a client who was recently promoted to supervisor and getting feedback that she wasn’t “proactive”</p>
+<p>enough. “How can I be accused of not being proactive?” she wondered. “I do everything I’m supposed to without being asked.” Doing everything you’re supposed to isn’t being proactive. It’s only doing what you’re supposed to. At her new level, management expected her to take more responsibility and make decisions independently. When I suggested this to her, she said she didn’t want to overstep her authority, so she ran most important decisions by her supervisor first.</p>
+<p>I asked the woman if she played tennis, and, fortunately, she did. Within moments of using the analogy of playing it safe in tennis, she got it. She could understand how she wasn’t using all the court available to her. By making assumptions about what would and wouldn’t be acceptable to her management, she narrowed her playing field. Rather than risk hitting the ball out-of-bounds, she engaged only in behaviors she knew would land the ball squarely within the court. It wasn’t enough for the woman’s manager, who wanted her team members to take calculated risks and go beyond what was asked of them.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">THE WORKPLACE PLAYING FIELD</h3>
+<p class="first-p">This same phenomenon plays out in the workplace all the time. Even when a woman knows the workplace is a game, she has the tendency to play safe rather than play smart. She obeys all the rules to the letter and expects others to as well. If the policy says don’t do it, then it can’t be done.</p>
+<p>If it might upset someone, she doesn’t do it. You never want to act unethically, but it is a game—and one you want to win. To do so, you have to use the entire field available to you.</p>
+<p>In my client’s case, she followed my suggestion to ask her manager to help her define her scope of authority so that she would feel more comfortable taking risks. The manager called me several weeks later and, during the course of conversation about another matter, mentioned that the woman was now showing more initiative and meeting her performance objectives.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Play the game within bounds, but at the edges. If you’re not sure where the edges of your company’s playing field are, look at the women in your workplace who are winning the game. Consider what they’re doing that you should be doing, too.</p>
+<p>•  Write down two rules you interpret narrowly and always follow. Have you seen other people bend these rules? If so, what’s happened to them? If nothing, then take the risk of stretching the bounds by broadly, rather than narrowly, interpreting the rules.</p>
+<p>•  If you’re not sure something is fair, do it anyway. If you’re not sure something is ethical, ask.</p>
+<p>•  If you’re called out, don’t take it personally—and by all means don’t revert to playing safe. Look at it as an opportunity to learn where the edge of the boundary is and how to play to it.</p>
+<h2 class="mistake-heading">Mistake 3: Assuming the Rules, Boundaries, and Strategies Are the Same for Everyone</h2>
+<p class="first-p">This is by far the most controversial issue I discuss in my keynote presentations. I intentionally left it out of the first edition because I wasn’t sure how readers would respond. I chose to play it safe. Now, after receiving so much positive feedback from groups that I’ve spoken to (along with some pushback from those finding it patently unfair), I feel I not only should but must include it, because to do otherwise would be an egregious oversight.</p>
+<p>If you’ve ever wondered why when you say something in the exact same way a male counterpart says it you get called a bitch and he gets called assertive, it’s because the rules, boundaries, and strategies are different for men and women and for people of color and Caucasians. I don’t think it’s fair or right, but it does explain why people are treated and evaluated differently at work. The playing field diagram is useful in understanding these differences.</p>
+<p>Using the example of assertiveness, you can see from the following illustration that the boundaries are practically nonexistent for men. The more assertive, direct, and straightforward they are, the better. Now let’s take a look at the same playing field for women (page 28).</p>
+<p>Notice how the boundaries come in, making the field narrower. The narrower the boundaries, the easier it is to go out-of-bounds. Women can’t play by the same rules as men and expect to win the game. Right or wrong, we live in a society where we don’t like men who act like women and we don’t like women who act like men. Imagine if Warren Buffett cried during an earnings call! People would think the “Oracle from Omaha” had completely lost it. Similarly, when women exceed the boundaries of acceptability for assertiveness in their corporate culture, they risk getting called out, called names, or called on the carpet.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">THE ASSERTIVE PLAYING FIELD: MEN</h3>
+<p class="first-p">Finally, let’s look at the assertive playing field for women of color (page 29). The boundaries are even narrower! As a Caucasian woman, I can say things in a more assertive manner without going out-of-bounds than can a woman of color. When women of color, particularly African American women, are assertive, they are wrongly accused of being “angry.” Cultural issues that go into understanding the strength of their messages (such as having strong female role models and the acceptability of louder communications) are ignored, and they are categorized in a way that disinclines them from speaking their minds in the future—which just might be the purpose of the accusation to begin with!</p>
+<p>Renata was just such a woman. As the CIO (chief information officer) at a multinational women’s clothing firm, she was smart, no-nonsense, articulate, hardworking, and quick on her feet. If she were a man, she’d be envied. But because she was an African American woman, she was feared.</p>
+<p>When she was referred to me for coaching, I conducted interviews with her peers, her management, and people who reported to her. In the vaguest terms they described her as capable but not in sync with their corporate culture. This is usually code for “She goes out-of-bounds.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">THE ASSERTIVE PLAYING FIELD: WOMEN</h3>
+<p class="first-p">Personally, I liked Renata and saw that she had a lot of value to add to her employer, but their playing field was so narrowly defined that she would have to turn herself into a pretzel to conform to it. This was an unfortunate circumstance where, despite my best efforts to help her see it wasn’t her but the culture that needed changing and there was nothing either of us could do about that, she refused to adjust her behavior. Instead, she continued acting and communicating in ways that were most comfortable for her, but not for those around her. In the best of all worlds I would have liked her to find a bigger playing field where she could simultaneously be herself and be appreciated, but instead her intransigence around change caused her to ultimately be terminated.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">THE ASSERTIVE PLAYING FIELD: WOMEN OF COLOR</h3>
+<p class="first-p">One additional thing to remember is that the rules, boundaries, and strategies don’t only change for women and people of color, they change from company to company and boss to boss. What makes you successful in one company or with one boss won’t always hold true in a different company or with a different boss. Each corporate culture has its own unique rules of engagement.</p>
+<p>I was talking about the playing field concept to a group of women at a defense contractor. Instead of using assertiveness to illustrate my point, I used creativity. After explaining that the boundaries for creativity in the entertainment industry are almost nonexistent, whereas the boundaries for creativity in the defense industry are narrower (wacky ideas aren’t embraced in quite the same way as in entertainment), a woman raised her hand and said, “That explains everything.” It turns out she had recently transferred to this company from a film studio, and, as she put it, “Whereas I could do nothing wrong in my last job, I can do nothing right in my current one.”</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Size up the playing field in your organization and identify the rules and boundaries for various behaviors. This in turn will help you to create strategies for successfully maneuvering the field within bounds but at the edge.</p>
+<p>•  Consciously decide if it’s you or the size of the field that’s holding you back. Sometimes we receive feedback that would be true on any field—in which case it’s best to take it to heart and act on it. At other times the feedback is unique to the situation or company. If in every job you’ve had you’ve heard that you don’t communicate crisply enough, then it’s time to do something about it.</p>
+<p>•  Understand that it is unlikely that you will change the size of the playing field to suit your needs. Playing your game at the edge can help to stretch the boundaries, but if it’s too narrowly defined for you, start looking for a bigger field.</p>
+<p>•  When transferring to a new company or a different boss, don’t overrely on past strengths to build your credibility. They may or may not work. If you find yourself challenged by the transition, assess the new playing field by observing the behaviors of the people who seem to be winning the game. You might need to add some of their actions to your tool kit.</p>
+<p>•  If you’re a manager or business owner, focus on making the playing field equal for everyone by avoiding stereotyped judgments, proactively valuing and capitalizing on diversity, and holding people accountable for treating everyone equitably.</p>
+<h2 class="mistake-heading">Mistake 4: Dancing Around Pregnancy</h2>
+<p class="first-p">What should be the happiest moment of your life becomes one of the scariest when you realize you’re going to have to tell the boss about it. You obsess over the right time to do it, how to do it, and whether it will cause him or her to treat you differently. You try to hide it, avoid it, or play it down when what you really want to do is shout it loud: “I’m pregnant and proud!”</p>
+<p>I know there are many pundits who suggest that you keep your pregnancy on the DL (down low) for as long as possible, but I’m not one of them. Men don’t keep the impending births of their children a secret (at least not intentionally), and you shouldn’t have to either. The difference, of course, is that it’s not expected that a man’s performance will be impacted by the birth of his child, but it’s expected that a woman’s performance will be. Like everything else that you do with your career, this presents yet another opportunity for you to be strategic.</p>
+<p>Marissa Mayer made a splash when, on the same day the company announced her appointment as CEO of Yahoo!, she announced that she was six months pregnant. I have no doubt that she told the board of directors before accepting the offer. I also have no doubt that she assured them she was up for the challenge, pregnant or not. Her promotion despite her pregnancy was touted as a win for women in the workplace. But not so fast.</p>
+<p>Another situation that was compared with Mayer’s was that of Jennifer Christiansen, an associate director of consumer marketing at the pharmaceutical company Bayer (a client of mine and a company that I consider to be a great place for women to work). A major difference, however, was that the pregnant Christiansen asked if she could participate in the company’s job sharing program. Despite the fact that she had a history of outstanding performance, her boss refused to allow her to take advantage of the program and supposedly said, “I need to stop hiring women of reproductive age.” While on maternity leave Christiansen was terminated and is now part of a $100 million class-action suit against the company.</p>
+<p>There’s no doubt about it—if you’re pregnant in the workplace, you’re between a rock and a hard place. When you hide your pregnancy for fear of what others will think, you wind up looking less than honest and perhaps even deceptive. If you announce it sooner than later, others may make judgments about your capabilities or commitment. I believe the only thing your employer really cares about at the end of the day is that you get your job done. Whereas Mayer made her pregnancy a nonissue, Christiansen asked for more flexible working hours. Regardless of what policies are in place that provide consideration for pregnancy, by assuring your management that you’re not going to miss a beat, you appear more confident and in control of things when you belly up to the bar early on this one (pun intended).</p>
+<p>One more thing to note while I’m on the subject of working moms is taking advantage of other company policies, such as flextime and telecommuting. After the birth of her third child, I asked a woman who works in publishing (a field dominated by women) if she was working flex hours. Without hesitation she said no, to do so would be the kiss of death.</p>
+<p>Consequently, I’ve consulted with other women to get their input, and it’s been the same. Their strategy, and I think it’s a wise one, is to simply take time off or work from home when a family situation requires them to do so.</p>
+<p>As each woman implied, it doesn’t matter if you’re a man or a woman— formally requesting flextime as a steady diet contributes to the opinion that you’re less than committed to the job.</p>
+<p>Before you start sending me irate letters and e-mail, let me say I’m a huge proponent of creating avenues for women to be able to work while still meeting the expectation that they will be the primary caretakers for their children. It’s an unfair burden that is placed on women in society.</p>
+<p>Although savvy companies are addressing the issue in an effort to retain talented women, and the fact that there are laws to protect pregnant women, it remains a hot-button topic. So hot, in fact, that when Google’s Marissa Mayer abolished telecommuting soon after assuming the position of CEO, she was accused of being sexist and having no concern for women without the same resources and stature that she has. I disagree with the critics.</p>
+<p>Mayer defended her position by saying that people are more creative and innovative when working collaboratively and that is best achieved in the office. It was a business decision based on the needs of the company at the time.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Announce your pregnancy when you’re ready. For a variety of reasons, it does not have to be the moment it’s confirmed by your doctor.</p>
+<p>You’re entitled to your privacy. Decide on a time that makes the most sense to you and your significant other.</p>
+<p>•  Accompany your announcement with a clear and definitive statement of what can be expected of you during the pregnancy and after. In no uncertain terms, inform your management that you will continue to perform at the level you always have, will prepare for your absence so that nothing slips between the cracks, and will return to work fit for resuming your duties.</p>
+<p>•  Handle pregnancy-related issues (morning sickness, doctor’s appointments, etc.) on a case-by-case basis in the same manner you handle all other personal issues. If you need to miss work, don’t go into graphic detail about why. Simply inform whoever needs to be informed that you’ll be late or out and offer assurance that the projects you’re working on are on track for completion.</p>
+<p>•  Give yourself permission to change your mind about your priorities.</p>
+<p>For Marissa Mayer, it was business as usual before and after the birth of her son. If at any point you realize that for health or personal reasons you can’t work at the same pace or the same hours as you have in the past, then honor your values. Be clear about your priorities and live your life in a way that reflects your commitment to them. This is your life—no one else’s. Starting a family may significantly change your perspective about the importance of work or family. No one will take away your card to the sacred women’s club because you choose to focus more on one or the other.</p>
+<h2 class="mistake-heading">Mistake 5: Sitting Out the Social Network Game</h2>
+<p class="first-p">Remember how your parents used to tell you that just because everyone else was doing something that didn’t mean you should? When it comes to social networking, they were wrong. I’m the first to admit that social networking can be a nuisance. I have more important things to do than check my Facebook page or be interrupted by an incoming feed that tells me where someone is having lunch today. One tech-savvy friend went so far as to call me a Luddite (I had to look that one up!).</p>
+<p>Yet, like it or not, we live in an age where social networking is not a “nice-to” but rather a “must-do” if we want to be considered in the know.</p>
+<p>Even I grudgingly have to agree that when used properly, the advantages of social networking include that it •  makes you appear as if you belong in the twenty-first century; •  allows you to market yourself; •  enables you to engage in my number one rule for success: “Build strong 360-degree relationships”; •  gives you access to what the competition is up to; •  provides you with a forum to exchange ideas or solicit opinions; •  enhances your credibility as a subject-matter expert; and •  can be a fun and efficient way to keep up with colleagues.</p>
+<p>The key phrase here is used properly. Unfortunately, many women don’t realize the web footprint they leave with their Facebook pages, LinkedIn accounts, and tweeting. As a result, they do more potential damage to their reputations and credibility than they do good. I’ll talk more about that in the chapter on personal branding, but for now suffice it to say that if you’re not engaged in social networking, it’s time to buy a front-row seat to this game.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Set up a Facebook page and use it for business purposes only. In subsequent Mistakes you’ll find coaching tips for how to maximize its value to you and how to avoid common pitfalls when engaging in social networking.</p>
+<p>•  Join LinkedIn, the social networking site for professionals. By nature, it limits what you can post and whom you can communicate with (and vice versa). It’s designed to showcase you professionally and enable you to network with people with whom you have colleagues in common.</p>
+<p>•  Create your own personal website. It’s an inexpensive way to market your brand while having control over content (although not necessarily over who visits the site). Check out weebly.com for an inexpensive place to establish numerous websites and blogs.</p>
+<h2 class="mistake-heading">Mistake 6: Overlooking the Importance of Mentors and Sponsors/Advocates</h2>
+<p class="first-p">The September 2010 issue of Harvard Business Review contained an article titled “Why Men Still Get More Promotions Than Women,” by Herminia Ibarra, Nancy M. Carter, and Christine Silva. The premise of the piece is that women receive fewer promotions than men because they are less likely to have mentors who are also advocates for them. The authors found through their research:</p>
+<p>There is a special kind of relationship—called sponsorship—in which the mentor goes beyond giving feedback and advice and uses his or her influence with senior executives to advocate for the mentee. Our interviews and surveys alike suggest that highpotential women are overmentored and undersponsored relative to their male peers—and that they are not advancing in their organizations. Furthermore, without sponsorship, women not only are less likely than men to be appointed to top roles but may also be more reluctant to go for them.</p>
+<p>The difference between mentoring and advocacy (or sponsorship) is the level of active involvement in helping you with your career. Mentors offer advice and guidance that help you to grow in your career, in your field, and within your company. Advocates, on the other hand, speak up for you on your behalf in your absence, introduce you to people who might be able to help you (and vice versa), and put you on the radar screens of people who can help further your career.</p>
+<p>As I mentioned previously, mentors can also help you to learn the rules of the road and find the edge of the playing field. Yet many women are reluctant to ask someone to mentor them because they fear it’s an imposition, they don’t feel connected enough to the people who could mentor them, or they don’t know whom to ask to be a mentor. The following tips will help you overcome these and other challenges and increase the likelihood of getting both mentorship and sponsorship.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Find out if your company has a formal or informal mentoring program. If so, this is the place to identify a few people who could potentially mentor you. Again, it’s not a bad idea to have a male and a female mentor, because each will have unique experiences that will add to your understanding of how to play the game to win on your corporate field.</p>
+<p>•  If your company does not have a mentoring program, look to the edge of the playing field. That’s where the people who are winning the game are playing. Identify a few people you admire and ask if they would be willing to spend thirty minutes to one hour a month or even a quarter with you to answer questions you have about career issues. Be specific about the amount of time you are asking for so that they don’t think this is going to take an inordinate amount of time. Also, make it clear that you will be responsible for getting on their calendars and for driving the agenda. The easier you make it for the person, the more likely they are to agree to mentor you.</p>
+<p>•  Go to the website mentoringgroup.com and order The Mentor’s Guide and The Mentee’s Guide. These two pamphlets are extraordinarily helpful in establishing roles and responsibilities in mentoring. During your first meeting with your mentor, give him or her The Mentor’s Guide, explain what you’ve learned from your own guide, and use it to discuss the terms of engagement for your relationship.</p>
+<p>•  Ask for situation-specific advocacy from people in positions to provide it. These people might include your mentors, but possibly also individuals who do not mentor you yet are familiar with your work and are in positions to provide you with visibility or recommendations. “Situationspecific” means asking for advocacy related to a particular opportunity, not simply asking the person to keep you in mind when a good opportunity arises. For example, ask an advocate to write a letter of recommendation for a promotion you’re up for or to recommend you for a committee that will get high visibility from executive management. The more specific you are, the more likely the person is to take action.</p>
+<p>•  Join the appropriate “affinity group” within your company. Many companies have initiated groups for people with common workplace challenges as a means of providing support for them. Find out if your company has such a group for women (and/or for people of color), and if so, join it. You’ll often find senior women involved in these groups who want to mentor younger or less senior women, making your task of asking for a mentor that much less daunting.</p>
+<h2 class="mistake-heading">Mistake 7: Working Hard</h2>
+<p class="first-p">There’s a popular saying: “Women have to work twice as hard to be considered half as good.” As a result, women are like little ants—working, working, working. They complain that they do more than everyone else, and they do! It’s a myth that people get ahead because they work hard. The truth is, no one ever got promoted purely because of hard work. Likability, strategic thinking, networking, and being a team player are but a few of the other factors that go into crafting a successful career.</p>
+<p>In every organization there’s a baseline for hard work. In some organizations that baseline is higher than in others. I work with a lot of professional and financial services firms where working hard is not only expected, it’s required. Women, however, take it to the extreme, working far harder than their male colleagues. When you consistently go over that baseline you aren’t always recognized, but you usually are given more work to do—because you’ve shown you can and will do it.</p>
+<p>Sometimes I think women work hard because it’s easier to do what they know best, rather than to engage in behaviors that seem foreign to them.</p>
+<p>One woman complained to me about the guys she worked with who, every Monday morning during football season, spent the first half hour of the day rehashing Sunday’s games with the boss.</p>
+<p>“What a waste of time. Here I am working away, and they’re talking about football!” she lamented. What bothered her even more was the fact that these same guys were being tapped for prime assignments. Whereas women see it as “wasting the company’s money” to do anything other than focus on the task at hand between 8 a.m. and 5 p.m., men know that whether it’s talking about football or last weekend’s golf scores, they’re building relationships that will later work for them. In this situation her male coworkers were bonding with the boss in a way that allowed him to better know these team members. As a result, when growth opportunities became available, he picked them because he was familiar and comfortable with them.</p>
+<p>And herein lies one of business’s best-kept secrets. People aren’t hired and promoted simply because they work hard. It happens because the decision maker knows the character of the person and feels confident about his or her ability not only to do the job, but also to do it in a way that promotes collegial team relationships. By keeping her nose to the grindstone, the woman was actually acting in a way detrimental to getting what she most wanted—more interesting work and an opportunity to show she was capable of doing more.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Give yourself permission to “waste” a little time. If you’re not spending 5 percent of your day building relationships, you’re doing something wrong.</p>
+<p>•  Define your work hours and stick with them. Remember Parkinson’s Law: “Work expands to fill the time available.” This isn’t to say there won’t be times when you must work overtime, but if you’re consistently the last one left at the office, there’s something wrong with that picture.</p>
+<p>•  At the beginning of each day, define what you want to accomplish.</p>
+<p>You can avoid the tendency to take on whatever comes across your desk during the course of the day by deliberately scheduling it for a later time.</p>
+<h2 class="mistake-heading">Mistake 8: Doing the Work of Others</h2>
+<p class="first-p">When Harry S. Truman said, “The buck stops here,” surely he was thinking of a woman. Our tendency to take responsibility for not only our own work but also the work of others is yet another self-defeating behavior.</p>
+<p>Yes, you have a responsibility to your employer to ensure the delivery of a high-quality product or service, but it is not your responsibility alone.</p>
+<p>Women have a nasty habit of saying, “Well, if I don’t do it, no one else will.” This only ensures that you’ll be doing it—and for a l-o-n-g time.</p>
+<p>And there’s another problem associated with taking too much responsibility. While women are doing the grunt work, men are building their careers. They’re no fools. Promotions are rewards for getting the job done, not necessarily doing the job. I had a boss once who told me there are two kinds of people in the world: careerists and achievers. Achievers keep busy by doing the work. Careerists spend their time managing their careers.</p>
+<p>Truth be known, you’ve got to be a little of both to get ahead.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Stop volunteering for low-profile, low-impact assignments. If necessary, sit on your hand rather than raise it.</p>
+<p>•  Recognize when people delegate inappropriately to you. Practice saying unapologetically, “You know, I’d love to help you out with this, but I’m just swamped.” Then stop talking. Avoid the inclination to want to solve the problem for them. It’s their problem, not yours.</p>
+<p>•  If you’re a manager or supervisor, don’t let people delegate up. This most often happens when people reporting to you claim to be unable to perform a task or say they don’t have the time. Avoid the tendency to take it over because it will be faster if you do it yourself. Instead, suggest that they ask a coworker for technical assistance, or, if you have the time, use it as a teaching opportunity.</p>
+<p>•  Use self-talk to replace feeling guilty about saying no. Try saying something like “I don’t have to feel guilty about seeing that my needs are met.”</p>
+<h2 class="mistake-heading">Mistake 9: Working Without a Break</h2>
+<p class="first-p">There’s certainly truth to the adage “If you need something done, give it to a woman.” Women will work nonstop to crank out a project. Working without a break is not only damaging to your health, but actually impedes optimum performance as well. Productivity experts suggest that a break every ninety minutes is required to maintain maximum levels of concentration and accuracy. “From a productivity standpoint, there are diminishing marginal returns when you ask your brain to exert constant effort through an eight-hour day,” says Dr. Janet Scarborough Civitelli, a workplace psychologist at VocationVillage.com.</p>
+<p>Working without a break also contributes to the impression that you’re flustered or inefficient. One executive told me that a female vice president reporting to him made him feel “uncomfortable” because she always looked like she was overworked and harried (a word you rarely hear used to describe a man). Working through lunch hours or without coming up for air won’t get you ahead. Giving the impression you are always up to your ears in alligators could hinder being given special projects or assignments that could later bring you recognition.</p>
+<p>And if you’re not convinced yet, according to self-proclaimed time management ninja Craig Jarrow, there are five more good reasons why you should take breaks:</p>
+<p>1. Gain Perspective—If your head is down in your work, you aren’t aware of your surrounding environment. Priorities may have changed since you started your project. A break can let you zoom in and out again.</p>
+<p>2. Recharge—Everyone needs to “fill their tanks,” or eventually their energy reserves will reach zero. Rest is needed to let the body and the mind recharge.</p>
+<p>3. Refocus—It is easy to get distracted and pulled off task. Taking a break can let you address those distractions and then refocus your energy on the more important tasks.</p>
+<p>4. Get Advice—No one can operate entirely independently. Seeking advice from others can save you much time and effort. Maybe they have previously done what you are doing and can provide timesaving tips.</p>
+<p>5. Take Care of Yourself—Life is a marathon, not a sprint. You can’t keep going at 100 percent without burning yourself out. Even topnotch machines will burn out if they are not maintained. Make sure you are maintaining yourself.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Get in the habit of getting up from your desk for a stretch break at least once every ninety minutes.</p>
+<p>•  At the beginning of each week, make it a point to schedule at least one lunch meeting.</p>
+<p>•  Schedule times throughout the day to drop by a colleague’s office for a few minutes of casual conversation. When someone drops by yours, stop what you’re doing and invite him or her in.</p>
+<p>•  Use the alarm function on your computer to remind you of your break (and when it goes off… take your break).</p>
+<p>•  Use the lunch hour to your advantage. Join a Toastmasters club, run an errand that will allow you to get home earlier after work, or just take a walk and refresh yourself for your afternoon activities.</p>
+<p>•  If about now you’re thinking, I don’t have time for this, then you’re definitely doing too much at work.</p>
+<h2 class="mistake-heading">Mistake 10: Being Naive</h2>
+<p class="first-p">Women may not have the market on naïveté, but we certainly do our fair share of taking what people say at face value. The dynamic behind this is interesting. We often don’t probe deeply to determine the veracity of what we’re told, either because we don’t want to embarrass the other person or because we want to see only the good in people. By busily focusing on the work itself, we often miss the more obvious behaviors that lie on the periphery.</p>
+<p>Lisa was someone whose naïveté got her into trouble. She was the director of development for a nationally known nonprofit agency. Her department was efficient, there was a good sense of teamwork and camaraderie among the staff, and every year that Lisa was at the helm they surpassed their fund-raising goals—until she hired Adam, that is. He was the son of one of the board members, and her colleagues at the agency warned her it was not a good idea to hire him. Lisa was sure that if she established ground rules and kept the lines of communication open with Adam, it would work out just fine.</p>
+<p>Within a few months the team began to falter. Morale was spiraling down. Team members weren’t hitting their monthly targets. Several team members confided in Lisa that Adam was bad-mouthing her behind her back and spreading lies about her. Lisa’s manager called her into his office several times to discuss the unrest on her team. For the first time in her career, she was seen as a less-than-capable leader.</p>
+<p>When she openly discussed the problem with Adam, he denied doing anything to undermine her authority. She wanted to believe him and reiterated her expectations of him. The problem only went from bad to worse. Board members were beginning to question the head of the agency about problems that kept surfacing. Finally, Lisa left the agency for a better position, but not one she would have considered before Adam had come along.</p>
+<p>When we see naïveté in another person, we often find it refreshing.</p>
+<p>Sometimes young people just beginning their careers benefit from it by making others want to mentor them or show them the rules of the road.</p>
+<p>When we see it in a more seasoned professional, however, we use it to discredit them. A woman’s expression of naïveté underscores her inability to read a situation appropriately or learn from her experience.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  If something doesn’t make sense to you, ask for an explanation. If someone downplays your need for an explanation, be suspicious.</p>
+<p>•  Without assuming the worst, get in the habit of asking yourself what a person’s motives might be.</p>
+<p>•  Don’t rely on just one person’s expertise when making major decisions. Solicit input from several reliable sources.</p>
+<p>•  If you find yourself the only person in the room who disagrees with the consensus that it can’t be done, and you think, But I could make it happen, an alarm should go off that you’re being naive.</p>
+<p>•  Trust your instincts. If it looks like a duck, sounds like a duck, and walks like a duck—it’s a duck.</p>
+<p>•  Read Spy the Lie by Phillip Houston, Michael Floyd, and Susan Carnicero. Former CIA agents help you to identify deceptive behaviors before you fall prey to them.</p>
+<h2 class="mistake-heading">Mistake 11: Pinching Company Pennies</h2>
+<p class="first-p">Accustomed to having to account for how they spend their money, it seems even women who aren’t hesitant to spend their own money on themselves fall into the trap of pinching company pennies. They allow themselves to be inconvenienced, or deny themselves the smallest item, for fear of spending a few extra dollars of the company’s money on legitimate business expenses. Some women wear their savings as a badge of honor—when in most cases the amount of money they save is rounding off numbers for their corporation.</p>
+<p>I was reminded of the folly of this when a woman executive told me about being delayed in Los Angeles for a flight to JFK. She was originally going to take a train to her hometown where her husband would pick her up, but, with the delay, it would be too late to catch the last train. She struggled with how to get home in the most economical way possible—she even considered asking her husband to pick her up at 2 a.m. to save cab fare. Now, that’s a mistake! A man wouldn’t hesitate to call a car company or take a cab at that hour—regardless of the expense.</p>
+<p>As someone who travels quite a bit for clients who pay my expenses, I pride myself on treating their money the same as I would my own— frugally. Recently I had a discussion with a male colleague about the increasing cost of airfare tickets and how much I hated to charge back these high prices to my clients. He was amused at my concern for the bottom lines of these behemoth corporations. “I don’t treat myself the same as if I were writing the check,” he said. “I treat myself better. If they want me to arrive refreshed, eager to work, and delighted to be there, then I’m going to fly business class no matter what the cost. They know the cost of doing business and you should too.” Hmmmm… my inner nice girl flinched, but I knew he was right.</p>
+<p>In another scenario, the assistant to a female executive at a major manufacturing company was retiring after twenty-two years of service. The executive, notorious for her frugality, arranged a potluck going-away party.</p>
+<p>Thinking that she must be saving the money for a nice retirement gift, several employees asked if she would like help in purchasing it. Without hesitation or embarrassment, the executive said she thought the party was enough. As you can imagine, the word on the street about this executive was that she was cheap and thoughtless. It would be one thing if the company was experiencing financial difficulties, but this was far from the case. In fact, the male executives in the same company were known for quite lavish send-offs for long-term loyal employees.</p>
+<p>When you pinch pennies, you’re wasting time and energy on meaningless matters. Additionally, you’re more likely to be viewed as someone who isn’t ready to play in the big leagues, and you definitely aren’t taking care of the company’s greatest assets—you and others.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  When considering an expenditure, look at the big picture and how much difference the expense will really make in the larger scheme of things.</p>
+<p>•  If you have a budget—use it. Few companies reward, let alone notice, employees for being frugal.</p>
+<p>•  Consider the payoffs for spending small amounts of money on employees. Paying for a lunch or a floral arrangement to a staff member in the hospital won’t break the budget, but it will reap dividends in terms of goodwill and loyalty.</p>
+<p>•  Unless you’re directed otherwise, never ask permission to spend money. Instead, expect you’ll be told if there’s a problem… and if there is, don’t apologize. Simply acknowledge your understanding of the message and ask for clarification around spending authority.</p>
+<p>•  When the voice comes into your head that says, I’m not sure I should spend this money, talk back to it by asking, What’s the cost [in terms of time, resources, goodwill, or money] of not spending it?</p>
+<h2 class="mistake-heading">Mistake 12: Waiting to Be Given What You Want</h2>
+<p class="first-p">I frequently hear women express disappointment over not having their needs met without having to ask. I don’t get it. Ever hear the saying “The squeaky wheel gets the grease”? On the other hand, if you’re one of those people who, no matter what they’re given, it isn’t enough, you might find people resisting your constant requests. Still, more often women are made to feel like they’re asking for too much when, in fact, they’re not. If you won’t ask, you don’t risk hearing no, but you also won’t get what you want.</p>
+<p>The most obvious examples of this come when women finally get up the nerve to ask for a raise. They’re frequently made to feel they’re doing something wrong or have no right to ask for what is rightfully theirs.</p>
+<p>Having worked in human resources for many years, I know that men take care of their own needs but will often minimize what women are worth or owed. As of this writing, on average, full-time working women earn $36,931 compared to men’s $47,715. As mentioned earlier, the figures are even bleaker for African American women and Latinas. Although part of this discrepancy is clearly due to discrimination, and another reason is the fact that women gravitate toward lower-paying jobs, it’s largely true because disenfranchised groups are less likely to ask for what they want.</p>
+<p>A client once called to tell me that she hadn’t received the same signing bonus everyone else had already gotten as the result of transferring to a newly formed department. I inquired as to why she thought this happened.</p>
+<p>As people often do when confronted with a situation they don’t understand, she made up a story in her head that it must have something to do with not being respected or just treating her as if she were invisible. It bothered her so much that she was losing sleep over it. Obviously, she needed to do something about it, but she was hesitant to “rock the boat.”</p>
+<p>After much discussion, we scripted out what she could say to her human resource manager to find out about the missing bonus. The way she wanted to put it was to ask whether she was entitled to a bonus. Typical girl behavior—never assume you’re entitled to something you’ve been promised! My tip to her was not to ask, but to assume she was entitled to the bonus and find out why she hadn’t received it. Essentially, she went in and said, “My signing bonus wasn’t in my check for the past two pay periods, and I’m wondering when I can expect to receive it.”</p>
+<p>Lo and behold, it had nothing at all to do with respect or being a woman.</p>
+<p>He had made a mistake. Of all the people who had transferred over, she was the only one who was due a performance review and annual raise within the next several weeks. He decided to wait on giving her the bonus so that he could do all the paperwork at one time. When her performance review was postponed because of the new assignment, though, he had forgotten to put in for the bonus. If she hadn’t asked, she would have continued to be distracted by and lose sleep over this apparent slight.</p>
+<p>The lesson for her was twofold: First, rather than make up a negative story, get the facts. Second, don’t wait to be given what’s owed to you—ask for it.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Mentally prepare requests in advance. Think about what you want and why you want it. When asking, be direct, straightforward, and accompany each request with two or three legitimate reasons why you should be given what you’ve requested. Try using the DESCript method provided under</p>
+<h2 class="mistake-heading">Mistake 91: .</h2>
+<p class="first-p">•  Consider the value of using the negotiation technique of fait accompli.</p>
+<p>That is, couch your request in the form of a statement. For example, rather than say, “I’d like to ask for an additional ten thousand dollars for next year’s training budget,” say, “I’ve added ten thousand dollars to the training budget. Additional staff and new technology account for the increase.”</p>
+<p>•  Read Her Place at the Table: A Woman’s Guide to Negotiating Five Key Challenges to Leadership Success, by Deborah Kolb, Judith Williams, and Carol Frohlinger. The authors describe common negotiation problems encountered by women and give realistic suggestions for how to overcome them. The book also illuminates some of the hidden agendas that often accompany trying to get what you want.</p>
+<p>•  Separate being liked and getting what you deserve. If you ask for what you deserve in an appropriate way, and you’re suddenly not liked because of it, someone is just yanking your chain and hoping you’ll acquiesce to his or her expression of displeasure.</p>
+<p>•  Carefully choose your times for asking for what you want or deserve.</p>
+<p>Asking for a raise after layoffs is not a good idea. Nor is asking for a transfer to another department in the middle of a crucial project—it will make it look like you’re trying to get out of work. Timing is everything in life—make sure you time your requests.</p>
+<h2 class="mistake-heading">Mistake 13: Avoiding Office Politics</h2>
+<p class="first-p">Repeat after me: “Politics is not a four-letter word.” Trying to avoid office politics is like trying to avoid the weather. Like it or not, it is what it is.</p>
+<p>Politics is how things get done—in the workplace, in government, in professional organizations. If you’re not involved in office politics, you’re not playing the game, and if you’re not playing the game, you can’t possibly win.</p>
+<p>The business of politics is simply the business of relationships and understanding the quid pro quo (something in exchange for something else) inherent to every relationship. The film Lincoln, starring Daniel Day-Lewis as Honest Abe, portrays this beautifully. He was so committed to ensuring passage of the Thirteenth Amendment to the Constitution abolishing slavery that he sent his allies out to cut deals with lawmakers in Congress in exchange for their votes. Did the end justify the means? You bet it did. It changed the course of history and the lives of countless indentured servants.</p>
+<p>Interestingly, a female friend I went with to see the movie thought this was the low point of the film—and I think most women are equally uncomfortable with this kind of brokering of deals because they find it a little smarmy. Men, on the other hand, get the concept of one hand washing the other, or “You scratch my back, and I’ll scratch yours.” In fact, an article I read about the movie (authored by a man) praised Lincoln for his political prowess in achieving his vision that all men are created equal (it took a little while longer for women to be created equal).</p>
+<p>A successful workplace relationship, whether with a boss or a coworker, is one in which you clearly define what you have to offer and what you need or want from the other person. It happens all the time without putting a name to it. Consider your relationship with your best friend. You may need counsel from her or you may want company, a racquetball partner, or a variety of other things. If she gives you those, you’re more likely to want to give her what she needs or wants. It may never be discussed, but the trade is implicit in the relationship. Workplace politics is no different. Each time you go out of your way for someone or give them what they need, you’ve earned a figurative “chip” that you can later cash in for something you need.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Approach political situations as you would any negotiation. Take time to find out what the other person needs, what you have to offer, and how you can facilitate a win-win situation.</p>
+<p>•  Remember: The quid pro quo of politics is something in exchange for something else. Don’t just give in; think about what you want in exchange.</p>
+<p>Don’t be afraid to cash in your chips.</p>
+<p>•  You can often win in the long run by giving up the smaller, less important points. When you do, you bank currency to be used at a later time.</p>
+<p>•  Don’t avoid what you perceive to be a political problem. People will only go around you. Work through political situations in a way that allows others to see you as a problem solver, not a problem.</p>
+<p>•  Read Survival of the Savvy: High-Integrity Political Tactics for Career and Company Success, by Rick Brandon and Marty Seldman. Although some people feel as if the authors are preaching inauthenticity, I believe they speak the hard truth about a difficult subject. Even if you use only half of their suggestions, you’ll most likely be twice as far along as you are currently when it comes to workplace politics.</p>
+<h2 class="mistake-heading">Mistake 14: Being the Conscience</h2>
+<p class="first-p">CIO magazine claims that women who report organizational malfeasance are more likely to experience retaliation than men who do the same.</p>
+<p>Whereas you might think that being higher in the organization would protect you from retaliation, this held true for men in the study; but for women? Not so much.</p>
+<p>The terrorist attacks of September 11 and the spate of shady corporate financial dealings in the early 2000s gave us three extreme examples of women being the conscience—only to find they were ignored, stonewalled, or crucified. First, Enron’s global finance vice president, Sherron Watkins, warned the company’s president, the late Kenneth Lay, about her discomfort with the firm’s accounting practices long before the company’s demise. In August 2001 she had written a memo to Lay complaining about a “veil of secrecy” surrounding private investment partnerships at the firm. “I am incredibly nervous that we will implode in a wave of accounting scandals,”</p>
+<p>wrote Watkins. “We are under too much scrutiny and there are probably one or two disgruntled ‘redeployed’ employees who know enough about the ‘funny’ accounting to get us in trouble.” Unfortunately for Lay, and thousands of other Enron employees, he didn’t heed her warning.</p>
+<p>Cynthia Cooper, formerly with the now-defunct WorldCom’s financial auditing department, felt she had no choice but to go to the board of directors to report the misappropriation of massive amounts of money when her management told her to ignore inappropriate accounting procedures.</p>
+<p>This, of course, was the beginning of the end for the prestigious conglomerate. Although she received praise from strangers for her courage, coworkers blamed and shunned her.</p>
+<p>Then there was former FBI staff attorney Coleen Rowley, who became the conscience of the agency after coming forward to speak the truth about inappropriate handling of evidence of terrorist activity prior to the attacks of September 11. Even though the public lauded her and in 2002 Time magazine named her one of three “Persons of the Year” (along with Watkins and Cooper), she was treated as a pariah by fellow FBI staffers, unable to win a congressional seat for which she ran, and denied the opportunity to sit on the 9/11 Commission, a position for which she was nominated.</p>
+<p>Is this to say women shouldn’t act in concert with their consciences and, at times, moral and ethical standards? Not at all. But women are far more likely than men to point out variance between company policy and practice.</p>
+<p>Most men have no difficulty with bending the rules as needed and when it’s a case of “no harm, no foul.”</p>
+<p>Let me give you an example. Claudette was an executive assistant for the vice president of consumer relations at a large entertainment company.</p>
+<p>Her boss routinely arrived late for work and expected that Claudette would cover for him. When the division president would call at nine-thirty, she would feel uncomfortable saying that her boss was “in a meeting” or had “stepped away from his desk.” In her mind, the company start time was nine o’clock, and he should have been there on time. Similarly, if he was tardy in completing the required weekly expense report, he would change the dates to the current week so that he could be reimbursed for expenses incurred earlier in the week or month.</p>
+<p>At first she would remind the boss of the rules, and he would cajole her into stretching them. After working for this boss a short time, Claudette went to human resources to complain. She felt the boss was asking her to compromise her values and ethics through these actions. Human resources, on the other hand, understood that the norms for this particular company were not very stringent and that she should be more cooperative with her boss if she wanted to build a successful relationship with him.</p>
+<p>Unable to shift from her rigid interpretations, she finally asked for a transfer to another boss. Human resources was happy to oblige, but knew that Claudette would encounter the same problem with most of the executives at the company. What her boss asked her to do wasn’t that unusual—nor was it unethical or immoral. Although she was eventually transferred to another boss who was known to be more of a straight arrow, human resources had by then branded her as somewhat of a prude and was aware of the limitations they would encounter in promoting or transferring her in the future.</p>
+<p>The point of the story is, you need to weigh the benefit of pointing out minor infractions in company policy or procedure in light of the potential consequences. Sherron Watkins, Cynthia Cooper, and Coleen Rowley are to be admired for acting in concert with their consciences. In their cases the consequences were enormous for the company, the country, and them. Most of us, however, simply need to understand the realities of the workplace.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  The workplace isn’t a platform. Don’t use it to further your cause.</p>
+<p>•  If you are being asked to do something illegal, unethical, or immoral, consider alternatives that will protect you from liability and extricate you from the situation without being labeled a whistle-blower.</p>
+<p>•  Don’t equate doing good with doing right for yourself. Taking a controversial position on an issue may make you feel better—but except in unique situations it’s not likely to get you ahead.</p>
+<p>•  Choose your battles carefully. Ask yourself if the risk of being the conscience is worth the potential profit. There will definitely be times when it is worth the risk—make it a calculated one.</p>
+<h2 class="mistake-heading">Mistake 15: Protecting Jerks</h2>
+<p class="first-p">I don’t know what it is about women and jerks. We’re like jerk flypaper.</p>
+<p>Not only do we attract them more than men do, but we also tolerate them longer. In our usual attempts to avoid making others feel bad, we let them take up more of our time than we should, shoulder the blame for their mistakes, and make excuses for their behavior. Men seem to have a much better detection device when it comes to jerks. They smell them a mile away—and avoid them at all costs.</p>
+<p>Greta is a good example of how women protect jerks. She works as a regulatory specialist on Wall Street. Her job is to ensure that trades are lawful and within the guidelines established by her nationally known firm.</p>
+<p>Greta reports to a jerk. He knows nothing about the regulations, but that doesn’t stop him from continually telling her how to do her job—and often giving her and others wrong information that could create substantial liability for the company. Despite Greta’s attempts to tell him he’s wrong, he insists that she follow his directives.</p>
+<p>When the department vice president asked why so many errors were made on several recent trades, she refused to say she was simply following the instructions of her boss. As a result, her performance review moved her down a notch on the rating scale, her pay was reduced accordingly, and the promotion she was up for was postponed for another year. Greta’s efforts to protect her boss not only backfired on her, but also put the company in jeopardy of being fined for regulatory violations.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Trust your instincts. When you think someone is a jerk, he or she probably is.</p>
+<p>•  Distance yourself from jerks. Don’t be found guilty by association.</p>
+<p>•  Politely but firmly tell a jerk to take a hike (more on this under</p>
+<h2 class="mistake-heading">Mistake 120: ).</h2>
+<p class="first-p">•  When you get blamed for the actions of some jerk, don’t hesitate to redirect your accuser to the real source (which is what Greta should have done). Try saying something like “I can see why you would be upset over this. Why don’t you speak with Chris about it to find out why he wanted it done that way?”</p>
+<p>•  When the jerk is your boss, it’s time to look for another job. Research conducted by the Center for Creative Leadership reveals that trying to change your boss is a waste of time. Employees don’t change bosses’ behaviors. So stop wishing he or she will change and put your own needs first.</p>
+<h2 class="mistake-heading">Mistake 16: Holding Your Tongue</h2>
+<p class="first-p">Fearful of hearing the accusation that we’re too aggressive or pushy, women will often avoid saying things that should legitimately be said. How many times have you withheld a comment, only to have a male colleague be applauded for saying exactly what you were thinking? Keep in mind that the accusations of being too pushy are designed to keep you quiet. They’re ploys to make you feel bad about having an opinion or alternative viewpoint. Holding your tongue only serves to make you frustrated and appear less willing than you really are to speak up for what you believe.</p>
+<p>Take Marilyn, for example. She was embroiled in an e-mail war with a colleague who had a reputation for being Teflon-like. Nothing stuck to him because he was so busy pointing the finger at others. For a while she spent most of her time placating him so she wouldn’t be blamed, but he eventually got around to her. When I asked her why she didn’t just tell him she felt the blaming wasn’t doing any good and they should focus on the problem instead, she said she didn’t want to fuel the fire any further. My suggestion to her was that the next time he started pointing the finger, she should turn it into a problem-solving discussion. She could say something neutral, such as “Blaming won’t get us anywhere, Joe. Let’s talk about how we can fix the problem of communication between our two departments.”</p>
+<p>Even if his retort is “I’m not blaming, I’m just looking for the cause of the problem,” she can be a broken record and say, “Be that as it may, I’m ready to move into the problem-solving phase.”</p>
+<p>An interesting aside to this situation is the fact that Marilyn is a fiftyyear-old Italian woman from a very traditional Brooklyn background and married to a man significantly older than she. As we explored what got in the way of her coming up with this solution herself, it became clear that her traditional socialization caused her to acquiesce to “macho” men. I pointed out to her that the name of the game is When in Rome, do as the Romans do.</p>
+<p>In other words, it may be appropriate to back off at home with her husband or with her father because that is the rule of her family, but at work the rules are different.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Disagree without being disagreeable. You can do this by first acknowledging what the other person said, then giving your opinion. It sounds like this: “If I understand you correctly, you think we should put Joe on the Stanford account. I propose we consider several other more qualified staff.” Be prepared to back this up with two or three good reasons.</p>
+<p>•  Take more risks with giving your opinions at meetings. Practice giving your opinion at least once during every meeting. It gets easier every time you do it.</p>
+<p>•  Don’t disregard the customs and traditions of your ancestors, but be more selective about how, when, and where you apply them.</p>
+<p>•  To counterbalance the feeling of being too aggressive, after you’ve expressed your opinion you could add an inquiry. For example, “That’s how I see it. I’m curious to know what others think.”</p>
+<h2 class="mistake-heading">Mistake 17: Unwillingness to Capitalize on Relationships</h2>
+<p class="first-p">A woman consultant was having difficulty selling her idea for a new book to a publisher. As we talked about how she might go about getting the attention of a particular editor, she mentioned that her father, an internationally known leader in his field, had a good relationship with this man. When I asked why in the world she didn’t mention this to the editor, she said that she didn’t want to capitalize on her father’s name. This is yet another way women play differently than men. Men rely on relationships to open doors for them; they don’t view it as taking advantage of anyone. For Pete’s sake, it’s why they build relationships in the first place!</p>
+<p>There’s a difference between name-dropping and using a relationship to help open a door. It’s a reality that relationships sell everything from cars to consulting services. We do business with, and trust the judgments of, people we like. As opposed to guilt by association, it’s success by affiliation. Don’t be afraid to connect the dots among people in your network.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Ask permission to use a colleague’s name when you’re trying to get the attention of someone. For example, “I saw on LinkedIn that you’re connected with Ellen Torres. I’m trying to schedule a meeting with her and wonder if it would be all right to mention that I know you.”</p>
+<p>•  Ask for introductions. If there’s someone you’d like to know at a meeting or party, ask the person organizing the event to make an introduction.</p>
+<p>•  Introduce people with like interests or needs. Doing so models the behavior you would like returned in kind.</p>
+<p>•  Ask for referrals. If you’re looking for a job or just information, ask people if they know someone to whom they can refer you and if you can use their name when making the call.</p>
+<h2 class="mistake-heading">Mistake 18: Not Understanding the Needs of Your Constituents</h2>
+<p class="first-p">Former British prime minister Margaret Thatcher was raised by a father who always told her to think for herself and not be swayed by the opinions of others. She learned this lesson so well that it earned her the nickname of Iron Lady. This strength became her ultimate downfall, however, when she found herself embroiled in controversy after she proposed a tax on everyone who voted. Despite every indication that her constituents strongly opposed the tax, Thatcher told advisers who urged her to reconsider her position, “You turn if you want to. The Lady’s not for turning.”</p>
+<p>Although we’re not all politicians in the truest sense of the word, we all have constituents. They’re the people we serve. Whether we serve them through our services or our products, we must know what they need and expect if we’re to be perceived as adding value. The trap many women fall into is thinking they know what’s best for their constituents and therefore not asking the right questions on the front end.</p>
+<p>Take Belinda, a technical consultant to engineering firms. Belinda is as bright as they come—sharp as a whip. She knows her business inside and out. Other consultants go to her for consultation. Several years ago Belinda found that her business wasn’t as successful as she wanted it to be. She would sell an initial project to a company, only to find that she didn’t get repeat business.</p>
+<p>One day a client with whom Belinda had developed somewhat of a friendship asked if he could give her some feedback. When he told her that his company appreciated her expertise but not her rigidity, she was shocked.</p>
+<p>She thought she was offering the best advice possible and always had the best interests of the client in the forefront of her mind. Instead, she found that her unwillingness to listen to clients’ practical needs and applications was impeding her from being seen as adding value to a company. She was viewed as intractable and difficult to work with.</p>
+<p>It was difficult for her to hear, but Belinda was also smart enough to know that the feedback was a gift. If this man’s firm felt this way, others must, too, but without telling her. Instead, like most dissatisfied clients, they’d just stopped using her services. This was why she hadn’t been able to grow her business the way she wanted to.</p>
+<p>With one simple change, Belinda was able to turn the situation around.</p>
+<p>Following the initial diagnosis of client needs and presentation of her ideas and recommendations, she would stop and ask for input. If her ideas were met with skepticism, rather than seeing this as client ignorance of the “right” way to do things (and selling her ideas harder), she would shift to listening and asking more questions. She discovered that initial resistance was often due to miscommunication; further discussion helped bridge that gap. In some cases she found that although the client wanted to implement her ideas in a manner different from the way she envisioned it, the changes actually worked and were ones she could later use with other clients.</p>
+<p>Belinda is a terrific example of someone who, aware of her own intelligence and capability, could be contemptuous of others who may not have been as talented. The lesson here is that there’s often more than one way to skin a cat. You must take care not to be a victim of your own success.</p>
+<h3 style="font-family: var(--serif-heading); font-size: 1.4rem; color: var(--ink-berry); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: bold; border-bottom: 1px solid var(--paper-edge); padding-bottom: 0.25rem;">COACHING TIPS</h3>
+<p class="first-p">•  Read The Trusted Advisor, by David Maister. I also mention this book later in Mistake 64 related to the importance of consultative skills, but it is such a good book that I thought mentioning it twice can’t hurt. Maister talks about ways to build trust with your constituents that serves both you and them well. There is even a workbook that accompanies the book, which I’ve included on the reading list.</p>
+<p>•  Be more concerned with doing the right thing than doing things right.</p>
+<p>It’s not a sign of weakness to change your mind when data collected dictates it’s the right thing to do.</p>
+<p>•  Be acutely aware of the needs of your constituents. If you don’t know what they are—ask. Keep in mind the quid pro quo inherent to every relationship—one thing in exchange for another.</p>
+<p>•  Differentiate polling from understanding the needs of your constituents. Polling is what you do when you can’t make a decision independently. (See Mistake 24 for more on polling.) Understanding the needs of others is information you may or may not use to make decisions that impact them.</p>
+<p>•  When met with resistance avoid the urge to oversell, which usually results in polarizing factions or creating win-lose situations. Instead, let resistance be your cue to back off and shift to active listening.</p>
+    </div>
+  </div>
+</body>
+</html>
