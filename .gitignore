@@ -6,5 +6,5 @@ Thumbs.db
 # Exclude original PDF book files (designed HTML chapters are committed instead)
 *.pdf
 
-# Exclude unused root-level raw files
-/Lois-P.-Frankel-Ph.D.-image.jpg
+# Keep/allow the specific full book PDF to be downloaded on the website
+!_OceanofPDF.com_Nice_Girls_Dont_Get_the_Corner_Office_-_Lois_P_Frankel.pdf
