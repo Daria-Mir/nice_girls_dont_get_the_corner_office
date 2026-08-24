@@ -893,7 +893,7 @@ function fallbackShare(dataUrl, postText, platform) {
 // 8. GEMINI RAG CHATBOT LOGIC
 
 // Global fallback API Key
-const GLOBAL_GEMINI_API_KEY = atob("QUl6YVN5QkppUTZDVFNCZlJpemd0cUgzYWktZTV5UDRJejQ4dnlz");
+const GLOBAL_GEMINI_API_KEY = atob("QVEuQWI4Uk42SmFvNHJhTHVXdjJ6OGFWcnNMa1VZSTRpSzRyLUhFZzhyZnBEQldyQ2hmelE=");
 
 // Toggle Chat Window
 chatbotToggleBtn.addEventListener("click", (e) => {
