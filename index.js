@@ -1162,8 +1162,14 @@ function searchBookText(query) {
     .slice(0, 3);
 }
 
+const GEMINI_MODELS = [
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest"
+];
+
 // Live Gemini API Call
-function callLiveGeminiAPI(query, contextPages, loaderEl, apiKey, isFallback = false) {
+function callLiveGeminiAPI(query, contextPages, loaderEl, apiKey, isFallback = false, modelIndex = 0) {
   let contextString = "";
   if (contextPages.length > 0) {
     contextString = contextPages.map(p => {
@@ -1191,7 +1197,8 @@ ${contextString}
 User Question: ${query}
   `.trim();
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
+  const selectedModel = GEMINI_MODELS[modelIndex] || GEMINI_MODELS[0];
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${apiKey}`;
 
   fetch(url, {
     method: "POST",
@@ -1230,22 +1237,31 @@ User Question: ${query}
       addChatMessage("coach", responseText, pages ? `Sources: ${pages}` : null);
     } catch (e) {
       console.error(e);
-      addChatMessage("coach", "Oops! I received an empty or corrupted response from Gemini. Please try again.");
+      addChatMessage("coach", "Oops! I received an empty response from Gemini. Please try asking your question again.");
     }
   })
   .catch(err => {
-    console.error("Gemini API Error:", err);
+    console.warn(`Gemini API call to ${selectedModel} failed:`, err.message);
+
+    // If model is experiencing high demand / 503 / 429, try next fallback model in chain
+    if (modelIndex < GEMINI_MODELS.length - 1 && (err.message.includes("high demand") || err.message.includes("503") || err.message.includes("429") || err.message.includes("quota"))) {
+      console.log(`Retrying with fallback model ${GEMINI_MODELS[modelIndex + 1]}...`);
+      setTimeout(() => {
+        callLiveGeminiAPI(query, contextPages, loaderEl, apiKey, isFallback, modelIndex + 1);
+      }, 1000);
+      return;
+    }
     
     // If custom key in localStorage failed, clear it and retry with GLOBAL_GEMINI_API_KEY
     if (!isFallback && apiKey !== GLOBAL_GEMINI_API_KEY && GLOBAL_GEMINI_API_KEY) {
       console.warn("Custom API key failed. Clearing invalid key and retrying with Global API Key...");
       localStorage.removeItem("gemini_api_key");
-      callLiveGeminiAPI(query, contextPages, loaderEl, GLOBAL_GEMINI_API_KEY, true);
+      callLiveGeminiAPI(query, contextPages, loaderEl, GLOBAL_GEMINI_API_KEY, true, 0);
       return;
     }
 
     loaderEl.remove();
-    addChatMessage("coach", `Failed to call Gemini API: ${err.message}. If you saved a custom key in settings, try clearing it.`);
+    addChatMessage("coach", `Google's AI servers are currently experiencing temporary high demand (${err.message}). Please wait a few seconds and try again.`);
   });
 }
 
