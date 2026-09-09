@@ -1163,7 +1163,7 @@ function searchBookText(query) {
 }
 
 // Live Gemini API Call
-function callLiveGeminiAPI(query, contextPages, loaderEl, apiKey) {
+function callLiveGeminiAPI(query, contextPages, loaderEl, apiKey, isFallback = false) {
   let contextString = "";
   if (contextPages.length > 0) {
     contextString = contextPages.map(p => {
@@ -1191,7 +1191,6 @@ ${contextString}
 User Question: ${query}
   `.trim();
 
-  // Call Gemini 3.6 Flash
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
 
   fetch(url, {
@@ -1212,9 +1211,13 @@ User Question: ${query}
       }
     })
   })
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
-    return res.json();
+  .then(async res => {
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const errorMsg = data?.error?.message || `HTTP Error ${res.status}`;
+      throw new Error(errorMsg);
+    }
+    return data;
   })
   .then(data => {
     loaderEl.remove();
@@ -1231,9 +1234,18 @@ User Question: ${query}
     }
   })
   .catch(err => {
-    console.error(err);
+    console.error("Gemini API Error:", err);
+    
+    // If custom key in localStorage failed, clear it and retry with GLOBAL_GEMINI_API_KEY
+    if (!isFallback && apiKey !== GLOBAL_GEMINI_API_KEY && GLOBAL_GEMINI_API_KEY) {
+      console.warn("Custom API key failed. Clearing invalid key and retrying with Global API Key...");
+      localStorage.removeItem("gemini_api_key");
+      callLiveGeminiAPI(query, contextPages, loaderEl, GLOBAL_GEMINI_API_KEY, true);
+      return;
+    }
+
     loaderEl.remove();
-    addChatMessage("coach", `Failed to call Gemini API (${err.message}). Check your API Key or try again.`);
+    addChatMessage("coach", `Failed to call Gemini API: ${err.message}. If you saved a custom key in settings, try clearing it.`);
   });
 }
 
