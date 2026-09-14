@@ -1704,6 +1704,21 @@ body {
   padding-top: 0.25rem;
 }
 
+.chat-msg .citation a,
+.citation-link {
+  color: var(--accent-burgundy, #8b263e);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.chat-msg .citation a:hover,
+.citation-link:hover {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
 .chat-msg p {
   margin: 0 0 0.5rem 0;
 }

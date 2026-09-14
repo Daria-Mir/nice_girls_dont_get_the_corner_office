@@ -1061,7 +1061,7 @@ function addChatMessage(sender, text, citation = null) {
   if (citation) {
     const citeEl = document.createElement("span");
     citeEl.className = "citation";
-    citeEl.innerText = citation;
+    citeEl.innerHTML = citation;
     msgEl.appendChild(citeEl);
   }
   
@@ -1230,9 +1230,10 @@ User Question: ${query}
     loaderEl.remove();
     try {
       const responseText = data.candidates[0].content.parts[0].text;
+      const pdfFileName = "Nice_Girls_Dont_Get_the_Corner_Office_-_Lois_P_Frankel.pdf";
       const pages = contextPages.map(p => {
-        if (p.page_num_1based === p.end_page) return `Page ${p.page_num_1based}`;
-        return `Pages ${p.page_num_1based}-${p.end_page}`;
+        const label = p.page_num_1based === p.end_page ? `Page ${p.page_num_1based}` : `Pages ${p.page_num_1based}-${p.end_page}`;
+        return `<a href="${pdfFileName}#page=${p.page_num_1based}" target="_blank" class="citation-link">${label}</a>`;
       }).join(", ");
       addChatMessage("coach", responseText, pages ? `Sources: ${pages}` : null);
     } catch (e) {
@@ -1274,9 +1275,11 @@ function callSimulatedGeminiAPI(query, contextPages, loaderEl) {
     return;
   }
 
+  const pdfFileName = "Nice_Girls_Dont_Get_the_Corner_Office_-_Lois_P_Frankel.pdf";
   const topPage = contextPages[0];
   const snippet = topPage.text.substring(0, 350) + "...";
   const sourceText = topPage.page_num_1based === topPage.end_page ? `Page ${topPage.page_num_1based}` : `Pages ${topPage.page_num_1based}-${topPage.end_page}`;
+  const sourceLink = `<a href="${pdfFileName}#page=${topPage.page_num_1based}" target="_blank" class="citation-link">${sourceText}</a>`;
   
   const simResponse = `
 I scanned the book and found this relevant excerpt on **${sourceText}** in **${topPage.chapter}**:
@@ -1284,7 +1287,7 @@ I scanned the book and found this relevant excerpt on **${sourceText}** in **${t
 "${snippet}"
   `.trim();
 
-  addChatMessage("coach", simResponse, `Sources: ${sourceText}`);
+  addChatMessage("coach", simResponse, `Sources: ${sourceLink}`);
 }
 
 // 9. Toast Notification
